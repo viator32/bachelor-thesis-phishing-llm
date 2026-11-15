@@ -1,0 +1,6 @@
+dataset,n,P0,P1,open,adopted_by,adoption_date,annotation_method
+PhishFuzzer,424,334,84,6,thesis_author,2026-11-01,assistant_rules_v1_binary_author_adopted
+E-PhishLLM,1000,368,622,10,thesis_author,2026-11-01,assistant_rules_v1_binary_author_adopted
+Cross-Model,1000,906,87,7,thesis_author,2026-11-01,assistant_rules_v1_binary_author_adopted
+Contextual Paired Email Injection,872,30,842,0,thesis_author,2026-11-01,assistant_rules_v1_binary_author_adopted
+LLMail-Inject,1000,821,61,118,thesis_author,2026-11-01,assistant_rules_v1_binary_author_adopted

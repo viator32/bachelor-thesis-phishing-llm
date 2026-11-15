@@ -1,0 +1,1292 @@
+[
+  {
+    "name": "01_ueberblick",
+    "caption": "Balanced Accuracy nach Aufgabe, Modell und Datensatz; negative Fallbackentscheidung bei fehlenden Antworten.",
+    "pdf_page": 4,
+    "detail_projections": []
+  },
+  {
+    "name": "injection_pairs_ueberblick",
+    "caption": "Gepaarter Injection-Test: Phishing-Recall ohne und mit eingefügter Instruktion sowie ASR je Modellvariante und Baseline. ASR-Nenner sind die ohne Instruktion erkannten Paare.",
+    "pdf_page": 5,
+    "detail_projections": []
+  },
+  {
+    "name": "injection_pairs_aenderung",
+    "caption": "Gepaarter Injection-Test: Recall-Änderung und ASR mit 95-%-Bootstrap-Intervallen über Paare; keine Inferenzwiederholungen.",
+    "pdf_page": 6,
+    "detail_projections": []
+  },
+  {
+    "name": "injection_pairs_erkennung",
+    "caption": "Gepaarter Injection-Test: Injection-Erkennung der Basismodelle mit Injection-Prompt und der Injection-Adapter auf denselben 495 Paaren; Anteil richtiger Antworten ohne und mit eingefügter Instruktion sowie Anteil vollständig richtig bewerteter Paare.",
+    "pdf_page": 7,
+    "detail_projections": []
+  },
+  {
+    "name": "03_phishing_1_1",
+    "caption": "Phishingerkennung: Qwen3-4B, PhishFuzzer. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 8,
+    "detail_projections": [
+      {
+        "run_id": "qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_phishing_origin_PhishFuzzer_test_20261024T190720Z_188ba954",
+        "task": "phishing",
+        "model": "Qwen3-4B",
+        "variant": "base",
+        "dataset": "PhishFuzzer"
+      },
+      {
+        "run_id": "qwen3-4b-phishing-origin-4bit-heldout-v1-compari_phishing_origin_PhishFuzzer_test_20261024T194215Z_70e7a4f7",
+        "task": "phishing",
+        "model": "Qwen3-4B",
+        "variant": "adapted",
+        "dataset": "PhishFuzzer"
+      }
+    ]
+  },
+  {
+    "name": "04_phishing_1_2",
+    "caption": "Phishingerkennung: Qwen3-4B, E-PhishLLM. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 9,
+    "detail_projections": [
+      {
+        "run_id": "qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_phishing_E-PhishLLM_test_20261024T181909Z_ad4a541f",
+        "task": "phishing",
+        "model": "Qwen3-4B",
+        "variant": "base",
+        "dataset": "E-PhishLLM"
+      },
+      {
+        "run_id": "qwen3-4b-phishing-origin-4bit-heldout-v1-compari_phishing_E-PhishLLM_test_20261024T191819Z_ff5b31ba",
+        "task": "phishing",
+        "model": "Qwen3-4B",
+        "variant": "adapted",
+        "dataset": "E-PhishLLM"
+      }
+    ]
+  },
+  {
+    "name": "05_phishing_1_3",
+    "caption": "Phishingerkennung: Qwen3-4B, Cross-Model. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 10,
+    "detail_projections": [
+      {
+        "run_id": "qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_generation_origin_Cross-Model_test_20261024T183832Z_37b2e0a2",
+        "task": "phishing",
+        "model": "Qwen3-4B",
+        "variant": "base",
+        "dataset": "Cross-Model"
+      },
+      {
+        "run_id": "qwen3-4b-phishing-origin-4bit-heldout-v1-compari_generation_origin_Cross-Model_test_20261024T193047Z_fde60a5e",
+        "task": "phishing",
+        "model": "Qwen3-4B",
+        "variant": "adapted",
+        "dataset": "Cross-Model"
+      }
+    ]
+  },
+  {
+    "name": "phishing_1_paired",
+    "caption": "Phishingerkennung: Qwen3-4B, E-PhishLLM mit eingefügter Instruktion. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 11,
+    "detail_projections": [
+      {
+        "run_id": "qwen3-4b-base-4bit-phishing-origin-paired-inject_phishing_E-PhishLLM-paired-injection-v1_test_20261101T192558Z_4cbbb13d",
+        "task": "phishing",
+        "model": "Qwen3-4B",
+        "variant": "base",
+        "dataset": "E-PhishLLM paired injection v1"
+      },
+      {
+        "run_id": "qwen3-4b-phishing-origin-4bit-paired-injection-v_phishing_E-PhishLLM-paired-injection-v1_test_20261101T193451Z_7f5dfa3c",
+        "task": "phishing",
+        "model": "Qwen3-4B",
+        "variant": "adapted",
+        "dataset": "E-PhishLLM paired injection v1"
+      }
+    ]
+  },
+  {
+    "name": "06_phishing_2_1",
+    "caption": "Phishingerkennung: Qwen3-8B, PhishFuzzer. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 12,
+    "detail_projections": [
+      {
+        "run_id": "qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_phishing_origin_PhishFuzzer_test_20261024T204129Z_9cf3c750",
+        "task": "phishing",
+        "model": "Qwen3-8B",
+        "variant": "base",
+        "dataset": "PhishFuzzer"
+      },
+      {
+        "run_id": "qwen3-8b-phishing-origin-4bit-heldout-v1-compari_phishing_origin_PhishFuzzer_test_20261024T212921Z_96fddf8e",
+        "task": "phishing",
+        "model": "Qwen3-8B",
+        "variant": "adapted",
+        "dataset": "PhishFuzzer"
+      }
+    ]
+  },
+  {
+    "name": "07_phishing_2_2",
+    "caption": "Phishingerkennung: Qwen3-8B, E-PhishLLM. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 13,
+    "detail_projections": [
+      {
+        "run_id": "qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_phishing_E-PhishLLM_test_20261024T195502Z_6947e61c",
+        "task": "phishing",
+        "model": "Qwen3-8B",
+        "variant": "base",
+        "dataset": "E-PhishLLM"
+      },
+      {
+        "run_id": "qwen3-8b-phishing-origin-4bit-heldout-v1-compari_phishing_E-PhishLLM_test_20261101T162628Z_12df175a",
+        "task": "phishing",
+        "model": "Qwen3-8B",
+        "variant": "adapted",
+        "dataset": "E-PhishLLM"
+      }
+    ]
+  },
+  {
+    "name": "08_phishing_2_3",
+    "caption": "Phishingerkennung: Qwen3-8B, Cross-Model. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 14,
+    "detail_projections": [
+      {
+        "run_id": "qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_generation_origin_Cross-Model_test_20261024T202319Z_bc31a4f8",
+        "task": "phishing",
+        "model": "Qwen3-8B",
+        "variant": "base",
+        "dataset": "Cross-Model"
+      },
+      {
+        "run_id": "qwen3-8b-phishing-origin-4bit-heldout-v1-compari_generation_origin_Cross-Model_test_20261024T210756Z_7dfb41ae",
+        "task": "phishing",
+        "model": "Qwen3-8B",
+        "variant": "adapted",
+        "dataset": "Cross-Model"
+      }
+    ]
+  },
+  {
+    "name": "phishing_2_paired",
+    "caption": "Phishingerkennung: Qwen3-8B, E-PhishLLM mit eingefügter Instruktion. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 15,
+    "detail_projections": [
+      {
+        "run_id": "qwen3-8b-base-4bit-phishing-origin-paired-inject_phishing_E-PhishLLM-paired-injection-v1_test_20261101T194207Z_64e0f803",
+        "task": "phishing",
+        "model": "Qwen3-8B",
+        "variant": "base",
+        "dataset": "E-PhishLLM paired injection v1"
+      },
+      {
+        "run_id": "qwen3-8b-phishing-origin-4bit-paired-injection-v_phishing_E-PhishLLM-paired-injection-v1_test_20261101T200353Z_0f7f740e",
+        "task": "phishing",
+        "model": "Qwen3-8B",
+        "variant": "adapted",
+        "dataset": "E-PhishLLM paired injection v1"
+      }
+    ]
+  },
+  {
+    "name": "09_phishing_3_1",
+    "caption": "Phishingerkennung: Mistral-7B-v0.3, PhishFuzzer. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 16,
+    "detail_projections": [
+      {
+        "run_id": "mistral-7b-instruct-v0-3-base-4bit-phishing-orig_phishing_origin_PhishFuzzer_test_20261024T160916Z_72fc16ac",
+        "task": "phishing",
+        "model": "Mistral-7B-v0.3",
+        "variant": "base",
+        "dataset": "PhishFuzzer"
+      },
+      {
+        "run_id": "mistral-7b-instruct-v0-3-phishing-origin-4bit-he_phishing_origin_PhishFuzzer_test_20261024T161857Z_27b71faf",
+        "task": "phishing",
+        "model": "Mistral-7B-v0.3",
+        "variant": "adapted",
+        "dataset": "PhishFuzzer"
+      }
+    ]
+  },
+  {
+    "name": "10_phishing_3_2",
+    "caption": "Phishingerkennung: Mistral-7B-v0.3, E-PhishLLM. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 17,
+    "detail_projections": [
+      {
+        "run_id": "mistral-7b-instruct-v0-3-base-4bit-phishing-orig_phishing_E-PhishLLM_test_20261024T130718Z_bed2bc1d",
+        "task": "phishing",
+        "model": "Mistral-7B-v0.3",
+        "variant": "base",
+        "dataset": "E-PhishLLM"
+      },
+      {
+        "run_id": "mistral-7b-instruct-v0-3-phishing-origin-4bit-he_phishing_E-PhishLLM_test_20261024T140625Z_915e01aa",
+        "task": "phishing",
+        "model": "Mistral-7B-v0.3",
+        "variant": "adapted",
+        "dataset": "E-PhishLLM"
+      }
+    ]
+  },
+  {
+    "name": "11_phishing_3_3",
+    "caption": "Phishingerkennung: Mistral-7B-v0.3, Cross-Model. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 18,
+    "detail_projections": [
+      {
+        "run_id": "mistral-7b-instruct-v0-3-base-4bit-phishing-orig_generation_origin_Cross-Model_test_20261024T132506Z_570e0563",
+        "task": "phishing",
+        "model": "Mistral-7B-v0.3",
+        "variant": "base",
+        "dataset": "Cross-Model"
+      },
+      {
+        "run_id": "mistral-7b-instruct-v0-3-phishing-origin-4bit-he_generation_origin_Cross-Model_test_20261024T143830Z_6f4eb335",
+        "task": "phishing",
+        "model": "Mistral-7B-v0.3",
+        "variant": "adapted",
+        "dataset": "Cross-Model"
+      }
+    ]
+  },
+  {
+    "name": "phishing_3_paired",
+    "caption": "Phishingerkennung: Mistral-7B-v0.3, E-PhishLLM mit eingefügter Instruktion. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 19,
+    "detail_projections": [
+      {
+        "run_id": "mistral-7b-instruct-v0-3-base-4bit-phishing-orig_phishing_E-PhishLLM-paired-injection-v1_test_20261101T184034Z_f1055a7a",
+        "task": "phishing",
+        "model": "Mistral-7B-v0.3",
+        "variant": "base",
+        "dataset": "E-PhishLLM paired injection v1"
+      },
+      {
+        "run_id": "mistral-7b-instruct-v0-3-phishing-origin-4bit-pa_phishing_E-PhishLLM-paired-injection-v1_test_20261101T185751Z_fc38a052",
+        "task": "phishing",
+        "model": "Mistral-7B-v0.3",
+        "variant": "adapted",
+        "dataset": "E-PhishLLM paired injection v1"
+      }
+    ]
+  },
+  {
+    "name": "12_phishing_4_1",
+    "caption": "Phishingerkennung: Phi-4-mini, PhishFuzzer. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 20,
+    "detail_projections": [
+      {
+        "run_id": "phi4-mini-instruct-base-4bit-phishing-origin-hel_phishing_origin_PhishFuzzer_test_20261024T155125Z_97f41ed9",
+        "task": "phishing",
+        "model": "Phi-4-mini",
+        "variant": "base",
+        "dataset": "PhishFuzzer"
+      },
+      {
+        "run_id": "phi4-mini-instruct-phishing-origin-4bit-heldout-_phishing_origin_PhishFuzzer_test_20261109T181840Z_764d774c",
+        "task": "phishing",
+        "model": "Phi-4-mini",
+        "variant": "adapted",
+        "dataset": "PhishFuzzer"
+      }
+    ]
+  },
+  {
+    "name": "13_phishing_4_2",
+    "caption": "Phishingerkennung: Phi-4-mini, E-PhishLLM. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 21,
+    "detail_projections": [
+      {
+        "run_id": "phi4-mini-instruct-base-4bit-phishing-origin-hel_phishing_E-PhishLLM_test_20261024T145831Z_e0e4e8b5",
+        "task": "phishing",
+        "model": "Phi-4-mini",
+        "variant": "base",
+        "dataset": "E-PhishLLM"
+      },
+      {
+        "run_id": "phi4-mini-instruct-phishing-origin-4bit-heldout-_phishing_E-PhishLLM_test_20261109T174258Z_42522859",
+        "task": "phishing",
+        "model": "Phi-4-mini",
+        "variant": "adapted",
+        "dataset": "E-PhishLLM"
+      }
+    ]
+  },
+  {
+    "name": "14_phishing_4_3",
+    "caption": "Phishingerkennung: Phi-4-mini, Cross-Model. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 22,
+    "detail_projections": [
+      {
+        "run_id": "phi4-mini-instruct-base-4bit-phishing-origin-hel_generation_origin_Cross-Model_test_20261024T151515Z_1ed66531",
+        "task": "phishing",
+        "model": "Phi-4-mini",
+        "variant": "base",
+        "dataset": "Cross-Model"
+      },
+      {
+        "run_id": "phi4-mini-instruct-phishing-origin-4bit-heldout-_generation_origin_Cross-Model_test_20261109T174921Z_9b0e0d5f",
+        "task": "phishing",
+        "model": "Phi-4-mini",
+        "variant": "adapted",
+        "dataset": "Cross-Model"
+      }
+    ]
+  },
+  {
+    "name": "phishing_4_paired",
+    "caption": "Phishingerkennung: Phi-4-mini, E-PhishLLM mit eingefügter Instruktion. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 23,
+    "detail_projections": [
+      {
+        "run_id": "phi4-mini-instruct-base-4bit-phishing-origin-pai_phishing_E-PhishLLM-paired-injection-v1_test_20261101T191140Z_ee2843d1",
+        "task": "phishing",
+        "model": "Phi-4-mini",
+        "variant": "base",
+        "dataset": "E-PhishLLM paired injection v1"
+      },
+      {
+        "run_id": "phi4-mini-instruct-phishing-origin-4bit-paired-i_phishing_E-PhishLLM-paired-injection-v1_test_20261109T173637Z_575fc1e7",
+        "task": "phishing",
+        "model": "Phi-4-mini",
+        "variant": "adapted",
+        "dataset": "E-PhishLLM paired injection v1"
+      }
+    ]
+  },
+  {
+    "name": "15_phishing_5_1",
+    "caption": "Phishingerkennung: Llama-3.1-8B, PhishFuzzer. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 24,
+    "detail_projections": [
+      {
+        "run_id": "llama31-8b-instruct-base-4bit-phishing-origin-he_phishing_origin_PhishFuzzer_test_20261024T155758Z_143d8e78",
+        "task": "phishing",
+        "model": "Llama-3.1-8B",
+        "variant": "base",
+        "dataset": "PhishFuzzer"
+      },
+      {
+        "run_id": "llama31-8b-instruct-phishing-origin-4bit-heldout_phishing_origin_PhishFuzzer_test_20261024T114341Z_e16a766e",
+        "task": "phishing",
+        "model": "Llama-3.1-8B",
+        "variant": "adapted",
+        "dataset": "PhishFuzzer"
+      }
+    ]
+  },
+  {
+    "name": "16_phishing_5_2",
+    "caption": "Phishingerkennung: Llama-3.1-8B, E-PhishLLM. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 25,
+    "detail_projections": [
+      {
+        "run_id": "llama31-8b-instruct-base-4bit-phishing-origin-he_phishing_E-PhishLLM_test_20261024T172901Z_8da3e130",
+        "task": "phishing",
+        "model": "Llama-3.1-8B",
+        "variant": "base",
+        "dataset": "E-PhishLLM"
+      },
+      {
+        "run_id": "llama31-8b-instruct-phishing-origin-4bit-heldout_phishing_E-PhishLLM_test_20261024T180459Z_aa0d7a85",
+        "task": "phishing",
+        "model": "Llama-3.1-8B",
+        "variant": "adapted",
+        "dataset": "E-PhishLLM"
+      }
+    ]
+  },
+  {
+    "name": "17_phishing_5_3",
+    "caption": "Phishingerkennung: Llama-3.1-8B, Cross-Model. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 26,
+    "detail_projections": [
+      {
+        "run_id": "llama31-8b-instruct-base-4bit-phishing-origin-he_generation_origin_Cross-Model_test_20261024T174539Z_d8aa80fb",
+        "task": "phishing",
+        "model": "Llama-3.1-8B",
+        "variant": "base",
+        "dataset": "Cross-Model"
+      },
+      {
+        "run_id": "llama31-8b-instruct-phishing-origin-4bit-heldout_generation_origin_Cross-Model_test_20261024T111546Z_81702ec6",
+        "task": "phishing",
+        "model": "Llama-3.1-8B",
+        "variant": "adapted",
+        "dataset": "Cross-Model"
+      }
+    ]
+  },
+  {
+    "name": "phishing_5_paired",
+    "caption": "Phishingerkennung: Llama-3.1-8B, E-PhishLLM mit eingefügter Instruktion. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 27,
+    "detail_projections": [
+      {
+        "run_id": "llama31-8b-instruct-base-4bit-phishing-origin-pa_phishing_E-PhishLLM-paired-injection-v1_test_20261101T181134Z_4fd44f86",
+        "task": "phishing",
+        "model": "Llama-3.1-8B",
+        "variant": "base",
+        "dataset": "E-PhishLLM paired injection v1"
+      },
+      {
+        "run_id": "llama31-8b-instruct-phishing-origin-4bit-paired-_phishing_E-PhishLLM-paired-injection-v1_test_20261101T182712Z_5deb451d",
+        "task": "phishing",
+        "model": "Llama-3.1-8B",
+        "variant": "adapted",
+        "dataset": "E-PhishLLM paired injection v1"
+      }
+    ]
+  },
+  {
+    "name": "baseline_phishing_0",
+    "caption": "Phishingerkennung: Baselines auf PhishFuzzer. Je Methode ein ausgewählter Lauf; keine Mehrfachzählung wiederholter Konfigurationen. MCC wird separat ausgewiesen.",
+    "pdf_page": 28,
+    "detail_projections": [
+      {
+        "run_id": "rules_only-ephishllm-fixed-test-v1_phishing_PhishFuzzer_test_20261025T154551Z_a8cfaaca",
+        "task": "phishing",
+        "model": "Regeln",
+        "variant": "baseline",
+        "dataset": "PhishFuzzer"
+      },
+      {
+        "run_id": "tfidf_logreg-phishfuzzer-fixed-test-v1_phishing_PhishFuzzer_test_20261025T154521Z_c3f1b42f",
+        "task": "phishing",
+        "model": "TF-IDF",
+        "variant": "baseline",
+        "dataset": "PhishFuzzer"
+      }
+    ]
+  },
+  {
+    "name": "baseline_phishing_1",
+    "caption": "Phishingerkennung: Baselines auf E-PhishLLM. Je Methode ein ausgewählter Lauf; keine Mehrfachzählung wiederholter Konfigurationen. MCC wird separat ausgewiesen.",
+    "pdf_page": 29,
+    "detail_projections": [
+      {
+        "run_id": "rules_only-phishfuzzer-fixed-test-v1_phishing_E-PhishLLM_test_20261025T154633Z_6e794d8c",
+        "task": "phishing",
+        "model": "Regeln",
+        "variant": "baseline",
+        "dataset": "E-PhishLLM"
+      },
+      {
+        "run_id": "tfidf_logreg-phishfuzzer-fixed-test-v1_phishing_E-PhishLLM_test_20261025T154527Z_990e119f",
+        "task": "phishing",
+        "model": "TF-IDF",
+        "variant": "baseline",
+        "dataset": "E-PhishLLM"
+      }
+    ]
+  },
+  {
+    "name": "baseline_phishing_2",
+    "caption": "Phishingerkennung: Baselines auf Cross-Model. Je Methode ein ausgewählter Lauf; keine Mehrfachzählung wiederholter Konfigurationen. MCC wird separat ausgewiesen.",
+    "pdf_page": 30,
+    "detail_projections": [
+      {
+        "run_id": "rules_only-phishfuzzer-fixed-test-v1_phishing_Cross-Model_test_20261025T154618Z_815bb1ba",
+        "task": "phishing",
+        "model": "Regeln",
+        "variant": "baseline",
+        "dataset": "Cross-Model"
+      },
+      {
+        "run_id": "tfidf_logreg-phishfuzzer-fixed-test-v1_phishing_Cross-Model_test_20261025T154514Z_a966e0c0",
+        "task": "phishing",
+        "model": "TF-IDF",
+        "variant": "baseline",
+        "dataset": "Cross-Model"
+      }
+    ]
+  },
+  {
+    "name": "baseline_phishing_paired",
+    "caption": "Phishingerkennung: Baselines auf E-PhishLLM mit eingefügter Instruktion. Je Methode ein ausgewählter Lauf; keine Mehrfachzählung wiederholter Konfigurationen.",
+    "pdf_page": 31,
+    "detail_projections": [
+      {
+        "run_id": "rules_only-ephishllm-paired-injection-fixed-test_phishing_E-PhishLLM-paired-injection-v1_test_20261104T084107Z_87fd79cd",
+        "task": "phishing",
+        "model": "Regeln",
+        "variant": "baseline",
+        "dataset": "E-PhishLLM paired injection v1"
+      },
+      {
+        "run_id": "tfidf_logreg-ephishllm-paired-injection-fixed-te_phishing_E-PhishLLM-paired-injection-v1_test_20261104T084103Z_b22505cb",
+        "task": "phishing",
+        "model": "TF-IDF",
+        "variant": "baseline",
+        "dataset": "E-PhishLLM paired injection v1"
+      }
+    ]
+  },
+  {
+    "name": "18_origin_1_1",
+    "caption": "Herkunftserkennung: Qwen3-4B, PhishFuzzer. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 32,
+    "detail_projections": [
+      {
+        "run_id": "qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_phishing_origin_PhishFuzzer_test_20261024T190720Z_188ba954",
+        "task": "origin",
+        "model": "Qwen3-4B",
+        "variant": "base",
+        "dataset": "PhishFuzzer"
+      },
+      {
+        "run_id": "qwen3-4b-phishing-origin-4bit-heldout-v1-compari_phishing_origin_PhishFuzzer_test_20261024T194215Z_70e7a4f7",
+        "task": "origin",
+        "model": "Qwen3-4B",
+        "variant": "adapted",
+        "dataset": "PhishFuzzer"
+      }
+    ]
+  },
+  {
+    "name": "19_origin_1_2",
+    "caption": "Herkunftserkennung: Qwen3-4B, E-PhishLLM. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 33,
+    "detail_projections": [
+      {
+        "run_id": "qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_phishing_E-PhishLLM_test_20261024T181909Z_ad4a541f",
+        "task": "origin",
+        "model": "Qwen3-4B",
+        "variant": "base",
+        "dataset": "E-PhishLLM"
+      },
+      {
+        "run_id": "qwen3-4b-phishing-origin-4bit-heldout-v1-compari_phishing_E-PhishLLM_test_20261024T191819Z_ff5b31ba",
+        "task": "origin",
+        "model": "Qwen3-4B",
+        "variant": "adapted",
+        "dataset": "E-PhishLLM"
+      }
+    ]
+  },
+  {
+    "name": "20_origin_1_3",
+    "caption": "Herkunftserkennung: Qwen3-4B, Cross-Model. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 34,
+    "detail_projections": [
+      {
+        "run_id": "qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_generation_origin_Cross-Model_test_20261024T183832Z_37b2e0a2",
+        "task": "origin",
+        "model": "Qwen3-4B",
+        "variant": "base",
+        "dataset": "Cross-Model"
+      },
+      {
+        "run_id": "qwen3-4b-phishing-origin-4bit-heldout-v1-compari_generation_origin_Cross-Model_test_20261024T193047Z_fde60a5e",
+        "task": "origin",
+        "model": "Qwen3-4B",
+        "variant": "adapted",
+        "dataset": "Cross-Model"
+      }
+    ]
+  },
+  {
+    "name": "21_origin_2_1",
+    "caption": "Herkunftserkennung: Qwen3-8B, PhishFuzzer. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 35,
+    "detail_projections": [
+      {
+        "run_id": "qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_phishing_origin_PhishFuzzer_test_20261024T204129Z_9cf3c750",
+        "task": "origin",
+        "model": "Qwen3-8B",
+        "variant": "base",
+        "dataset": "PhishFuzzer"
+      },
+      {
+        "run_id": "qwen3-8b-phishing-origin-4bit-heldout-v1-compari_phishing_origin_PhishFuzzer_test_20261024T212921Z_96fddf8e",
+        "task": "origin",
+        "model": "Qwen3-8B",
+        "variant": "adapted",
+        "dataset": "PhishFuzzer"
+      }
+    ]
+  },
+  {
+    "name": "22_origin_2_2",
+    "caption": "Herkunftserkennung: Qwen3-8B, E-PhishLLM. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 36,
+    "detail_projections": [
+      {
+        "run_id": "qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_phishing_E-PhishLLM_test_20261024T195502Z_6947e61c",
+        "task": "origin",
+        "model": "Qwen3-8B",
+        "variant": "base",
+        "dataset": "E-PhishLLM"
+      },
+      {
+        "run_id": "qwen3-8b-phishing-origin-4bit-heldout-v1-compari_phishing_E-PhishLLM_test_20261101T162628Z_12df175a",
+        "task": "origin",
+        "model": "Qwen3-8B",
+        "variant": "adapted",
+        "dataset": "E-PhishLLM"
+      }
+    ]
+  },
+  {
+    "name": "23_origin_2_3",
+    "caption": "Herkunftserkennung: Qwen3-8B, Cross-Model. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 37,
+    "detail_projections": [
+      {
+        "run_id": "qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_generation_origin_Cross-Model_test_20261024T202319Z_bc31a4f8",
+        "task": "origin",
+        "model": "Qwen3-8B",
+        "variant": "base",
+        "dataset": "Cross-Model"
+      },
+      {
+        "run_id": "qwen3-8b-phishing-origin-4bit-heldout-v1-compari_generation_origin_Cross-Model_test_20261024T210756Z_7dfb41ae",
+        "task": "origin",
+        "model": "Qwen3-8B",
+        "variant": "adapted",
+        "dataset": "Cross-Model"
+      }
+    ]
+  },
+  {
+    "name": "24_origin_3_1",
+    "caption": "Herkunftserkennung: Mistral-7B-v0.3, PhishFuzzer. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 38,
+    "detail_projections": [
+      {
+        "run_id": "mistral-7b-instruct-v0-3-base-4bit-phishing-orig_phishing_origin_PhishFuzzer_test_20261024T160916Z_72fc16ac",
+        "task": "origin",
+        "model": "Mistral-7B-v0.3",
+        "variant": "base",
+        "dataset": "PhishFuzzer"
+      },
+      {
+        "run_id": "mistral-7b-instruct-v0-3-phishing-origin-4bit-he_phishing_origin_PhishFuzzer_test_20261024T161857Z_27b71faf",
+        "task": "origin",
+        "model": "Mistral-7B-v0.3",
+        "variant": "adapted",
+        "dataset": "PhishFuzzer"
+      }
+    ]
+  },
+  {
+    "name": "25_origin_3_2",
+    "caption": "Herkunftserkennung: Mistral-7B-v0.3, E-PhishLLM. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 39,
+    "detail_projections": [
+      {
+        "run_id": "mistral-7b-instruct-v0-3-base-4bit-phishing-orig_phishing_E-PhishLLM_test_20261024T130718Z_bed2bc1d",
+        "task": "origin",
+        "model": "Mistral-7B-v0.3",
+        "variant": "base",
+        "dataset": "E-PhishLLM"
+      },
+      {
+        "run_id": "mistral-7b-instruct-v0-3-phishing-origin-4bit-he_phishing_E-PhishLLM_test_20261024T140625Z_915e01aa",
+        "task": "origin",
+        "model": "Mistral-7B-v0.3",
+        "variant": "adapted",
+        "dataset": "E-PhishLLM"
+      }
+    ]
+  },
+  {
+    "name": "26_origin_3_3",
+    "caption": "Herkunftserkennung: Mistral-7B-v0.3, Cross-Model. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 40,
+    "detail_projections": [
+      {
+        "run_id": "mistral-7b-instruct-v0-3-base-4bit-phishing-orig_generation_origin_Cross-Model_test_20261024T132506Z_570e0563",
+        "task": "origin",
+        "model": "Mistral-7B-v0.3",
+        "variant": "base",
+        "dataset": "Cross-Model"
+      },
+      {
+        "run_id": "mistral-7b-instruct-v0-3-phishing-origin-4bit-he_generation_origin_Cross-Model_test_20261024T143830Z_6f4eb335",
+        "task": "origin",
+        "model": "Mistral-7B-v0.3",
+        "variant": "adapted",
+        "dataset": "Cross-Model"
+      }
+    ]
+  },
+  {
+    "name": "27_origin_4_1",
+    "caption": "Herkunftserkennung: Phi-4-mini, PhishFuzzer. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 41,
+    "detail_projections": [
+      {
+        "run_id": "phi4-mini-instruct-base-4bit-phishing-origin-hel_phishing_origin_PhishFuzzer_test_20261024T155125Z_97f41ed9",
+        "task": "origin",
+        "model": "Phi-4-mini",
+        "variant": "base",
+        "dataset": "PhishFuzzer"
+      },
+      {
+        "run_id": "phi4-mini-instruct-phishing-origin-4bit-heldout-_phishing_origin_PhishFuzzer_test_20261109T181840Z_764d774c",
+        "task": "origin",
+        "model": "Phi-4-mini",
+        "variant": "adapted",
+        "dataset": "PhishFuzzer"
+      }
+    ]
+  },
+  {
+    "name": "28_origin_4_2",
+    "caption": "Herkunftserkennung: Phi-4-mini, E-PhishLLM. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 42,
+    "detail_projections": [
+      {
+        "run_id": "phi4-mini-instruct-base-4bit-phishing-origin-hel_phishing_E-PhishLLM_test_20261024T145831Z_e0e4e8b5",
+        "task": "origin",
+        "model": "Phi-4-mini",
+        "variant": "base",
+        "dataset": "E-PhishLLM"
+      },
+      {
+        "run_id": "phi4-mini-instruct-phishing-origin-4bit-heldout-_phishing_E-PhishLLM_test_20261109T174258Z_42522859",
+        "task": "origin",
+        "model": "Phi-4-mini",
+        "variant": "adapted",
+        "dataset": "E-PhishLLM"
+      }
+    ]
+  },
+  {
+    "name": "29_origin_4_3",
+    "caption": "Herkunftserkennung: Phi-4-mini, Cross-Model. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 43,
+    "detail_projections": [
+      {
+        "run_id": "phi4-mini-instruct-base-4bit-phishing-origin-hel_generation_origin_Cross-Model_test_20261024T151515Z_1ed66531",
+        "task": "origin",
+        "model": "Phi-4-mini",
+        "variant": "base",
+        "dataset": "Cross-Model"
+      },
+      {
+        "run_id": "phi4-mini-instruct-phishing-origin-4bit-heldout-_generation_origin_Cross-Model_test_20261109T174921Z_9b0e0d5f",
+        "task": "origin",
+        "model": "Phi-4-mini",
+        "variant": "adapted",
+        "dataset": "Cross-Model"
+      }
+    ]
+  },
+  {
+    "name": "30_origin_5_1",
+    "caption": "Herkunftserkennung: Llama-3.1-8B, PhishFuzzer. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 44,
+    "detail_projections": [
+      {
+        "run_id": "llama31-8b-instruct-base-4bit-phishing-origin-he_phishing_origin_PhishFuzzer_test_20261024T155758Z_143d8e78",
+        "task": "origin",
+        "model": "Llama-3.1-8B",
+        "variant": "base",
+        "dataset": "PhishFuzzer"
+      },
+      {
+        "run_id": "llama31-8b-instruct-phishing-origin-4bit-heldout_phishing_origin_PhishFuzzer_test_20261024T114341Z_e16a766e",
+        "task": "origin",
+        "model": "Llama-3.1-8B",
+        "variant": "adapted",
+        "dataset": "PhishFuzzer"
+      }
+    ]
+  },
+  {
+    "name": "31_origin_5_2",
+    "caption": "Herkunftserkennung: Llama-3.1-8B, E-PhishLLM. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 45,
+    "detail_projections": [
+      {
+        "run_id": "llama31-8b-instruct-base-4bit-phishing-origin-he_phishing_E-PhishLLM_test_20261024T172901Z_8da3e130",
+        "task": "origin",
+        "model": "Llama-3.1-8B",
+        "variant": "base",
+        "dataset": "E-PhishLLM"
+      },
+      {
+        "run_id": "llama31-8b-instruct-phishing-origin-4bit-heldout_phishing_E-PhishLLM_test_20261024T180459Z_aa0d7a85",
+        "task": "origin",
+        "model": "Llama-3.1-8B",
+        "variant": "adapted",
+        "dataset": "E-PhishLLM"
+      }
+    ]
+  },
+  {
+    "name": "32_origin_5_3",
+    "caption": "Herkunftserkennung: Llama-3.1-8B, Cross-Model. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 46,
+    "detail_projections": [
+      {
+        "run_id": "llama31-8b-instruct-base-4bit-phishing-origin-he_generation_origin_Cross-Model_test_20261024T174539Z_d8aa80fb",
+        "task": "origin",
+        "model": "Llama-3.1-8B",
+        "variant": "base",
+        "dataset": "Cross-Model"
+      },
+      {
+        "run_id": "llama31-8b-instruct-phishing-origin-4bit-heldout_generation_origin_Cross-Model_test_20261024T111546Z_81702ec6",
+        "task": "origin",
+        "model": "Llama-3.1-8B",
+        "variant": "adapted",
+        "dataset": "Cross-Model"
+      }
+    ]
+  },
+  {
+    "name": "33_injection_1_4",
+    "caption": "Injection-Erkennung: Qwen3-4B, Contextual Paired Email Injection. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 47,
+    "detail_projections": [
+      {
+        "run_id": "qwen3-4b-base-4bit-injection-heldout-v1-comparis_injection_Contextual-Paired-Email-Injection_test_20261025T124522Z_1527729f",
+        "task": "injection",
+        "model": "Qwen3-4B",
+        "variant": "base",
+        "dataset": "Contextual Paired Email Injection"
+      },
+      {
+        "run_id": "qwen3-4b-injection-4bit-heldout-v1-comparison-v1_injection_Contextual-Paired-Email-Injection_test_20261025T131556Z_11531e57",
+        "task": "injection",
+        "model": "Qwen3-4B",
+        "variant": "adapted",
+        "dataset": "Contextual Paired Email Injection"
+      }
+    ]
+  },
+  {
+    "name": "34_injection_1_5",
+    "caption": "Injection-Erkennung: Qwen3-4B, LLMail-Inject. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 48,
+    "detail_projections": [
+      {
+        "run_id": "qwen3-4b-base-4bit-injection-heldout-v1-comparis_injection_LLMail-Inject_test_20261025T123356Z_e5a58cb8",
+        "task": "injection",
+        "model": "Qwen3-4B",
+        "variant": "base",
+        "dataset": "LLMail-Inject"
+      },
+      {
+        "run_id": "qwen3-4b-injection-4bit-heldout-v1-comparison-v1_injection_LLMail-Inject_test_20261025T130459Z_8868bc6e",
+        "task": "injection",
+        "model": "Qwen3-4B",
+        "variant": "adapted",
+        "dataset": "LLMail-Inject"
+      }
+    ]
+  },
+  {
+    "name": "injection_1_paired",
+    "caption": "Injection-Erkennung: Qwen3-4B, gepaarter E-PhishLLM-Test. Positiv sind nur die experimentell eingefügten Instruktionen; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 49,
+    "detail_projections": [
+      {
+        "run_id": "qwen3-4b-base-4bit-injection-paired-injection-de_phishing_E-PhishLLM-paired-injection-v1_test_20261114T163923Z_77b3309d",
+        "task": "injection",
+        "model": "Qwen3-4B",
+        "variant": "base",
+        "dataset": "E-PhishLLM paired injection v1"
+      },
+      {
+        "run_id": "qwen3-4b-injection-4bit-paired-injection-detecti_phishing_E-PhishLLM-paired-injection-v1_test_20261114T164558Z_4448e180",
+        "task": "injection",
+        "model": "Qwen3-4B",
+        "variant": "adapted",
+        "dataset": "E-PhishLLM paired injection v1"
+      }
+    ]
+  },
+  {
+    "name": "35_injection_2_4",
+    "caption": "Injection-Erkennung: Qwen3-8B, Contextual Paired Email Injection. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 50,
+    "detail_projections": [
+      {
+        "run_id": "qwen3-8b-base-4bit-injection-heldout-v1-comparis_injection_Contextual-Paired-Email-Injection_test_20261025T133759Z_3b858738",
+        "task": "injection",
+        "model": "Qwen3-8B",
+        "variant": "base",
+        "dataset": "Contextual Paired Email Injection"
+      },
+      {
+        "run_id": "qwen3-8b-injection-4bit-heldout-v1-comparison-v1_injection_Contextual-Paired-Email-Injection_test_20261025T142547Z_81dd0a47",
+        "task": "injection",
+        "model": "Qwen3-8B",
+        "variant": "adapted",
+        "dataset": "Contextual Paired Email Injection"
+      }
+    ]
+  },
+  {
+    "name": "36_injection_2_5",
+    "caption": "Injection-Erkennung: Qwen3-8B, LLMail-Inject. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 51,
+    "detail_projections": [
+      {
+        "run_id": "qwen3-8b-base-4bit-injection-heldout-v1-comparis_injection_LLMail-Inject_test_20261025T132101Z_d2cd32b2",
+        "task": "injection",
+        "model": "Qwen3-8B",
+        "variant": "base",
+        "dataset": "LLMail-Inject"
+      },
+      {
+        "run_id": "qwen3-8b-injection-4bit-heldout-v1-comparison-v1_injection_LLMail-Inject_test_20261025T141249Z_415f1cde",
+        "task": "injection",
+        "model": "Qwen3-8B",
+        "variant": "adapted",
+        "dataset": "LLMail-Inject"
+      }
+    ]
+  },
+  {
+    "name": "injection_2_paired",
+    "caption": "Injection-Erkennung: Qwen3-8B, gepaarter E-PhishLLM-Test. Positiv sind nur die experimentell eingefügten Instruktionen; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 52,
+    "detail_projections": [
+      {
+        "run_id": "qwen3-8b-base-4bit-injection-paired-injection-de_phishing_E-PhishLLM-paired-injection-v1_test_20261114T165221Z_4d3aec8b",
+        "task": "injection",
+        "model": "Qwen3-8B",
+        "variant": "base",
+        "dataset": "E-PhishLLM paired injection v1"
+      },
+      {
+        "run_id": "qwen3-8b-injection-4bit-paired-injection-detecti_phishing_E-PhishLLM-paired-injection-v1_test_20261114T170251Z_79ce792e",
+        "task": "injection",
+        "model": "Qwen3-8B",
+        "variant": "adapted",
+        "dataset": "E-PhishLLM paired injection v1"
+      }
+    ]
+  },
+  {
+    "name": "37_injection_3_4",
+    "caption": "Injection-Erkennung: Mistral-7B-v0.3, Contextual Paired Email Injection. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 53,
+    "detail_projections": [
+      {
+        "run_id": "mistral-7b-instruct-v0-3-base-4bit-injection-hel_injection_Contextual-Paired-Email-Injection_test_20261025T093140Z_a607c3da",
+        "task": "injection",
+        "model": "Mistral-7B-v0.3",
+        "variant": "base",
+        "dataset": "Contextual Paired Email Injection"
+      },
+      {
+        "run_id": "mistral-7b-instruct-v0-3-injection-4bit-heldout-_injection_Contextual-Paired-Email-Injection_test_20261025T114401Z_55cab46a",
+        "task": "injection",
+        "model": "Mistral-7B-v0.3",
+        "variant": "adapted",
+        "dataset": "Contextual Paired Email Injection"
+      }
+    ]
+  },
+  {
+    "name": "38_injection_3_5",
+    "caption": "Injection-Erkennung: Mistral-7B-v0.3, LLMail-Inject. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 54,
+    "detail_projections": [
+      {
+        "run_id": "mistral-7b-instruct-v0-3-base-4bit-injection-hel_injection_LLMail-Inject_test_20261025T090124Z_d6f3c90c",
+        "task": "injection",
+        "model": "Mistral-7B-v0.3",
+        "variant": "base",
+        "dataset": "LLMail-Inject"
+      },
+      {
+        "run_id": "mistral-7b-instruct-v0-3-injection-4bit-heldout-_injection_LLMail-Inject_test_20261025T094256Z_8238b2aa",
+        "task": "injection",
+        "model": "Mistral-7B-v0.3",
+        "variant": "adapted",
+        "dataset": "LLMail-Inject"
+      }
+    ]
+  },
+  {
+    "name": "injection_3_paired",
+    "caption": "Injection-Erkennung: Mistral-7B-v0.3, gepaarter E-PhishLLM-Test. Positiv sind nur die experimentell eingefügten Instruktionen; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 55,
+    "detail_projections": [
+      {
+        "run_id": "mistral-7b-instruct-v0-3-base-4bit-injection-pai_phishing_E-PhishLLM-paired-injection-v1_test_20261114T160227Z_0ab18be1",
+        "task": "injection",
+        "model": "Mistral-7B-v0.3",
+        "variant": "base",
+        "dataset": "E-PhishLLM paired injection v1"
+      },
+      {
+        "run_id": "mistral-7b-instruct-v0-3-injection-4bit-paired-i_phishing_E-PhishLLM-paired-injection-v1_test_20261114T161435Z_3c368f27",
+        "task": "injection",
+        "model": "Mistral-7B-v0.3",
+        "variant": "adapted",
+        "dataset": "E-PhishLLM paired injection v1"
+      }
+    ]
+  },
+  {
+    "name": "39_injection_4_4",
+    "caption": "Injection-Erkennung: Phi-4-mini, Contextual Paired Email Injection. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 56,
+    "detail_projections": [
+      {
+        "run_id": "phi4-mini-instruct-base-4bit-injection-heldout-v_injection_Contextual-Paired-Email-Injection_test_20261025T121446Z_63c869b1",
+        "task": "injection",
+        "model": "Phi-4-mini",
+        "variant": "base",
+        "dataset": "Contextual Paired Email Injection"
+      },
+      {
+        "run_id": "phi4-mini-instruct-injection-4bit-heldout-v1-com_injection_Contextual-Paired-Email-Injection_test_20261109T173206Z_b755b8ec",
+        "task": "injection",
+        "model": "Phi-4-mini",
+        "variant": "adapted",
+        "dataset": "Contextual Paired Email Injection"
+      }
+    ]
+  },
+  {
+    "name": "40_injection_4_5",
+    "caption": "Injection-Erkennung: Phi-4-mini, LLMail-Inject. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 57,
+    "detail_projections": [
+      {
+        "run_id": "phi4-mini-instruct-base-4bit-injection-heldout-v_injection_LLMail-Inject_test_20261025T120406Z_1f3df7f2",
+        "task": "injection",
+        "model": "Phi-4-mini",
+        "variant": "base",
+        "dataset": "LLMail-Inject"
+      },
+      {
+        "run_id": "phi4-mini-instruct-injection-4bit-heldout-v1-com_injection_LLMail-Inject_test_20261109T164922Z_8ee2210e",
+        "task": "injection",
+        "model": "Phi-4-mini",
+        "variant": "adapted",
+        "dataset": "LLMail-Inject"
+      }
+    ]
+  },
+  {
+    "name": "injection_4_paired",
+    "caption": "Injection-Erkennung: Phi-4-mini, gepaarter E-PhishLLM-Test. Positiv sind nur die experimentell eingefügten Instruktionen; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 58,
+    "detail_projections": [
+      {
+        "run_id": "phi4-mini-instruct-base-4bit-injection-paired-in_phishing_E-PhishLLM-paired-injection-v1_test_20261114T162751Z_9813dc30",
+        "task": "injection",
+        "model": "Phi-4-mini",
+        "variant": "base",
+        "dataset": "E-PhishLLM paired injection v1"
+      },
+      {
+        "run_id": "phi4-mini-instruct-injection-4bit-paired-injecti_phishing_E-PhishLLM-paired-injection-v1_test_20261114T163359Z_b1b70795",
+        "task": "injection",
+        "model": "Phi-4-mini",
+        "variant": "adapted",
+        "dataset": "E-PhishLLM paired injection v1"
+      }
+    ]
+  },
+  {
+    "name": "41_injection_5_4",
+    "caption": "Injection-Erkennung: Llama-3.1-8B, Contextual Paired Email Injection. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 59,
+    "detail_projections": [
+      {
+        "run_id": "llama31-8b-instruct-base-4bit-injection-heldout-_injection_Contextual-Paired-Email-Injection_test_20261025T081621Z_ccc2e27b",
+        "task": "injection",
+        "model": "Llama-3.1-8B",
+        "variant": "base",
+        "dataset": "Contextual Paired Email Injection"
+      },
+      {
+        "run_id": "llama31-8b-instruct-injection-4bit-heldout-v1-co_injection_Contextual-Paired-Email-Injection_test_20261025T113100Z_ac540501",
+        "task": "injection",
+        "model": "Llama-3.1-8B",
+        "variant": "adapted",
+        "dataset": "Contextual Paired Email Injection"
+      }
+    ]
+  },
+  {
+    "name": "42_injection_5_5",
+    "caption": "Injection-Erkennung: Llama-3.1-8B, LLMail-Inject. Zeilen normieren auf alle Referenzfälle; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 60,
+    "detail_projections": [
+      {
+        "run_id": "llama31-8b-instruct-base-4bit-injection-heldout-_injection_LLMail-Inject_test_20261024T215216Z_0b0bb21f",
+        "task": "injection",
+        "model": "Llama-3.1-8B",
+        "variant": "base",
+        "dataset": "LLMail-Inject"
+      },
+      {
+        "run_id": "llama31-8b-instruct-injection-4bit-heldout-v1-co_injection_LLMail-Inject_test_20261025T083022Z_4541110c",
+        "task": "injection",
+        "model": "Llama-3.1-8B",
+        "variant": "adapted",
+        "dataset": "LLMail-Inject"
+      }
+    ]
+  },
+  {
+    "name": "injection_5_paired",
+    "caption": "Injection-Erkennung: Llama-3.1-8B, gepaarter E-PhishLLM-Test. Positiv sind nur die experimentell eingefügten Instruktionen; fehlende Antworten zählen als negative Fallbackentscheidung. Latenzen nur für empfangene Antworten.",
+    "pdf_page": 61,
+    "detail_projections": [
+      {
+        "run_id": "llama31-8b-instruct-base-4bit-injection-paired-i_phishing_E-PhishLLM-paired-injection-v1_test_20261114T154043Z_9f7ff154",
+        "task": "injection",
+        "model": "Llama-3.1-8B",
+        "variant": "base",
+        "dataset": "E-PhishLLM paired injection v1"
+      },
+      {
+        "run_id": "llama31-8b-instruct-injection-4bit-paired-inject_phishing_E-PhishLLM-paired-injection-v1_test_20261114T155220Z_82acd2c9",
+        "task": "injection",
+        "model": "Llama-3.1-8B",
+        "variant": "adapted",
+        "dataset": "E-PhishLLM paired injection v1"
+      }
+    ]
+  },
+  {
+    "name": "baseline_injection_3",
+    "caption": "Injection-Erkennung: Baselines auf Contextual Paired Email Injection. Je Methode ein ausgewählter Lauf; keine Mehrfachzählung wiederholter Konfigurationen. MCC wird separat ausgewiesen.",
+    "pdf_page": 62,
+    "detail_projections": [
+      {
+        "run_id": "rules_only-contextual-fixed-test-v1_injection_Contextual-Paired-Email-Injection_test_20261025T154536Z_888e2cee",
+        "task": "injection",
+        "model": "Regeln",
+        "variant": "baseline",
+        "dataset": "Contextual Paired Email Injection"
+      }
+    ]
+  },
+  {
+    "name": "baseline_injection_4",
+    "caption": "Injection-Erkennung: Baselines auf LLMail-Inject. Je Methode ein ausgewählter Lauf; keine Mehrfachzählung wiederholter Konfigurationen. MCC wird separat ausgewiesen.",
+    "pdf_page": 63,
+    "detail_projections": [
+      {
+        "run_id": "rules_only-contextual-fixed-test-v1_injection_LLMail-Inject_test_20261025T154542Z_527f371f",
+        "task": "injection",
+        "model": "Regeln",
+        "variant": "baseline",
+        "dataset": "LLMail-Inject"
+      }
+    ]
+  },
+  {
+    "name": "baseline_injection_paired",
+    "caption": "Injection-Erkennung: Regelbaseline auf den gepaarten E-PhishLLM-Texten; positiv ist nur die experimentell eingefügte Instruktion.",
+    "pdf_page": 64,
+    "detail_projections": [
+      {
+        "run_id": "rules_only-contextual-fixed-test-v1_phishing_E-PhishLLM-paired-injection-v1_test_20261104T084845Z_98d9632e",
+        "task": "injection",
+        "model": "Regeln",
+        "variant": "baseline",
+        "dataset": "E-PhishLLM paired injection v1"
+      }
+    ]
+  },
+  {
+    "name": "33_herkunft_und_phishing",
+    "caption": "Phishing-Recall nach Referenzherkunft in PhishFuzzer; keine Personalisierungsstufen.",
+    "pdf_page": 65,
+    "detail_projections": []
+  },
+  {
+    "name": "34_sprachen",
+    "caption": "Sprachgruppen der externen Phishingevaluation, deskriptiv; keine Kontrolle von Inhalt oder Profilen.",
+    "pdf_page": 66,
+    "detail_projections": []
+  },
+  {
+    "name": "36_generatoren",
+    "caption": "LLM-Recall nach externem Generator; menschliche Gegenklasse in den vollständigen Cross-Model-Matrizen.",
+    "pdf_page": 67,
+    "detail_projections": []
+  },
+  {
+    "name": "37_qualitaet_latenz",
+    "caption": "Qualität und Latenz innerhalb derselben Aufgabe und Testmenge; keine kausale Zuschreibung von Zeitdifferenzen an die Anpassung.",
+    "pdf_page": 68,
+    "detail_projections": []
+  },
+  {
+    "name": "injection_pairs_muster",
+    "caption": "Gepaarter Injection-Test: ASR nach Muster, deskriptiv; Teilgruppen sind explorativ.",
+    "pdf_page": 69,
+    "detail_projections": []
+  },
+  {
+    "name": "injection_pairs_sprache",
+    "caption": "Gepaarter Injection-Test: ASR nach Sprache, deskriptiv; Teilgruppen sind explorativ.",
+    "pdf_page": 70,
+    "detail_projections": []
+  },
+  {
+    "name": "personalization_named_salutation",
+    "caption": "Explorativer Vergleich nach Textmarker: Namentlich wirkende Anrede. B: Basis; A: angepasst. Referenz-n zählt alle positiven bzw. negativen Beispiele der Gruppe; die FPR verwendet alle negativen Referenzfälle. Textmarker und binäre Gruppenzuordnung sind getrennte Merkmale.",
+    "pdf_page": 71,
+    "detail_projections": []
+  },
+  {
+    "name": "personalization_recipient_context_phrase",
+    "caption": "Explorativer Vergleich nach Textmarker: Empfängerbezogene Kontextformulierung. B: Basis; A: angepasst. Referenz-n zählt alle positiven bzw. negativen Beispiele der Gruppe; die FPR verwendet alle negativen Referenzfälle. Textmarker und binäre Gruppenzuordnung sind getrennte Merkmale.",
+    "pdf_page": 72,
+    "detail_projections": []
+  },
+  {
+    "name": "personalization_proposed_coverage",
+    "caption": "Abdeckung der Personalisierungsgruppen P0 und P1.",
+    "pdf_page": 73,
+    "detail_projections": []
+  },
+  {
+    "name": "personalization_proposed_0",
+    "caption": "Phishingerkennung nach P0 und P1 auf PhishFuzzer. P1 umfasst jeden erkannten Empfängerbezug.",
+    "pdf_page": 74,
+    "detail_projections": []
+  },
+  {
+    "name": "personalization_proposed_1",
+    "caption": "Phishingerkennung nach P0 und P1 auf E-PhishLLM. P1 umfasst jeden erkannten Empfängerbezug.",
+    "pdf_page": 75,
+    "detail_projections": []
+  },
+  {
+    "name": "personalization_proposed_paired",
+    "caption": "Gepaarter Injection-Test nach P0 und P1 auf E-PhishLLM. Die Gruppe stammt vom Trägertext; Personalisierung wurde im Versuch nicht variiert.",
+    "pdf_page": 76,
+    "detail_projections": []
+  },
+  {
+    "name": "personalization_proposed_2",
+    "caption": "Phishingerkennung nach P0 und P1 auf Cross-Model. P1 umfasst jeden erkannten Empfängerbezug.",
+    "pdf_page": 77,
+    "detail_projections": []
+  },
+  {
+    "name": "personalization_proposed_3",
+    "caption": "Injection-Erkennung nach P0 und P1 auf Contextual Paired Email Injection. P1 umfasst jeden erkannten Empfängerbezug.",
+    "pdf_page": 78,
+    "detail_projections": []
+  },
+  {
+    "name": "personalization_proposed_4",
+    "caption": "Injection-Erkennung nach P0 und P1 auf LLMail-Inject. P1 umfasst jeden erkannten Empfängerbezug.",
+    "pdf_page": 79,
+    "detail_projections": []
+  }
+]

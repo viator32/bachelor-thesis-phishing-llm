@@ -1,0 +1,15 @@
+{
+  "evaluation_scope": "External source evaluation after exact local overlap exclusions; not a near-duplicate/pretraining audit",
+  "selection_policy": "Use this frozen full file without --limit; groups need not be two-row pairs",
+  "tasks": {
+    "phishing_origin": {
+      "splits": {
+        "test": {
+          "path": "data/evaluation/external/ephishllm_phishing_origin.jsonl",
+          "rows": 16606,
+          "sha256": "bf472d39d2f1619acb0919baa9daa6d04249a3df7a1c99c33cfc9af8c9761186"
+        }
+      }
+    }
+  }
+}

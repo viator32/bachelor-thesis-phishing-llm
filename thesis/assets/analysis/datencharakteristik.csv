@@ -1,0 +1,8 @@
+dataset,reference_origin,n,median_input_characters
+PhishFuzzer,human,212,1145.5
+PhishFuzzer,llm,212,1914.5
+E-PhishLLM,llm,1000,626.0
+Cross-Model,llm,507,1389.0
+Cross-Model,human,493,844.0
+Contextual Paired Email Injection,unknown,872,778.5
+LLMail-Inject,unknown,1000,1066.0

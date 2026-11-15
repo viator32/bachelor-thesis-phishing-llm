@@ -1,0 +1,36 @@
+services:
+  api:
+    build: .
+    command: uvicorn llm_phishing.api:app --host 0.0.0.0 --port 8000
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - ./:/app
+      - /Volumes/TITAN5/models:/Volumes/TITAN5/models:ro
+      - ${OMLX_SETTINGS_FILE:-/dev/null}:/run/secrets/omlx-settings.json:ro
+    environment:
+      MLX_BASE_URL: ${MLX_BASE_URL:-http://host.docker.internal:8080}
+      OMLX_SETTINGS_PATH: /run/secrets/omlx-settings.json
+    ports:
+      - "127.0.0.1:${API_PORT:-8001}:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 12
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE_URL: http://127.0.0.1:${API_PORT:-8001}
+    ports:
+      - "127.0.0.1:${FRONTEND_PORT:-5173}:4173"
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped

@@ -1,0 +1,64 @@
+{
+  "source": "saved LLM exports; unchanged inputs and reference labels",
+  "datasets": [
+    {
+      "dataset": "PhishFuzzer",
+      "path": "data/processed/comparison_phishfuzzer_test.jsonl",
+      "rows": 424,
+      "sha256": "f91945d8dacb456928daf7627322ff3fb79d07ebb656310afbbeca3f957527ea",
+      "source_run_id": "llama31-8b-instruct-base-4bit-phishing-origin-he_phishing_origin_PhishFuzzer_test_20261024T155758Z_143d8e78",
+      "source_records_sha256": "7af8244099497de9c97de41aa5a41c0e5240d5d4d7ed7057dee155f54c244c50",
+      "selected_ids_sha256": "d979be7d6fdbd1e7c2374805615b5eebe46f439d64ddb5e5547525f8b75442ef",
+      "unannotated_sha256": "2ac7c68eb6487eafb9545e2132bc44a4c8524316fd361332fdbc3e4cb702c6c1",
+      "personalization_assessment": "assistant_rules_v1; provisional metadata, not reference labels"
+    },
+    {
+      "dataset": "E-PhishLLM",
+      "path": "data/processed/comparison_ephishllm_test.jsonl",
+      "rows": 1000,
+      "sha256": "a5c8dc3fe6b4fa2cb7e95ceb55418ca6ebe5a25e264cb371290537ca625811f3",
+      "source_run_id": "llama31-8b-instruct-base-4bit-phishing-origin-he_phishing_E-PhishLLM_test_20261024T172901Z_8da3e130",
+      "source_records_sha256": "bd47c6eb345dde7db47d50244909f60f85b17a1fcb52d78eee32092a80dfadfa",
+      "selected_ids_sha256": "ec1cb5614306193ef57ba99ee830dc035e74f6c102294454852480795bd51437",
+      "unannotated_sha256": "4203396b57d0a39a7c52b3989c82e32f8e69151839721976d50ac6b77c75e37d",
+      "personalization_assessment": "assistant_rules_v1; provisional metadata, not reference labels"
+    },
+    {
+      "dataset": "Cross-Model",
+      "path": "data/processed/comparison_crossmodel_test.jsonl",
+      "rows": 1000,
+      "sha256": "1ebb4b70455d311622f93977ff9f20f2c351d45797fa636392d35e656f803b71",
+      "source_run_id": "llama31-8b-instruct-base-4bit-phishing-origin-he_generation_origin_Cross-Model_test_20261024T174539Z_d8aa80fb",
+      "source_records_sha256": "fb72edcc2a18411bae63dfc1bd8cbdd2865b8ec81c5c67cc8698dae3ea5543d3",
+      "selected_ids_sha256": "59a53e2d0dafa1ea1d479160794d785f9303358a5a8d0892141b7281998cb23a",
+      "unannotated_sha256": "07a71919c7acb97645c65f986f7a54178a3c72935fe9af0318d9d4170166ae44",
+      "personalization_assessment": "assistant_rules_v1; provisional metadata, not reference labels"
+    },
+    {
+      "dataset": "Contextual Paired Email Injection",
+      "path": "data/processed/comparison_contextual_test.jsonl",
+      "rows": 872,
+      "sha256": "492ad031f4b73921076d66f7aa3fcd52a73b7676a141fb44709c4cf45c34ba15",
+      "source_run_id": "llama31-8b-instruct-base-4bit-injection-heldout-_injection_Contextual-Paired-Email-Injection_test_20261025T081621Z_ccc2e27b",
+      "source_records_sha256": "b804448afc52be9cd8b9a71ea320236ef004e8212a17c5406d3234f5b56ea4a2",
+      "selected_ids_sha256": "b2134c1de28c4f78c64abb5589745c60dad7a78613a8f1d68f976f4ee92a29a9",
+      "unannotated_sha256": "6e8ec24f3a80439a759b4691e6fdc945d37bbdcf706f983eeecae14269e563bb",
+      "personalization_assessment": "assistant_rules_v1; provisional metadata, not reference labels"
+    },
+    {
+      "dataset": "LLMail-Inject",
+      "path": "data/processed/comparison_llmail_test.jsonl",
+      "rows": 1000,
+      "sha256": "457a99a8ed1ec6acb25222425da646f64487850d3d8be9458ea8c2e4e831d76e",
+      "source_run_id": "llama31-8b-instruct-base-4bit-injection-heldout-_injection_LLMail-Inject_test_20261024T215216Z_0b0bb21f",
+      "source_records_sha256": "8e360814c46933aba6391e018321d463c55104b41e6bde168f879d0946845b35",
+      "selected_ids_sha256": "d9e2dd4af7275bb57c3796884a030f05b279b7789f04862a7ae5780c4dccd0c5",
+      "unannotated_sha256": "867261849873b630cb1222e0db23c673715228925399cfc749ce2e5470f104c3",
+      "personalization_assessment": "assistant_rules_v1; provisional metadata, not reference labels"
+    }
+  ],
+  "classifier": "models/tfidf_Phishing_trained_classifier.joblib",
+  "classifier_sha256": "45ee9498975933c5436054ae8a460207fcbbcffb7897a026bcb4f8d994ea5b3c",
+  "annotation_template": "data/evaluation/personalization/comparison_review.csv",
+  "note": "Test only; no new detector calls or training. Original input text and reference labels preserved; additional provisional rule-assisted personalization metadata, not human reference labels."
+}

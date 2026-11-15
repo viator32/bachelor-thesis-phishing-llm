@@ -1,0 +1,12 @@
+config_id: tfidf_logreg-phishfuzzer-fixed-test-v1
+method: tfidf_logreg
+task: phishing
+model: tfidf-logreg
+dataset_path: data/processed/comparison_phishfuzzer_test.jsonl
+tfidf_model_path: models/tfidf_Phishing_trained_classifier.joblib
+seed: 42
+split: test
+languages: []
+max_input_tokens: null
+limit: null
+personalization_annotations: null

@@ -1,0 +1,1482 @@
+{
+  "version": 1,
+  "prepared_on": "2026-10-21",
+  "split": "external test only; no fitting",
+  "preparation_script_sha256": "2b4499641d00b168020c92582a25cdc6143e67dc473c0ea29544f56cdec44357",
+  "missing_label_policy": "null means unannotated; do not score as false",
+  "overlap_audit": {
+    "checked_training_sources": [
+      {
+        "path": "Phishing experiment runner/data/sources/datasets/training/Contextual_Paired_Email_Injection/paired_emails_dataset.json",
+        "texts_indexed": 8400
+      },
+      {
+        "path": "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_entity_rephrased_v1.json",
+        "texts_indexed": 39600
+      },
+      {
+        "path": "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json",
+        "texts_indexed": 6598
+      }
+    ],
+    "policy": "exclude exact normalized body/full-text matches to all local training-source rows and pilot selections",
+    "limits": "not a near-duplicate audit; saved model-specific train splits are absent locally; pretraining overlap unknown"
+  },
+  "datasets": {
+    "ephishllm": {
+      "full": {
+        "path": "data/processed/external_ephishllm.jsonl",
+        "rows": 16606,
+        "sha256": "7a0a6d072ca450ac6f06b9629b1668ef671e0b34f1e4d2fce3a5922ed8529d93"
+      },
+      "task_inputs": {
+        "full": {
+          "path": "data/evaluation/external/ephishllm_phishing_origin.jsonl",
+          "rows": 16606,
+          "sha256": "bf472d39d2f1619acb0919baa9daa6d04249a3df7a1c99c33cfc9af8c9761186",
+          "manifest": "data/evaluation/external/ephishllm_task_manifest.json",
+          "omitted_missing_labels": 0
+        }
+      },
+      "config": "configs/baselines/external_ephishllm.yaml",
+      "input_rows": 16616,
+      "duplicate_rows_collapsed": 0,
+      "languages": {
+        "it": 2701,
+        "en": 11492,
+        "fr": 12,
+        "de": 2349,
+        "es": 35,
+        "zh-cn": 3,
+        "ja": 2,
+        "da": 4,
+        "no": 3,
+        "sv": 5
+      },
+      "phishing_labels": {
+        "False": 8393,
+        "True": 8213
+      },
+      "injection_labels": {
+        "None": 16606
+      },
+      "origin_labels": {
+        "ai": 16606
+      },
+      "generators": {
+        "gpt-4o-mini": 16606
+      }
+    },
+    "crossmodel": {
+      "full": {
+        "path": "data/processed/external_crossmodel.jsonl",
+        "rows": 9840,
+        "sha256": "9c322943ef6393683a7f5a9cfca46d3b4514208d568257717a9797549fda8958"
+      },
+      "task_inputs": {
+        "full": {
+          "path": "data/evaluation/external/crossmodel_phishing_origin.jsonl",
+          "rows": 9840,
+          "sha256": "224f92d857ac004b60dd9771112841f6693b64c12913ace11db0da0ce8cb5b68",
+          "manifest": "data/evaluation/external/crossmodel_task_manifest.json",
+          "omitted_missing_labels": 0
+        }
+      },
+      "config": "configs/baselines/external_crossmodel.yaml",
+      "input_rows": 9986,
+      "duplicate_rows_collapsed": 0,
+      "languages": {
+        "en": 9840
+      },
+      "phishing_labels": {
+        "True": 9840
+      },
+      "injection_labels": {
+        "None": 9840
+      },
+      "origin_labels": {
+        "human": 4854,
+        "ai": 4986
+      },
+      "generators": {
+        "None": 4854,
+        "gpt-4.1": 1665,
+        "deepseek3.2": 1665,
+        "llama-3.3-70b": 1656
+      }
+    },
+    "llmail": {
+      "full": {
+        "path": "data/processed/external_llmail.jsonl",
+        "rows": 190966,
+        "sha256": "b4e227d31337c46eb252481120f8a16c7f9d118484336581b9ec78079672b37c"
+      },
+      "task_inputs": {
+        "full": {
+          "path": "data/evaluation/external/llmail_injection.jsonl",
+          "rows": 153986,
+          "sha256": "6fbec31870bacc3fb8ee933b59877b253bfd63d89d19c39a46da84f9fd76c422",
+          "manifest": "data/evaluation/external/llmail_task_manifest.json",
+          "omitted_missing_labels": 36980
+        }
+      },
+      "config": "configs/baselines/external_llmail.yaml",
+      "input_rows": 190966,
+      "duplicate_rows_collapsed": 0,
+      "languages": {
+        "en": 190966
+      },
+      "phishing_labels": {
+        "None": 190966
+      },
+      "injection_labels": {
+        "True": 142310,
+        "None": 36980,
+        "False": 11676
+      },
+      "origin_labels": {
+        "unknown": 190966
+      },
+      "generators": {
+        "None": 190966
+      },
+      "notes": {
+        "source_counts": {
+          "phase1": 160741,
+          "phase2": 37303
+        },
+        "conflicting_binary_labels": 90,
+        "annotation_policy": "published API/judge labels; Unclear/conflicts remain null",
+        "phishing_labels": "unavailable; injection absence does not establish legitimacy",
+        "original_tool_call_ASR": "not reproduced by this classifier adaptation"
+      }
+    }
+  },
+  "excluded_overlaps": [
+    {
+      "dataset": "ephishllm",
+      "instance_id": "ephishllm-344",
+      "reason": [
+        "existing diagnostic pilot selection"
+      ],
+      "text_sha256": "360f752c6772d9017074811e1ff8875bd0d02818bc761cc7966035d72a5346e6"
+    },
+    {
+      "dataset": "ephishllm",
+      "instance_id": "ephishllm-1020",
+      "reason": [
+        "existing diagnostic pilot selection"
+      ],
+      "text_sha256": "70a8fd55db1be15e2d93e164e94f83b8964bef726d8f115670cfbc1685de149e"
+    },
+    {
+      "dataset": "ephishllm",
+      "instance_id": "ephishllm-2065",
+      "reason": [
+        "existing diagnostic pilot selection"
+      ],
+      "text_sha256": "582bdf8d3f72fd0cceb3e0ee4bff651c0638436f76656da95133cb79c13819b8"
+    },
+    {
+      "dataset": "ephishllm",
+      "instance_id": "ephishllm-3141",
+      "reason": [
+        "existing diagnostic pilot selection"
+      ],
+      "text_sha256": "25b3cb9a2f6bc5963a7836e718cdb34a4223537bad8a9aa6055896f04998a3fa"
+    },
+    {
+      "dataset": "ephishllm",
+      "instance_id": "ephishllm-5376",
+      "reason": [
+        "existing diagnostic pilot selection"
+      ],
+      "text_sha256": "7f1cf5c1f663fd33247ed9302b0a8af42605a7d6a5a3956e0cc599c361169f44"
+    },
+    {
+      "dataset": "ephishllm",
+      "instance_id": "ephishllm-6445",
+      "reason": [
+        "existing diagnostic pilot selection"
+      ],
+      "text_sha256": "79d3f49d26262fe3afd8c3f9d02c66d66d70d0a7f2c98170ce0ee2ad09d6e79f"
+    },
+    {
+      "dataset": "ephishllm",
+      "instance_id": "ephishllm-8446",
+      "reason": [
+        "existing diagnostic pilot selection"
+      ],
+      "text_sha256": "82f3c0646a392c2834c809273548039e3895fac564242a6a025b837dc7fa1d49"
+    },
+    {
+      "dataset": "ephishllm",
+      "instance_id": "ephishllm-12345",
+      "reason": [
+        "existing diagnostic pilot selection"
+      ],
+      "text_sha256": "3c9b140a23c68344a2aafc1ccc8b9a9eca52db29ad78f2555205165be0614fc8"
+    },
+    {
+      "dataset": "ephishllm",
+      "instance_id": "ephishllm-14159",
+      "reason": [
+        "existing diagnostic pilot selection"
+      ],
+      "text_sha256": "41d0d8df26bec3e31d2cd2971dfbc27ff93065ef3a959b707a5ae0ae0e5fd80b"
+    },
+    {
+      "dataset": "ephishllm",
+      "instance_id": "ephishllm-15169",
+      "reason": [
+        "existing diagnostic pilot selection"
+      ],
+      "text_sha256": "c7254e9ac0f23927000bd97663dc040dd2bc8d16d0e733dec0b1d1d1678a83c4"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-15",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "d5b734b737387b6f6fde9b6f1dee49dc0c2bc4a3131812bd56f46e55622933ca"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-36",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "db5d883cd6474fbc5cbbaf85aebb06230a97e062bfb7efb24478dee85c3963c6"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-129",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "803ecb32228577311fa96c27306382b10072826a56c4979944448a6726fcdfed"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-137",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "7f95e94915f9cf1c90382678b54ba9052e8806b5867bf75d4bdba67535b6dc55"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-140",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "2e3f5eab2b1bd97ccd95f25585ee9312dee0785ef61cb97374d44925ad1c2da1"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-177",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "ec6a02631cd830301699b7d634fb769458dc485b4d0a469f1615e3e1d0116387"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-185",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "9033cbb6635b8db75aab507abf876937f76845651d7fef3b751f438b24904221"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-204",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "a8235c61d789dc181843310966c5dd49e4421e0eda4aa83a526fb5d94864d295"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-208",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "21b99b997ca4b8c2a0cf44e218eeca4bcab4f535f3d4380ccdf1c297c0a417ca"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-223",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "a2f6d30a70600c9f8129553ad7e9543bdd058936da3c6ef06abeb3bef1031d00"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-236",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "78e1e3f5107af18ae0e9913f0df41d25df6cc405da963366412260b27ef87721"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-285",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "96a37aead23555751431bc23844c0aa78530658fcb24e999dde3d6cf9eece8a4"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-347",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "24dec607b5cfba77dc6727989c6cadaeaf9ec2f8d956e7b28256eb0add429551"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-365",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "4063ed836a41e2bdb290f32cb34e813df4da1b7970704f2153ed8f2cf9d4a896"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-440",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "5fc4387df2ef8e762619c4ff6a5a5e42f907570b3b37c48d01006582bbe749fb"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-451",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "bf748e4e788278825e844f18e4645d0337d19eb3e9f1181fdf047371518aa6cc"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-500",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "d0cb7301970216a871be3682d37e38b98afad9182aa1dfb712fcb6a2f10cc65d"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-501",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "9725cdda4796432d9c8e18049c43e7805fd7538849755c4e87b8314fbb6ccb57"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-510",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "c3dc0dc62c6fea8e21d6cb21133c838cc379e37106275cff1c39d1aa0d32edad"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-535",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "284bc09cfa7c9cb3a74dd49220c5c17a1927005ea0bbb8685ae7dcf4e405dc5c"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-537",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "289ee430a8267bcc8a74718fa8df41b3b5a7d89be84452666bf619ac13611636"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-552",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "7ea409bc00f901a7e001fa163b3f46d9714e283c384edec67e7f7907fcb0c6b1"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-566",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "f01feb3418073383cfadb8975e7d3e268ec2adfdc17f6b26cae079bcfb161a65"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-578",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "2afe5584933c1f6c5b11814841395d269903fb7442144842edfbe703d9aeb8ac"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-583",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "01694864e04715efa5e92f6fbb7155996909da4047cadd3d099b8e0a491a60d5"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-605",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "93e51b6bdb20d8a218f32c70e59a32d893ce961047f0ce90d4eb2f022feaf690"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-646",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "030e33c98c5f5fe642f185be511f52e5eee82f32b725df7b99fa48e7bca9a333"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-683",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "55402739d31e96449ac27853b8bf470f4621b33d795f03340451f21f1a26dcc3"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-714",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "0d142a2af94b42daddb6a3baf6c72c2001dd66509fba28ccd5623e81949406d2"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-742",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "e5a3cfd6f7a222c0cc7752e5952f6e783052ad0ca262c2435903484289237ddb"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-754",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "8125e2bd965707c0bd9a20de34a2b3972cd7f2235769d019a3daf1ec5c479341"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-774",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "c945aed46cf1dff1c9571fddfe3eb424b51ef40eb0df133a041bf45ff001b292"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-779",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "ac2507b5a2d8752ec39ac93dfe1cbd01ddcf2cdd1d247602de70f17ff73335fa"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-814",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "3ce934bf2b81c6b88dee524b631d7e8bd507e52d41f811ab1a0ae7c8504dabfc"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-815",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "63ef80ded195fa42d816e61800fc74318d305003103b67161e3b5a9cd6aecee8"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-822",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "074ba45ccd2c6a413aa0a828f79818ddcf0a17690ff34c5e4e5cd9572b07c3f3"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-864",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "d1a38fa018cd64b96d9abeb4a715244c952baa2f07dfa250abbc3e8f748ce554"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-887",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "878bec87d05b207b5c98c1c603f21618025ca7672fd90acc43794bc2d3ba55f8"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-908",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "da91804f24a58821bf69110babfa7b4334cf714957f349e69177cd963a151068"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-937",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "ab70a0bb560d45b22bdaa9cf31a192334d147ce26b7493c353593e523e18291a"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1013",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "3c27e7926cbbd3470c7e7afd4ba242f47fe2149db3206e78959534e9aee72645"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1081",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "424aeac682536f3a1cc0adcec72834fd6150c24b7f5c694db5f7f4e2d456e321"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1140",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "48266b4b65e8b938dc4c55a3a878e45dbedb57e358f4f88644f1279cac64dca8"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1195",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "ae0acb22c85a9fbfc6e40ab570845e5bdc0ae1aa849bfcb0f96c24da68198001"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1198",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "5f6e72bf9574c718de5ba17fb253ae9a2e64bf5cd12da2d1e07d86fd6041cc23"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1214",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "64be785c27b6f7fbd6fa3a6261ad33734be0d7f8c1c286ec6e4538353790e99c"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1217",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "1b347e39c89ef3fce11d4dbb6de4bb0ef52003dbf942d14f3830e08a393fb6b1"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1251",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "5ac8fbcc96fbfc20bae2f3451bece37f0d67c7134013b41aaca518e6806c6bf3"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1283",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "4841147b369d35b1e95d5b42ea708cc77ce46f1869845c8fa177b2777bd8dd33"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1304",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "b15b871309e92fc6d3a4109c6b858cb72eca76e2b5c5ff2da92fbcddfde136a6"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1338",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "66757b6c3fa61a514a93bc6a885253f7afcb5031b25e9df71a5eb2cda7d492c2"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1421",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "57762636610461fc22abb832a4d6d43a500608d772a9963d6caa55d902dfa829"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1445",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "c24ea0ce5bcef824297a4dbc56ae1d3758009f79fcfbd44864dcbd855d176630"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1536",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "b818c7e87d2a43a7bf33b28c9a9fb7d8632d3697d2b9b775aa160e19cde66911"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1538",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "00a638108cb7e30fd6e003452f6b27e3046ad0f0686cf7785d405a5e097856cb"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1575",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "803b0c6507b001ab02a60b142d475a8b92b04ed50df2c9fa6dcaf28ef19d744b"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1707",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "a37fe201c37e2e1490f898be6db5953b70ba790765be232dba344440e9c526ff"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1743",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "4d520b5d9af98bc2b7eb4b04aaa6ad7696580a7ebd713a6f3a1514dcb43d59db"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1843",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "714945cb587302c2f48f1ebbfa6e011dbf20ad3c1fe924bec5de82440179a96c"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1878",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "bd6df7e580a7102569617938d207fe57937617bce7f223044c51b4e3d2a5349b"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1935",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "2b46b90982ce512f618b17c62450f7a5782685af41450b3d0cd459a4c5197647"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1983",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "6b142364dd5dacadbf90ee87411d6cb1b7783ccca5f205accb4fa8cec4043786"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-1999",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "c8c357172413ba224d4d257233b7f6dcacec7162e8e485898a10b0f97c2144ad"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2024",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "b730e6996cffc25bd7dbff30a4f743529179c023705587cc064a00406f4a8426"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2193",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "e4d471f80a1d31020c7d6d4ba7b359d6680e9c1a3104d6cb1c820c45627aa605"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2208",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "35fe956af5fa58aa8eef02c7ed3c79277f0d5004ecf7e498144154fe91507b78"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2319",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "da1284af86fe4dee3e0a9283d1214e5c534421da4ecb8d4c348d41421eac8b89"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2329",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "9df6f6d97b666e9ad9d1ce0adeaf26f2481fd45ed299261ad4dec181bf5af101"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2363",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "8998724cb7840e8ec77ba519a227e165ecd45b76dcc017fbcd2d6310a99a9fd2"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2383",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "68587d50f06cdf8ca6dc039b2b7b953db53609ae80f1e5650f63edec536ea1e7"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2478",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "a34d26608fe84bf53d96fb57214aafbefb8fbec00fa365212eff998f45c8d716"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2482",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "ec646348c5446d76d72048419b96ece6c7d98a26b1748706526ff9498b947ac4"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2487",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "bd5d90161c8f6f568caa8ec1f12e2952e83d2aa86c004fc77289e0894e4563a6"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2562",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "26d857dea5c513ddeed2718d1a058de1efa936fa6bacb4e658738429fd19d981"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2623",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "1bc8290a7bde7cee30d86feb7253599bee76841e4b15d8a26d713e37c9f01a7d"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2659",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "3d0ce881fbf76061c119459127420cd4fc91dadcbc50d5987c69e1c6e9f73984"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2692",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "b60695bd075923a0a1429d23342e44665fcfa531c1b9045d8086b241578fa31d"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2693",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "1f0721be469cd8035bedded4b2a33bc5b6ca48eb573d552e9833ca857c981895"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2710",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "fdbc97336311915a77b35a2252284dfe0e53fdc08f67cfa902249188a9000274"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2747",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "22b6d5f3a5f319c05a2253d8d894919b3404b38c2cbe8b2f2b73ea5672e57e3e"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2787",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "37aeae08bfa18acf17edbe825962ad99b5caf9bc3db9293a5a769ced34393aa2"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2790",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "9d1cefed18b3e0bd8149ec70702f5e1c73672b349bc7cf0f017a1b03eea49bdb"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2801",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "a4b9ed9c7739fa53731b5fca9ae0216b1da1e6faa17589c5cac573a58cd3b005"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2833",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "525fe9ae6dc2c799e704866dbf7071ffd67f5fcfb6bda787e43ae1b93da9d7b7"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2860",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "2c401a32288ff0f0c86f7b2f56fcd92c8fc103b1c7869b2777846aa65ee116a6"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2884",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "48967e162cb2035e0f966441615065f3a3d1ad5c8ec8d2c5fa5643875d680f2f"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-2965",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "529ebf19afcce69f30b0c478df10c05a56cac8b2104ab9fdb38ff88fef058ac0"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3001",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "df4d04f5a51e016c4f17d39fb318123a265a3e145f55e5b1457331ece30fd7c1"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3018",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "b63ba71cbc38f01cb476d51265de79b5e381f4ad25ba9e5500eaa66677639762"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3055",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "5b8a9c21e1d2d5263aa5b4eee54ff45a5e9ce0be7281f072b8ee804a23bb5dec"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3085",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "72c88c6525b18c31be51de02e510080bd687dfc172becaf79219bc498a938d84"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3133",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "b0da346ce5eb6144c32c114555b53f1b2541b5007360d592adbd4b2bcac5f9fb"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3171",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "a2bb641596a5409c47ce7845258c57053a8658143d5cbddec9c703b9141d7c17"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3202",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "aba3670189070caa8640def97325f1d8d83218c5972bbfcaca0d13ac7b331fa9"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3203",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "ff6559ab66f1b5f83aaef0763ee984ff4729eb8d4a097384c1bd2fe432ffa6e7"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3220",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "d414c62ec04749d29420bb02a7bb72eea37b8f53158ea47fee54892cf63c6d76"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3231",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "e4107ee51dd0e24cda0f999e6857f421ee9fb03f65eb245f2d26ce77fda09e6f"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3247",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "b8010cb29524a8a3cf08e6378d1c86dcba06afaba1dc1f910a371fa90bb98846"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3281",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "efb37cf1fefbb3446775e03367226bf3834399556125a55d7f65fa3e86caa3ed"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3309",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "4ab78428a77df089d1097fbc270b207c51889ef93c35b8fcabbb9c31fcd4cd60"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3368",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "37ea9ab7128f536f0aac112ca57003866f454a5ae8a91933cd85d15a3e613a27"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3397",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "991090e73045b92ebd4f3a81f29cfe94534c719f89e80345ef92e410bf0d98b1"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3403",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "b08f747ad24b3ad761941dd25c9e908344e503a22b02ae3dde08f5353343abf9"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3406",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "4980a7d339615cdf8bf0c123f79eada9a15c807d45f4c891c223f313480c8494"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3442",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "4ef16df0601b643833974f4b69c02066242787b869218dca6dedf03b510a5d2d"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3489",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "6c6bb493c9b62acabc2bb0eb6f944f39fdf330f6c6a26dfc90b644d7c7800d2f"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3548",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "6e9433ea321f53cd66040b08bb70309221bca545e873af906bff4308b49c0e2c"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3569",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "e185f13f27293e105bfef7c83f403e2e5cf8b722a053feca53f82993ab597dcb"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3582",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "438463a94e9b49e00d4bebaf3fb315cb23cb6672e08fe87f50648965ec98acbd"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3675",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "937cb5b36f8c5d17af22d41009ffe998387be7334f1c0ed907e469a04f439586"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3718",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "a8b70e41b30300732917a5be2d1f50f6bfa954ba11ae3da9c889b552ec9e70fa"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3728",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "8385d49bebb0b1925044efb0a627ecca0b230b0c0588a8b4a288f4bb45db43ac"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3904",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "179a8238b2e19d491a6d586cc297a3f5a87e657753b77fe1707bf31668e25474"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3919",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "de3980ad77ae9d63b4fbd5479c4cd5bf881b701ce7f1a1cdc7416cf9f4524d16"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-3931",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "cc1affa50da755da13d706deeb5de5c820465586c0de94a54fbe359685d181f3"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4008",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "b08a3d9befd1720bb1561edf83e944b616e24c2d28cf7f1884d4acdebd8c1287"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4079",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "b4a51b2d64926fcd4aa56e1c5376ea44040bef61c5f0d4b52f097ab4af40d048"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4090",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "b1f0467e243691793204777e041e605909ee0ad394f7d23a98d3ce475274e1e9"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4183",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "980c69f99b815a44be6acaa96aaf4504247f1b8959810bf76bd6800ada760489"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4260",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "65ffae69bcdbf40ab91d2ab6ba1180e022aa9f6f8fb5fb10ded2d7fa84c312b2"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4316",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "0749cd5b3a8cfefc8996ec5556e2ac0d15a7d0ea644a2043fd8e4e8bcd307a99"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4329",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "67a55e44bd54174c57828e5e567c10f4d31c94514d64fecb3778aba6abb09747"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4330",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "f74965df52a9dc9bf073842780b9a70c1dbb6bb8ae4d1eb5c2d79d3821ba82f3"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4349",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "b491b0ea0a58721001deaefee5bdffef8ee355c6bd41a7bfba08f0420133b012"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4446",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "ea53a5bec4b9e2c7c177d2afca3d6756bdff33b882f7c1f263ff1c18fbed0ac6"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4450",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "948841f540fc67c193e8dca4b1b7a84b83583db57dadf7b6e7d9735b3d36fb20"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4478",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "a4036a70f4a7351344ad32dd0286c0376d48ce1f7583f584bd5341fc209b3c61"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4498",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "c8faf8f119b391da5d980413e20d9c55e7c1835feecd72987fa235337606d5d4"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4554",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "c8de0a4f7892b14cb517d14f4705a7508af4b00f92d25d526c8913e7e90316a0"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4564",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "d6e26cd6fa1e1324729e4053da7669c9765049dba9c7cf67c35fba513dbc087b"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4615",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "bcef89d030d0c11a3eeb56eec2d233aaae618993e40bcb0de33145faa20668ca"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4617",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "95be42c8061ac15d447bd6d687f1a3da6d7f5b768dddd2b829db613c8692c158"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4645",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "ac092d2b1af7394cc5176a34add0c865a8f9e09a57189c5023be21d6f79e2ac4"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4676",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "86a6d294cbc3f1b62f533dde3cfd3285ff3f30f27a4160b54edb5b881f234aca"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4727",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "7835adcb9a59a7acb9368e97c9a79ffecd56c41143c141ac474f2b81889995f8"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4765",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "1188209eea7146f2767eb1295f1b7c9452688214c60f9d188fc9b2f5383f4f2f"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4767",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "a00ba512658fbec7ac1d162c932ae71d2598fa9fb3e8ac42ec1c8a1a2d40358b"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4780",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "7c0fc00f6bdcc8f1ec395bdf7d11bbc3ca4d0afd9babac552a043aff18dc6cb7"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4814",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "fda6e2c0076c96d6e30b4863591d2ae28c23ce53b2a268e0085641e68acd06fa"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4850",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "0b4b7d36d9bceea4f4a1cccdd18d40001ce42c489c81982bed709b8387fc1e1d"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4875",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "497ff37ede54267c5a071a1acd0b48b157d9e7445ff100a0b1afc2aa73c2902e"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4894",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "9c52c3cee680f7d1ff75c51700e61f37490a83dfbd0dcace94fbb419c0f8bbff"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4903",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "8872b089cfdf442d6617a4d804cb2773ff76c5b2dca162cb1fe03954b973f415"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4941",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "2db090f2987048bd7066dd4ff01978b53795b66aa7bf1ac9823e9facc176acd4"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4947",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "f0e7a767fe8737cfd7641eb4e1ab5d65f86238b33adfe8e236bd0362b2ba113e"
+    },
+    {
+      "dataset": "crossmodel",
+      "instance_id": "crossmodel-human-4971",
+      "reason": [
+        "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json"
+      ],
+      "text_sha256": "239bc714dbc229280484a6d1fd948640d47b5889b2f30052e57af687e1f27c20"
+    }
+  ],
+  "sources": [
+    {
+      "path": "Bachelor_PrototypeV2/data/metadata/external_exclusions.json",
+      "bytes": 443,
+      "sha256": "fa1ca1d8052ac4d8560b4240ecdd74eebc4c684f86e09444f284e06bc3972a4e"
+    },
+    {
+      "path": "Phishing experiment runner/data/sources/datasets/experiments/CrossModel_AI_Phishing_2026/cross-model-phishing.zip",
+      "bytes": 7283980,
+      "sha256": "8366769dd18e8c10a78dc5f30389caa70491116deeda8dd5ec27a361717c2d2d"
+    },
+    {
+      "path": "Phishing experiment runner/data/sources/datasets/experiments/LLMail_Inject/emails_for_fp_tests.json",
+      "bytes": 55486,
+      "sha256": "4ddd950b5dbaa8548f5597c886d8e09a051ba07f80a9291fdcca9c2397d22abe"
+    },
+    {
+      "path": "Phishing experiment runner/data/sources/datasets/experiments/LLMail_Inject/labelled_unique_submissions_phase1.json",
+      "bytes": 448194111,
+      "sha256": "691dfa1595d2bd0e731069f233bd5448f7af1c0ebd9732bc6f12dd6cee446586"
+    },
+    {
+      "path": "Phishing experiment runner/data/sources/datasets/experiments/LLMail_Inject/labelled_unique_submissions_phase2.json",
+      "bytes": 68586935,
+      "sha256": "f89af984e345430c3b357903890e30867bf4676f4ef10c138cc7bad218e890b8"
+    },
+    {
+      "path": "Phishing experiment runner/data/sources/datasets/experiments/E_PhishLLM/ephishLLM.json",
+      "bytes": 12275474,
+      "sha256": "56420b143e30343f6db723c3716e10abec9f72a67ba99ae2cc7c3a87b547f51f"
+    },
+    {
+      "path": "Phishing experiment runner/data/sources/datasets/training/Contextual_Paired_Email_Injection/paired_emails_dataset.json",
+      "bytes": 8033299,
+      "sha256": "ed70ce117fc5916fe547d1e432e6a1be17763eb51ee15cdb4f36feb3af03d5b4"
+    },
+    {
+      "path": "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_entity_rephrased_v1.json",
+      "bytes": 48159145,
+      "sha256": "62f9c1231cf7e9d1b4a9740680aefcf8723e689ac60ae171ea4e0eef70f1275d"
+    },
+    {
+      "path": "Phishing experiment runner/data/sources/datasets/training/PhishFuzzer/PhishFuzzer_emails_original_seed_v1.json",
+      "bytes": 8218997,
+      "sha256": "394d542e27dcef57321bc69f0f93b03e5965531f616eb3d3c79416cc60a30765"
+    }
+  ],
+  "llmail_download": {
+    "repository": "https://huggingface.co/datasets/microsoft/llmail-inject-challenge",
+    "revision": "1063bdf01ec8762b812d5e06ee768a06faa5a6f7",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://huggingface.co/datasets/microsoft/llmail-inject-challenge/resolve/1063bdf01ec8762b812d5e06ee768a06faa5a6f7/README.md",
+        "sha256": "d85767e349ab1abbaf43db9390c4e906e34954e5df3a1335c8f1516efa64e812",
+        "bytes": 23628
+      },
+      {
+        "path": "emails_for_fp_tests.json",
+        "url": "https://huggingface.co/datasets/microsoft/llmail-inject-challenge/resolve/1063bdf01ec8762b812d5e06ee768a06faa5a6f7/data/emails_for_fp_tests.json",
+        "sha256": "4ddd950b5dbaa8548f5597c886d8e09a051ba07f80a9291fdcca9c2397d22abe",
+        "bytes": 55486
+      },
+      {
+        "path": "labelled_unique_submissions_phase2.json",
+        "url": "https://huggingface.co/datasets/microsoft/llmail-inject-challenge/resolve/1063bdf01ec8762b812d5e06ee768a06faa5a6f7/data/labelled_unique_submissions_phase2.json",
+        "sha256": "f89af984e345430c3b357903890e30867bf4676f4ef10c138cc7bad218e890b8",
+        "bytes": 68586935
+      },
+      {
+        "path": "labelled_unique_submissions_phase1.json",
+        "url": "https://huggingface.co/datasets/microsoft/llmail-inject-challenge/resolve/1063bdf01ec8762b812d5e06ee768a06faa5a6f7/data/labelled_unique_submissions_phase1.json",
+        "sha256": "691dfa1595d2bd0e731069f233bd5448f7af1c0ebd9732bc6f12dd6cee446586",
+        "bytes": 448194111
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "normalized_unique_inputs": 4296,
+  "normalization": "lowercase and whitespace collapsed; complete saved input",
+  "contextual_pairs": 436,
+  "contextual_pairs_with_different_trusted_task": 436,
+  "note": "Input equality and labels verified across models; not a new training-overlap or near-duplicate audit."
+}

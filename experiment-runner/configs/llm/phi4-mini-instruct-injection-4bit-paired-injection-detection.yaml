@@ -1,0 +1,19 @@
+{
+  "config_id": "phi4-mini-instruct-injection-4bit-paired-injection-detection-v1",
+  "task": "injection",
+  "model_id": "phi4-mini-instruct-injection-4bit",
+  "artifact_dir": "/Volumes/TITAN5/models/phi4-mini-instruct-injection-4bit",
+  "base_model_id": "microsoft/Phi-4-mini-instruct",
+  "base_revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+  "dataset_manifest": "data/evaluation/external/ephishllm_paired_injection_detection_task_manifest.json",
+  "base_url": "http://localhost:8080",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_new_tokens": 32,
+  "timeout_seconds": 180,
+  "input_policy": "full_saved_input",
+  "allow_repair": false,
+  "constrained_json": true,
+  "output_contract": "comparison_v1",
+  "response_schema": "task_native_v1"
+}

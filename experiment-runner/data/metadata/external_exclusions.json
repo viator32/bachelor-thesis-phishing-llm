@@ -1,0 +1,17 @@
+{
+  "purpose": "Preserve exclusions of E-PhishLLM rows previously used for development; no email contents or sample dataset.",
+  "source": "Phishing experiment runner/data/sources/datasets/experiments/E_PhishLLM/ephishLLM.json",
+  "source_sha256": "56420b143e30343f6db723c3716e10abec9f72a67ba99ae2cc7c3a87b547f51f",
+  "zero_based_rows": [
+    344,
+    2065,
+    3141,
+    6445,
+    8446,
+    1020,
+    5376,
+    12345,
+    14159,
+    15169
+  ]
+}

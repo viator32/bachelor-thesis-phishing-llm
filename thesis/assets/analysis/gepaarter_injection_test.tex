@@ -1,0 +1,23 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Gepaarter Injection-Test auf 495 E-PhishLLM-Phishingnachrichten. Recall ohne (clean) und mit eingefügter Instruktion; ASR = Anteil der clean korrekt erkannten Paare, die mit Instruktion als legitim gelten. Intervalle: 95-\%-Bootstrap über Paare (2\,000 Ziehungen, Seed 42). –: Baseline. Eigene Auswertung.}
+\label{tab:gepaarter-injection-test}
+\begin{tabular}{llrrrrr}
+\toprule
+Modell & Var. & Recall clean & Recall Instr. & $E$ & $S$ & ASR [95-\%-KI] \\
+\midrule
+Qwen3-4B & Basis & 15{,}2 & 0{,}0 & 75 & 75 & 100{,}0 [100{,}0; 100{,}0] \\
+Qwen3-4B & Angepasst & 52{,}1 & 1{,}8 & 258 & 249 & 96{,}5 [94{,}3; 98{,}8] \\
+Qwen3-8B & Basis & 36{,}8 & 0{,}2 & 182 & 181 & 99{,}5 [98{,}2; 100{,}0] \\
+Qwen3-8B & Angepasst & 74{,}3 & 11{,}1 & 368 & 313 & 85{,}1 [81{,}3; 88{,}5] \\
+Mistral-7B-v0.3 & Basis & 65{,}5 & 3{,}8 & 324 & 305 & 94{,}1 [91{,}3; 96{,}5] \\
+Mistral-7B-v0.3 & Angepasst & 57{,}6 & 39{,}0 & 285 & 92 & 32{,}3 [26{,}8; 37{,}7] \\
+Phi-4-mini & Basis & 97{,}8 & 13{,}5 & 484 & 417 & 86{,}2 [83{,}1; 89{,}2] \\
+Phi-4-mini & Angepasst & 64{,}0 & 22{,}6 & 317 & 205 & 64{,}7 [59{,}6; 69{,}8] \\
+Llama-3.1-8B & Basis & 59{,}4 & 0{,}0 & 294 & 294 & 100{,}0 [100{,}0; 100{,}0] \\
+Llama-3.1-8B & Angepasst & 74{,}3 & 31{,}5 & 368 & 212 & 57{,}6 [52{,}7; 62{,}5] \\
+Regeln & – & 19{,}4 & 19{,}4 & 96 & 0 & 0{,}0 [0{,}0; 0{,}0] \\
+TF-IDF & – & 60{,}0 & 63{,}6 & 297 & 4 & 1{,}3 [0{,}3; 3{,}0] \\
+\bottomrule
+\end{tabular}
+\end{table}

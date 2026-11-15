@@ -1,0 +1,17 @@
+{
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "Bachelorarbeit (latexmk + biber)",
+      "tools": ["build-thesis"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "build-thesis",
+      "command": "bash",
+      "args": ["%DIR%/build.sh"]
+    }
+  ],
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.view.pdf.viewer": "tab"
+}

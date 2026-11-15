@@ -1,0 +1,11 @@
+scope,run_id,model,model_id,variant,dataset,phishing_True_origin_True,phishing_True_origin_False,phishing_False_origin_True,phishing_False_origin_False,invalid
+main,llama31-8b-instruct-base-4bit-phishing-origin-he_phishing_origin_PhishFuzzer_test_20261024T155758Z_143d8e78,Llama-3.1-8B,llama31-8b-instruct-base-4bit,base,PhishFuzzer,198,200,14,12,
+main,llama31-8b-instruct-phishing-origin-4bit-heldout_phishing_origin_PhishFuzzer_test_20261024T114341Z_e16a766e,Llama-3.1-8B,llama31-8b-instruct-phishing-origin-4bit,adapted,PhishFuzzer,415,5,2,1,1
+main,mistral-7b-instruct-v0-3-base-4bit-phishing-orig_phishing_origin_PhishFuzzer_test_20261024T160916Z_72fc16ac,Mistral-7B-v0.3,mistral-7b-instruct-v0.3-base-4bit,base,PhishFuzzer,194,192,18,20,
+main,mistral-7b-instruct-v0-3-phishing-origin-4bit-he_phishing_origin_PhishFuzzer_test_20261024T161857Z_27b71faf,Mistral-7B-v0.3,mistral-7b-instruct-v0.3-phishing-origin-4bit,adapted,PhishFuzzer,409,5,9,1,
+main,phi4-mini-instruct-base-4bit-phishing-origin-hel_phishing_origin_PhishFuzzer_test_20261024T155125Z_97f41ed9,Phi-4-mini,phi4-mini-instruct-base-4bit,base,PhishFuzzer,123,193,34,74,
+main,phi4-mini-instruct-phishing-origin-4bit-heldout-_phishing_origin_PhishFuzzer_test_20261109T181840Z_764d774c,Phi-4-mini,phi4-mini-instruct-phishing-origin-4bit,adapted,PhishFuzzer,307,98,11,5,3
+main,qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_phishing_origin_PhishFuzzer_test_20261024T190720Z_188ba954,Qwen3-4B,qwen3-4b-base-4bit,base,PhishFuzzer,180,177,17,50,
+main,qwen3-4b-phishing-origin-4bit-heldout-v1-compari_phishing_origin_PhishFuzzer_test_20261024T194215Z_70e7a4f7,Qwen3-4B,qwen3-4b-phishing-origin-4bit,adapted,PhishFuzzer,416,4,4,,
+main,qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_phishing_origin_PhishFuzzer_test_20261024T204129Z_9cf3c750,Qwen3-8B,qwen3-8b-base-4bit,base,PhishFuzzer,196,190,16,22,
+main,qwen3-8b-phishing-origin-4bit-heldout-v1-compari_phishing_origin_PhishFuzzer_test_20261024T212921Z_96fddf8e,Qwen3-8B,qwen3-8b-phishing-origin-4bit,adapted,PhishFuzzer,416,6,2,,

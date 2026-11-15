@@ -1,0 +1,30 @@
+{
+  "repository": "https://huggingface.co/datasets/microsoft/llmail-inject-challenge",
+  "revision": "1063bdf01ec8762b812d5e06ee768a06faa5a6f7",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://huggingface.co/datasets/microsoft/llmail-inject-challenge/resolve/1063bdf01ec8762b812d5e06ee768a06faa5a6f7/README.md",
+      "sha256": "d85767e349ab1abbaf43db9390c4e906e34954e5df3a1335c8f1516efa64e812",
+      "bytes": 23628
+    },
+    {
+      "path": "emails_for_fp_tests.json",
+      "url": "https://huggingface.co/datasets/microsoft/llmail-inject-challenge/resolve/1063bdf01ec8762b812d5e06ee768a06faa5a6f7/data/emails_for_fp_tests.json",
+      "sha256": "4ddd950b5dbaa8548f5597c886d8e09a051ba07f80a9291fdcca9c2397d22abe",
+      "bytes": 55486
+    },
+    {
+      "path": "labelled_unique_submissions_phase2.json",
+      "url": "https://huggingface.co/datasets/microsoft/llmail-inject-challenge/resolve/1063bdf01ec8762b812d5e06ee768a06faa5a6f7/data/labelled_unique_submissions_phase2.json",
+      "sha256": "f89af984e345430c3b357903890e30867bf4676f4ef10c138cc7bad218e890b8",
+      "bytes": 68586935
+    },
+    {
+      "path": "labelled_unique_submissions_phase1.json",
+      "url": "https://huggingface.co/datasets/microsoft/llmail-inject-challenge/resolve/1063bdf01ec8762b812d5e06ee768a06faa5a6f7/data/labelled_unique_submissions_phase1.json",
+      "sha256": "691dfa1595d2bd0e731069f233bd5448f7af1c0ebd9732bc6f12dd6cee446586",
+      "bytes": 448194111
+    }
+  ]
+}

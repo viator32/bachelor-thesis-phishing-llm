@@ -1,0 +1,210 @@
+{
+  "version": 1,
+  "prepared_on": "2026-10-09",
+  "source_audit_sha256": "809848f3a073b0911c0aadfd1fffbf2cdacc490dbdce785c69bdc54e2d1845b0",
+  "input_policy": "byte-identical saved holdouts; no new split or annotation",
+  "tasks": {
+    "phishing_origin": {
+      "source_dataset": "PhishFuzzer Phishing/Valid pairs",
+      "split_seed": 42,
+      "split_unit": "Original_ID",
+      "overlaps": {
+        "train/validation": {
+          "group_ids": 0,
+          "normalized_full_inputs": 0
+        },
+        "train/test": {
+          "group_ids": 0,
+          "normalized_full_inputs": 0
+        },
+        "validation/test": {
+          "group_ids": 0,
+          "normalized_full_inputs": 0
+        }
+      },
+      "splits": {
+        "train": {
+          "rows": 3348,
+          "groups": 1674,
+          "target_counts": {
+            "{\"generation_origin\":\"human\",\"is_phishing\":true}": 892,
+            "{\"generation_origin\":\"llm\",\"is_phishing\":true}": 892,
+            "{\"generation_origin\":\"human\",\"is_phishing\":false}": 782,
+            "{\"generation_origin\":\"llm\",\"is_phishing\":false}": 782
+          },
+          "sha256": "2dc347c0eaea1eb8d59c69dae809d2649f68e1e972aa7a0e974e24d54b25818b"
+        },
+        "validation": {
+          "rows": 416,
+          "groups": 208,
+          "target_counts": {
+            "{\"generation_origin\":\"human\",\"is_phishing\":true}": 111,
+            "{\"generation_origin\":\"llm\",\"is_phishing\":true}": 111,
+            "{\"generation_origin\":\"human\",\"is_phishing\":false}": 97,
+            "{\"generation_origin\":\"llm\",\"is_phishing\":false}": 97
+          },
+          "sha256": "c9c5d74bf949c195ef58f3fe94ab686065e597d278c129308d47866570f83a0e",
+          "path": "data/evaluation/task_adapters/phishing_origin.validation.jsonl"
+        },
+        "test": {
+          "rows": 424,
+          "groups": 212,
+          "target_counts": {
+            "{\"generation_origin\":\"human\",\"is_phishing\":true}": 113,
+            "{\"generation_origin\":\"llm\",\"is_phishing\":true}": 113,
+            "{\"generation_origin\":\"human\",\"is_phishing\":false}": 99,
+            "{\"generation_origin\":\"llm\",\"is_phishing\":false}": 99
+          },
+          "sha256": "c696ba1224f7a66b5700032962176b9e37c49c88b60551883fd9a0006bdd9363",
+          "path": "data/evaluation/task_adapters/phishing_origin.test.jsonl"
+        }
+      },
+      "verified_model_runs": [
+        {
+          "model": "Qwen/Qwen3-4B",
+          "source_run": "/Users/serhii.radkovskyi/Library/CloudStorage/GoogleDrive-s.radk2003@gmail.com/My Drive/llm_phishing_finetune_workflow_v3/runs_v4/Qwen--Qwen3-4B/phishing_origin/run2_trainall_seq1024_b641f8bce155",
+          "sha256": {
+            "train": "2dc347c0eaea1eb8d59c69dae809d2649f68e1e972aa7a0e974e24d54b25818b",
+            "validation": "c9c5d74bf949c195ef58f3fe94ab686065e597d278c129308d47866570f83a0e",
+            "test": "c696ba1224f7a66b5700032962176b9e37c49c88b60551883fd9a0006bdd9363"
+          }
+        },
+        {
+          "model": "Qwen/Qwen3-8B",
+          "source_run": "/Users/serhii.radkovskyi/Library/CloudStorage/GoogleDrive-s.radk2003@gmail.com/My Drive/llm_phishing_finetune_workflow_v3/runs_v4/Qwen--Qwen3-8B/phishing_origin/run2_trainall_seq1024_e8e2f938c346",
+          "sha256": {
+            "train": "2dc347c0eaea1eb8d59c69dae809d2649f68e1e972aa7a0e974e24d54b25818b",
+            "validation": "c9c5d74bf949c195ef58f3fe94ab686065e597d278c129308d47866570f83a0e",
+            "test": "c696ba1224f7a66b5700032962176b9e37c49c88b60551883fd9a0006bdd9363"
+          }
+        },
+        {
+          "model": "microsoft/Phi-4-mini-instruct",
+          "source_run": "/Users/serhii.radkovskyi/Library/CloudStorage/GoogleDrive-s.radk2003@gmail.com/My Drive/llm_phishing_finetune_workflow_v3/runs_v4/microsoft--Phi-4-mini-instruct/phishing_origin/run2_trainall_seq1024_0440816031e5",
+          "sha256": {
+            "train": "2dc347c0eaea1eb8d59c69dae809d2649f68e1e972aa7a0e974e24d54b25818b",
+            "validation": "c9c5d74bf949c195ef58f3fe94ab686065e597d278c129308d47866570f83a0e",
+            "test": "c696ba1224f7a66b5700032962176b9e37c49c88b60551883fd9a0006bdd9363"
+          }
+        },
+        {
+          "model": "mistralai/Mistral-7B-Instruct-v0.3",
+          "source_run": "/Users/serhii.radkovskyi/Library/CloudStorage/GoogleDrive-s.radk2003@gmail.com/My Drive/llm_phishing_finetune_workflow_v3/runs_v4/mistralai--Mistral-7B-Instruct-v0.3/phishing_origin/run2_trainall_seq1024_f3f4198653be",
+          "sha256": {
+            "train": "2dc347c0eaea1eb8d59c69dae809d2649f68e1e972aa7a0e974e24d54b25818b",
+            "validation": "c9c5d74bf949c195ef58f3fe94ab686065e597d278c129308d47866570f83a0e",
+            "test": "c696ba1224f7a66b5700032962176b9e37c49c88b60551883fd9a0006bdd9363"
+          }
+        },
+        {
+          "model": "meta-llama/Llama-3.1-8B-Instruct",
+          "source_run": "/Users/serhii.radkovskyi/Library/CloudStorage/GoogleDrive-s.radk2003@gmail.com/My Drive/llm_phishing_finetune_workflow_v3/runs_v4/meta-llama--Llama-3.1-8B-Instruct/phishing_origin/run2_trainall_seq1024_da4398c35e8c",
+          "sha256": {
+            "train": "2dc347c0eaea1eb8d59c69dae809d2649f68e1e972aa7a0e974e24d54b25818b",
+            "validation": "c9c5d74bf949c195ef58f3fe94ab686065e597d278c129308d47866570f83a0e",
+            "test": "c696ba1224f7a66b5700032962176b9e37c49c88b60551883fd9a0006bdd9363"
+          }
+        }
+      ],
+      "annotation_limits": "No independent personalization-level labels; injection classification is not attack success rate."
+    },
+    "injection": {
+      "source_dataset": "Contextual Paired Email Injection",
+      "split_seed": 42,
+      "split_unit": "pair id",
+      "overlaps": {
+        "train/validation": {
+          "group_ids": 0,
+          "normalized_full_inputs": 0
+        },
+        "train/test": {
+          "group_ids": 0,
+          "normalized_full_inputs": 0
+        },
+        "validation/test": {
+          "group_ids": 0,
+          "normalized_full_inputs": 0
+        }
+      },
+      "splits": {
+        "train": {
+          "rows": 6704,
+          "groups": 3352,
+          "target_counts": {
+            "{\"contains_prompt_injection\":true}": 3352,
+            "{\"contains_prompt_injection\":false}": 3352
+          },
+          "sha256": "005e239c5ab9c4801b3edca61021c906b11274886dc2aadb8e84e73552e2724e"
+        },
+        "validation": {
+          "rows": 824,
+          "groups": 412,
+          "target_counts": {
+            "{\"contains_prompt_injection\":true}": 412,
+            "{\"contains_prompt_injection\":false}": 412
+          },
+          "sha256": "380cdc0a30055be55ed7cdf579fe4165b3b63c74779d653647f48f0c9680bcf9",
+          "path": "data/evaluation/task_adapters/injection.validation.jsonl"
+        },
+        "test": {
+          "rows": 872,
+          "groups": 436,
+          "target_counts": {
+            "{\"contains_prompt_injection\":true}": 436,
+            "{\"contains_prompt_injection\":false}": 436
+          },
+          "sha256": "c340897e07eff2c959121b370644f291cd694eb3bef39c2466d5df34460ab5f2",
+          "path": "data/evaluation/task_adapters/injection.test.jsonl"
+        }
+      },
+      "verified_model_runs": [
+        {
+          "model": "Qwen/Qwen3-4B",
+          "source_run": "/Users/serhii.radkovskyi/Library/CloudStorage/GoogleDrive-s.radk2003@gmail.com/My Drive/llm_phishing_finetune_workflow_v3/runs_v4/Qwen--Qwen3-4B/injection/run2_trainall_seq1024_ed25182458b1",
+          "sha256": {
+            "train": "005e239c5ab9c4801b3edca61021c906b11274886dc2aadb8e84e73552e2724e",
+            "validation": "380cdc0a30055be55ed7cdf579fe4165b3b63c74779d653647f48f0c9680bcf9",
+            "test": "c340897e07eff2c959121b370644f291cd694eb3bef39c2466d5df34460ab5f2"
+          }
+        },
+        {
+          "model": "Qwen/Qwen3-8B",
+          "source_run": "/Users/serhii.radkovskyi/Library/CloudStorage/GoogleDrive-s.radk2003@gmail.com/My Drive/llm_phishing_finetune_workflow_v3/runs_v4/Qwen--Qwen3-8B/injection/run2_trainall_seq1024_c95e53553674",
+          "sha256": {
+            "train": "005e239c5ab9c4801b3edca61021c906b11274886dc2aadb8e84e73552e2724e",
+            "validation": "380cdc0a30055be55ed7cdf579fe4165b3b63c74779d653647f48f0c9680bcf9",
+            "test": "c340897e07eff2c959121b370644f291cd694eb3bef39c2466d5df34460ab5f2"
+          }
+        },
+        {
+          "model": "microsoft/Phi-4-mini-instruct",
+          "source_run": "/Users/serhii.radkovskyi/Library/CloudStorage/GoogleDrive-s.radk2003@gmail.com/My Drive/llm_phishing_finetune_workflow_v3/runs_v4/microsoft--Phi-4-mini-instruct/injection/run2_trainall_seq1024_9f68a9aab86d",
+          "sha256": {
+            "train": "005e239c5ab9c4801b3edca61021c906b11274886dc2aadb8e84e73552e2724e",
+            "validation": "380cdc0a30055be55ed7cdf579fe4165b3b63c74779d653647f48f0c9680bcf9",
+            "test": "c340897e07eff2c959121b370644f291cd694eb3bef39c2466d5df34460ab5f2"
+          }
+        },
+        {
+          "model": "mistralai/Mistral-7B-Instruct-v0.3",
+          "source_run": "/Users/serhii.radkovskyi/Library/CloudStorage/GoogleDrive-s.radk2003@gmail.com/My Drive/llm_phishing_finetune_workflow_v3/runs_v4/mistralai--Mistral-7B-Instruct-v0.3/injection/run2_trainall_seq1024_e61fde90cc14",
+          "sha256": {
+            "train": "005e239c5ab9c4801b3edca61021c906b11274886dc2aadb8e84e73552e2724e",
+            "validation": "380cdc0a30055be55ed7cdf579fe4165b3b63c74779d653647f48f0c9680bcf9",
+            "test": "c340897e07eff2c959121b370644f291cd694eb3bef39c2466d5df34460ab5f2"
+          }
+        },
+        {
+          "model": "meta-llama/Llama-3.1-8B-Instruct",
+          "source_run": "/Users/serhii.radkovskyi/Library/CloudStorage/GoogleDrive-s.radk2003@gmail.com/My Drive/llm_phishing_finetune_workflow_v3/runs_v4/meta-llama--Llama-3.1-8B-Instruct/injection/run2_trainall_seq1024_0cfa9daf5a6c",
+          "sha256": {
+            "train": "005e239c5ab9c4801b3edca61021c906b11274886dc2aadb8e84e73552e2724e",
+            "validation": "380cdc0a30055be55ed7cdf579fe4165b3b63c74779d653647f48f0c9680bcf9",
+            "test": "c340897e07eff2c959121b370644f291cd694eb3bef39c2466d5df34460ab5f2"
+          }
+        }
+      ],
+      "annotation_limits": "No independent personalization-level labels; injection classification is not attack success rate."
+    }
+  }
+}

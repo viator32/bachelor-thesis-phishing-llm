@@ -1,0 +1,6 @@
+folder,role,data_url,paper_url,license,notes
+training/PhishFuzzer,training phishing + origin,https://github.com/DataPhish/PhishFuzzer,https://arxiv.org/abs/2511.21448,no license file in repository,downloaded 2026-09-18
+training/Contextual_Paired_Email_Injection,training injection,https://github.com/compass-group-tue/prompt_injections_so_back,https://arxiv.org/abs/2605.17634,no license file in repository,downloaded 2026-09-18
+experiments/E_PhishLLM,external phishing test,https://github.com/pajola/e-phishGen,https://arxiv.org/abs/2509.01791,no license file in repository,downloaded 2026-09-18
+experiments/CrossModel_AI_Phishing_2026,external origin test,https://zenodo.org/records/20250116,https://doi.org/10.5281/zenodo.20250116,data CC BY 4.0; code MIT,9986 phishing emails (4986 LLM / 5000 human)
+experiments/LLMail_Inject,external injection test,https://huggingface.co/datasets/microsoft/llmail-inject-challenge,https://github.com/microsoft/llmail-inject-challenge-analysis,research dataset; repo MIT,208095 unique attack submissions; attack labels are not phishing labels

@@ -1,0 +1,63 @@
+# macOS metadata
+.DS_Store
+
+# LaTeX build output (latexmk writes auxiliary files to build/)
+build/
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.brf
+*.dvi
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lol
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+
+# Generated bibliography/cache files
+*-blx.bib
+*.blx.bib
+*.mw
+
+# LaTeX temporary folders and editor backups
+_minted-*/
+*.bak
+*.backup
+*.tmp
+*.swp
+*.swo
+*.synctex(busy)
+
+# Non-LaTeX template/source documents.
+# PDFs and image files are intentionally not ignored.
+*.doc
+*.docx
+
+# Python tooling caches (the prototype has its own rules; these catch stray
+# runs from the repository root).
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+
+# Restored raw exports are stored as verified gzip archives in Git.
+/thesis/assets/all-runs-results/rules_only-ephishllm-fixed-test-v1_phishing_Cross-Model_test_20261025T153726Z_a52f83df/records.jsonl
+/thesis/assets/all-runs-results/rules_only-ephishllm-fixed-test-v1_phishing_E-PhishLLM_test_20261025T153759Z_02f12126/records.jsonl
+/thesis/assets/all-runs-results/tfidf-Phishing_trained_classifier_phishing_Cross-Model_test_20261025T154151Z_3dff2b6c/records.jsonl

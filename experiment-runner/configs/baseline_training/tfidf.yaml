@@ -1,0 +1,5 @@
+# Copy saved phishing_origin splits here, or upload them through the dashboard.
+source_dir: data/training/phishing_origin
+seed: 42
+# Backend lexical budget; this is separate from the LLM tokenizer's context limit.
+max_input_tokens: 4096

@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-27",
+  "annotation_method": "assistant_rules_v1",
+  "human_verified": false,
+  "script_sha256": "a15da09c3be8401e383fe46b5483b11ec718d2cbf5d3cdf48695382b9e0a3961",
+  "selected_inputs": 4296,
+  "detector_predictions_read": false,
+  "dataset_enrichment": "personalization_assessment only; existing ground truth preserved",
+  "sources": [
+    {
+      "dataset": "PhishFuzzer",
+      "path": "Phishing experiment runner/data/processed/comparison_phishfuzzer_test.jsonl",
+      "rows": 424,
+      "original_snapshot_sha256": "2ac7c68eb6487eafb9545e2132bc44a4c8524316fd361332fdbc3e4cb702c6c1",
+      "enriched_sha256": "f91945d8dacb456928daf7627322ff3fb79d07ebb656310afbbeca3f957527ea"
+    },
+    {
+      "dataset": "E-PhishLLM",
+      "path": "Phishing experiment runner/data/processed/comparison_ephishllm_test.jsonl",
+      "rows": 1000,
+      "original_snapshot_sha256": "4203396b57d0a39a7c52b3989c82e32f8e69151839721976d50ac6b77c75e37d",
+      "enriched_sha256": "a5c8dc3fe6b4fa2cb7e95ceb55418ca6ebe5a25e264cb371290537ca625811f3"
+    },
+    {
+      "dataset": "Cross-Model",
+      "path": "Phishing experiment runner/data/processed/comparison_crossmodel_test.jsonl",
+      "rows": 1000,
+      "original_snapshot_sha256": "07a71919c7acb97645c65f986f7a54178a3c72935fe9af0318d9d4170166ae44",
+      "enriched_sha256": "1ebb4b70455d311622f93977ff9f20f2c351d45797fa636392d35e656f803b71"
+    },
+    {
+      "dataset": "Contextual Paired Email Injection",
+      "path": "Phishing experiment runner/data/processed/comparison_contextual_test.jsonl",
+      "rows": 872,
+      "original_snapshot_sha256": "6e8ec24f3a80439a759b4691e6fdc945d37bbdcf706f983eeecae14269e563bb",
+      "enriched_sha256": "492ad031f4b73921076d66f7aa3fcd52a73b7676a141fb44709c4cf45c34ba15"
+    },
+    {
+      "dataset": "LLMail-Inject",
+      "path": "Phishing experiment runner/data/processed/comparison_llmail_test.jsonl",
+      "rows": 1000,
+      "original_snapshot_sha256": "867261849873b630cb1222e0db23c673715228925399cfc749ce2e5470f104c3",
+      "enriched_sha256": "457a99a8ed1ec6acb25222425da646f64487850d3d8be9458ea8c2e4e831d76e"
+    }
+  ]
+}

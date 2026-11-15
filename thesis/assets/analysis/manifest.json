@@ -1,0 +1,2043 @@
+{
+  "analysis_date": "2026-11-01",
+  "main_runs": 50,
+  "baseline_runs": 8,
+  "selected_runs": 58,
+  "raw_export_runs": 105,
+  "inventory_directories": 105,
+  "supplementary_directories": 0,
+  "supplementary_with_predictions": 0,
+  "paired_injection_runs": 10,
+  "paired_injection_baseline_runs": 3,
+  "paired_injection_records": 9900,
+  "paired_injection_baseline_records": 2970,
+  "paired_injection_pairs_per_run": 495,
+  "paired_injection_failed": 1,
+  "paired_injection_detection_runs": 10,
+  "paired_injection_detection_records": 9900,
+  "total_including_paired_runs": 81,
+  "total_including_paired_records": 72450,
+  "main_records": 42960,
+  "unique_main_inputs": 4296,
+  "baseline_records": 6720,
+  "selected_records": 49680,
+  "duplicate_baseline_exports": 16,
+  "excluded_baseline_exports": 8,
+  "selection_policy": "One run per comparison cell; Qwen3-8B adapted E-PhishLLM explicitly replaced by 20261101T162628Z_12df175a; earliest equivalent complete baseline on exact LLM inputs",
+  "invalid_main": 5,
+  "input_truth_identical_across_main_runs": true,
+  "main_database_run_counts_match_exports": null,
+  "baseline_inputs_and_task_labels_match_llm_references": true,
+  "personalization_annotations": null,
+  "personalization_proposals": "thesis/assets/analysis/personalisierung_vorschlaege.csv",
+  "personalization_scope": "Author-adopted binary grouping P0/P1; original rule provenance retained",
+  "invalid_output_policy": "negative fallback (no detection); raw exports unchanged",
+  "displayed_f1": "unweighted mean of both class F1 scores",
+  "validated_task_projections": 88,
+  "baseline_paired_comparisons": 80,
+  "script_sha256": "f1a0ec32106e533d3ea0b267372ef07c5fb6ed0be35660bb21375372940df7ee",
+  "numpy_version": "2.4.6",
+  "matplotlib_version": "3.11.2",
+  "bootstrap": {
+    "repetitions": 2000,
+    "seed": 42,
+    "method": "paired cluster percentile",
+    "metric": "end_to_end_accuracy_difference",
+    "unit": "stored group_id",
+    "interval": "95 percent"
+  },
+  "notes": [
+    "No new model calls; no retraining; no pooling of overlapping historical runs.",
+    "Intervals quantify test-sample uncertainty conditional on stored model outputs, not repeated training/inference variation.",
+    "No multiple-comparison correction; subgroup results are exploratory.",
+    "Exported code is the export-time code; execution manifests preserve recorded run-time hashes.",
+    "Scientific source statements are in the thesis; CSVs and figures are own empirical results."
+  ],
+  "sources": [
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-injection-heldout-_injection_Contextual-Paired-Email-Injection_test_20261025T081621Z_ccc2e27b/metrics.json",
+      "sha256": "4593734bdf9ea9f72a3f7db5a39e20737526364e7cdf823bc9cf0108da40fb43",
+      "bytes": 27904
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-injection-heldout-_injection_Contextual-Paired-Email-Injection_test_20261025T081621Z_ccc2e27b/records.jsonl.gz",
+      "sha256": "3213b6f0ea63eff699589804feadc645e70a5cf2f0b6176b25c56d6d899a8cf7",
+      "bytes": 516413
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-injection-heldout-_injection_Contextual-Paired-Email-Injection_test_20261025T081621Z_ccc2e27b/task/run_manifest.json",
+      "sha256": "281d6075dfd585961f7bfae2ca5b72415fca10e1557d27864325597e41abff0e",
+      "bytes": 22878
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-injection-heldout-_injection_Contextual-Paired-Email-Injection_test_20261025T081621Z_ccc2e27b/task/report.json",
+      "sha256": "9070592582ada84e26f01af5119d85cd9c7382f5ac3758d11002105f6f637ceb",
+      "bytes": 15439
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-injection-heldout-_injection_Contextual-Paired-Email-Injection_test_20261025T081621Z_ccc2e27b/task/predictions.jsonl",
+      "sha256": "6d8a702a4b5015318193b67be9131f0ceeb3e2b06195187d5f9fc430e1d7a407",
+      "bytes": 2184828
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-injection-heldout-_injection_LLMail-Inject_test_20261024T215216Z_0b0bb21f/metrics.json",
+      "sha256": "e423e03a0d7e71c6ee3e8902105f8a0926545fd9b646150df689117668895a31",
+      "bytes": 27486
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-injection-heldout-_injection_LLMail-Inject_test_20261024T215216Z_0b0bb21f/records.jsonl.gz",
+      "sha256": "b0923669e6c946d57469d3bc5db4ad5b96302061649630180588205bd581be93",
+      "bytes": 1112923
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-injection-heldout-_injection_LLMail-Inject_test_20261024T215216Z_0b0bb21f/task/run_manifest.json",
+      "sha256": "e0b8f96413c12e2a3c6f3d8ebee95c14ba4fdc65cd337b5f7eeba3b316e918b6",
+      "bytes": 85792
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-injection-heldout-_injection_LLMail-Inject_test_20261024T215216Z_0b0bb21f/task/report.json",
+      "sha256": "37538f88da5d60795092a9767be162d5a14f7a04b3966c50a5d88d1aa57b7c5b",
+      "bytes": 15322
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-injection-heldout-_injection_LLMail-Inject_test_20261024T215216Z_0b0bb21f/task/predictions.jsonl",
+      "sha256": "c2e437928cdd8a9fcff79aa64878aeaee62d8872ea064cbb75e6c6eba53ca482",
+      "bytes": 2689907
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-phishing-origin-he_generation_origin_Cross-Model_test_20261024T174539Z_d8aa80fb/metrics.json",
+      "sha256": "ae4587e125361955febff2140fef9b1779116c25b0e94d117388b857649be236",
+      "bytes": 34621
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-phishing-origin-he_generation_origin_Cross-Model_test_20261024T174539Z_d8aa80fb/records.jsonl.gz",
+      "sha256": "9b3e70000f62ad2d21a9bd2f0fa99502048c33be36456a6334461dca61064a85",
+      "bytes": 844992
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-phishing-origin-he_generation_origin_Cross-Model_test_20261024T174539Z_d8aa80fb/task/run_manifest.json",
+      "sha256": "0bfd507139029f683ec4efd5273f0a913724913d2eb51020a5fa82f8e5d876af",
+      "bytes": 34456
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-phishing-origin-he_generation_origin_Cross-Model_test_20261024T174539Z_d8aa80fb/task/report.json",
+      "sha256": "b6b0788744c9c879dac012b6e0e325fdaf6f1d8097f2943685df38f632542e8d",
+      "bytes": 20644
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-phishing-origin-he_generation_origin_Cross-Model_test_20261024T174539Z_d8aa80fb/task/predictions.jsonl",
+      "sha256": "60fe25e404fce8ee9eace14dbba157e1643aba1a309cf9fe0ad09fd10a12a199",
+      "bytes": 2628211
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-phishing-origin-he_phishing_E-PhishLLM_test_20261024T172901Z_8da3e130/metrics.json",
+      "sha256": "71b657c7d86f1d33acfa53c1ba74472b850bc16f7cea392e2f22089588b58b31",
+      "bytes": 34538
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-phishing-origin-he_phishing_E-PhishLLM_test_20261024T172901Z_8da3e130/records.jsonl.gz",
+      "sha256": "78827dc017d34be931632309ed8d7acddf29565adfc940d4e0fb6028cb51b01d",
+      "bytes": 591721
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-phishing-origin-he_phishing_E-PhishLLM_test_20261024T172901Z_8da3e130/task/run_manifest.json",
+      "sha256": "4d0fce88b3446bfb0b18a7f15e78a786615a0cfa6daa1bd80a8647d413637695",
+      "bytes": 29521
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-phishing-origin-he_phishing_E-PhishLLM_test_20261024T172901Z_8da3e130/task/report.json",
+      "sha256": "d1fdf7efb363e0fe8bb8e91aa4ac408afe43a1442110c3ea9902a1b2afff3d9b",
+      "bytes": 20730
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-phishing-origin-he_phishing_E-PhishLLM_test_20261024T172901Z_8da3e130/task/predictions.jsonl",
+      "sha256": "1d2e85ac10a47cf5eb315f6abc58fc266df8353856142e31dbd3f30c16a5bfa6",
+      "bytes": 2619304
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-phishing-origin-he_phishing_origin_PhishFuzzer_test_20261024T155758Z_143d8e78/metrics.json",
+      "sha256": "e56d9708778e68552ffdddb046bcabd603c40ef7e4549de8956613212bef07d3",
+      "bytes": 35559
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-phishing-origin-he_phishing_origin_PhishFuzzer_test_20261024T155758Z_143d8e78/records.jsonl.gz",
+      "sha256": "68e4ac71fdd4ccf0a3ebac74a2401df4a4be96455e06f62be07518ecc770eef2",
+      "bytes": 471209
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-phishing-origin-he_phishing_origin_PhishFuzzer_test_20261024T155758Z_143d8e78/task/run_manifest.json",
+      "sha256": "83feb601fc6d6759a9a02cff919a1078c188e91d09b2d165263d67ac83c9adf3",
+      "bytes": 18945
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-phishing-origin-he_phishing_origin_PhishFuzzer_test_20261024T155758Z_143d8e78/task/report.json",
+      "sha256": "c7daef50b4fa746879e248590f91d975b3399bc038512107b89115c3b04a11f0",
+      "bytes": 21405
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-phishing-origin-he_phishing_origin_PhishFuzzer_test_20261024T155758Z_143d8e78/task/predictions.jsonl",
+      "sha256": "d7aeb542d8824d167e779c69bb04de1cad70277c36701fe4bf27548f321bf837",
+      "bytes": 1099765
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-injection-4bit-heldout-v1-co_injection_Contextual-Paired-Email-Injection_test_20261025T113100Z_ac540501/metrics.json",
+      "sha256": "bb472de5c2088a4298fe6cd7d564adf61cf14836953469d03087bd1c674e1d47",
+      "bytes": 26905
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-injection-4bit-heldout-v1-co_injection_Contextual-Paired-Email-Injection_test_20261025T113100Z_ac540501/records.jsonl.gz",
+      "sha256": "8fffb00f163b6f61d9abf2a3866c107b1b2995dbd6aea2b65b9f2b7f8a29de8a",
+      "bytes": 522761
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-injection-4bit-heldout-v1-co_injection_Contextual-Paired-Email-Injection_test_20261025T113100Z_ac540501/task/run_manifest.json",
+      "sha256": "31116c848b8dcf78670652fa0a806f5278556d8cf7ca3e9069530382a6b75bcd",
+      "bytes": 23104
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-injection-4bit-heldout-v1-co_injection_Contextual-Paired-Email-Injection_test_20261025T113100Z_ac540501/task/report.json",
+      "sha256": "8bc022385a5de192a812626e3db4250b8b7d40ce0507b0db3764a8ae30dba821",
+      "bytes": 14962
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-injection-4bit-heldout-v1-co_injection_Contextual-Paired-Email-Injection_test_20261025T113100Z_ac540501/task/predictions.jsonl",
+      "sha256": "5a12b1f4cdf2abaa3f022757a14194bf21f7ab54123413aead2081cee50f206f",
+      "bytes": 2199071
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-injection-4bit-heldout-v1-co_injection_LLMail-Inject_test_20261025T083022Z_4541110c/metrics.json",
+      "sha256": "71ba21ef252a870320a7939ecb0003331bc7fff28c070bf36c1f0379069d4e15",
+      "bytes": 27484
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-injection-4bit-heldout-v1-co_injection_LLMail-Inject_test_20261025T083022Z_4541110c/records.jsonl.gz",
+      "sha256": "65e71f828149314691945b37c92a67643015d7ae309b21ed66a660c1b9226dd8",
+      "bytes": 1118106
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-injection-4bit-heldout-v1-co_injection_LLMail-Inject_test_20261025T083022Z_4541110c/task/run_manifest.json",
+      "sha256": "7dec1bcd4a67863539736a16ae0ddd6c2f79109daa1b7d6698e3845d8f81c103",
+      "bytes": 86018
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-injection-4bit-heldout-v1-co_injection_LLMail-Inject_test_20261025T083022Z_4541110c/task/report.json",
+      "sha256": "7e7a7c584602ad2327edafe65a7cf56706ed510f14511d9aec79ee96960a3f34",
+      "bytes": 15319
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-injection-4bit-heldout-v1-co_injection_LLMail-Inject_test_20261025T083022Z_4541110c/task/predictions.jsonl",
+      "sha256": "841ab1953091a82444a7b9596fdc3baec951d6a2e7c22000cced630dad426f56",
+      "bytes": 2708165
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-phishing-origin-4bit-heldout_generation_origin_Cross-Model_test_20261024T111546Z_81702ec6/metrics.json",
+      "sha256": "320dfa51554811832bbf2253a742696b2351a170e03e258451dee1889f383594",
+      "bytes": 34190
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-phishing-origin-4bit-heldout_generation_origin_Cross-Model_test_20261024T111546Z_81702ec6/records.jsonl.gz",
+      "sha256": "63394ced76a2d9b5997815af10d8d2cf4c87c91e2aafab866cf2c558c8eee50c",
+      "bytes": 860424
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-phishing-origin-4bit-heldout_generation_origin_Cross-Model_test_20261024T111546Z_81702ec6/task/run_manifest.json",
+      "sha256": "7803e04871c23a7912e58fafe00183ab45530060a4da7582bd331f6907bedaf0",
+      "bytes": 34712
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-phishing-origin-4bit-heldout_generation_origin_Cross-Model_test_20261024T111546Z_81702ec6/task/report.json",
+      "sha256": "e18bf6868a7af22d3ab6eeae565d8e99cc480d5828558f4c5b975b40833a1f23",
+      "bytes": 20454
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-phishing-origin-4bit-heldout_generation_origin_Cross-Model_test_20261024T111546Z_81702ec6/task/predictions.jsonl",
+      "sha256": "d37dc109c657e749a1d10243e76a44359343456e73b29757b68385a7cf323ad5",
+      "bytes": 2655430
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-phishing-origin-4bit-heldout_phishing_E-PhishLLM_test_20261024T180459Z_aa0d7a85/metrics.json",
+      "sha256": "f8ad6a5b71584cf7d138e294860f6727c37331e91f3385af346056a26c08f14b",
+      "bytes": 34757
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-phishing-origin-4bit-heldout_phishing_E-PhishLLM_test_20261024T180459Z_aa0d7a85/records.jsonl.gz",
+      "sha256": "643a92e28c432a1e50dec8f3e5a94dd9d589a537bf8d69f240871a3993ef1fcd",
+      "bytes": 597309
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-phishing-origin-4bit-heldout_phishing_E-PhishLLM_test_20261024T180459Z_aa0d7a85/task/run_manifest.json",
+      "sha256": "5677298f2f4571b935dbcfe30d1c5afa1186324659c6fb3976136d721cdd3777",
+      "bytes": 29777
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-phishing-origin-4bit-heldout_phishing_E-PhishLLM_test_20261024T180459Z_aa0d7a85/task/report.json",
+      "sha256": "a8f89cd92ec8df31b6d3790ebd2746b90e74644f9bcb7d56a2043de1d2dcaa3d",
+      "bytes": 20827
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-phishing-origin-4bit-heldout_phishing_E-PhishLLM_test_20261024T180459Z_aa0d7a85/task/predictions.jsonl",
+      "sha256": "8756987800369e2612d3ad38d4307e296c8cbb085f84c77e95a4bdfb32e539f9",
+      "bytes": 2643157
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-phishing-origin-4bit-heldout_phishing_origin_PhishFuzzer_test_20261024T114341Z_e16a766e/metrics.json",
+      "sha256": "19cc3d42dea3840b907c61e3db04e72290587613072ec045f21c6c5b12921d43",
+      "bytes": 36534
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-phishing-origin-4bit-heldout_phishing_origin_PhishFuzzer_test_20261024T114341Z_e16a766e/records.jsonl.gz",
+      "sha256": "a097b4c696fb65f9465470755a1755aaa3ac754d9a666fea587918633cf108c4",
+      "bytes": 478777
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-phishing-origin-4bit-heldout_phishing_origin_PhishFuzzer_test_20261024T114341Z_e16a766e/task/run_manifest.json",
+      "sha256": "0a8d14a3427b8d84931ac09c8e81ddfc936ea57c5b57e7159ea5d9db908f1b95",
+      "bytes": 19201
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-phishing-origin-4bit-heldout_phishing_origin_PhishFuzzer_test_20261024T114341Z_e16a766e/task/report.json",
+      "sha256": "90eec1f50a97f4d18f031bf5315aa29184da510522c8ae11db994899bd705773",
+      "bytes": 21709
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-phishing-origin-4bit-heldout_phishing_origin_PhishFuzzer_test_20261024T114341Z_e16a766e/task/predictions.jsonl",
+      "sha256": "524de7f3c40f9d77373c8ea672f2be281017c5bde331d3a784361ae5b26deca5",
+      "bytes": 1110941
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-injection-hel_injection_Contextual-Paired-Email-Injection_test_20261025T093140Z_a607c3da/metrics.json",
+      "sha256": "0cde71b6fd34e575adc99cf8ca8a1481bbeb0c5ee852a282c3773d647a3a0d0d",
+      "bytes": 27997
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-injection-hel_injection_Contextual-Paired-Email-Injection_test_20261025T093140Z_a607c3da/records.jsonl.gz",
+      "sha256": "693f17f2a48babebab108bf42b76618185f5267d9f17e9d3985c5c1cfbed3cf0",
+      "bytes": 521381
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-injection-hel_injection_Contextual-Paired-Email-Injection_test_20261025T093140Z_a607c3da/task/run_manifest.json",
+      "sha256": "aedd217232701e36c4ad74fbf54ccad9e4f58c9a8159e18ab0ba1f8f7ddc9e78",
+      "bytes": 22907
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-injection-hel_injection_Contextual-Paired-Email-Injection_test_20261025T093140Z_a607c3da/task/report.json",
+      "sha256": "99731ff54f42ad1cda8cdc06e93242c325c87e9c4acf04d64e0f213d7fdf9121",
+      "bytes": 15466
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-injection-hel_injection_Contextual-Paired-Email-Injection_test_20261025T093140Z_a607c3da/task/predictions.jsonl",
+      "sha256": "651cf39dbf64510dd61a21050d1c0ea776b648244be3a6cf6e5e8760d724c63c",
+      "bytes": 2191973
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-injection-hel_injection_LLMail-Inject_test_20261025T090124Z_d6f3c90c/metrics.json",
+      "sha256": "25cf0001a420dd7036c4a82b97eba2a5ac62d780f115fe85d83dfcd2b00d1e99",
+      "bytes": 27606
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-injection-hel_injection_LLMail-Inject_test_20261025T090124Z_d6f3c90c/records.jsonl.gz",
+      "sha256": "8d0b6b3475c134f9e32010d612dbef3e86a38053ad7409fc1891e2145715223e",
+      "bytes": 1113946
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-injection-hel_injection_LLMail-Inject_test_20261025T090124Z_d6f3c90c/task/run_manifest.json",
+      "sha256": "adda891a2b0fa65093822c8964dd861587fe6d2c5f338c7e1ec32b70e1b35f64",
+      "bytes": 85821
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-injection-hel_injection_LLMail-Inject_test_20261025T090124Z_d6f3c90c/task/report.json",
+      "sha256": "39ccd86edaf6d6b26edeb10dfe312e800a8d08e7c29a903b6f9bcfbe9bc37758",
+      "bytes": 15361
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-injection-hel_injection_LLMail-Inject_test_20261025T090124Z_d6f3c90c/task/predictions.jsonl",
+      "sha256": "6468d1a1efc08eedb473c6f1705d60aecaff387aba108d678af1fe17fb289ce8",
+      "bytes": 2700689
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-phishing-orig_generation_origin_Cross-Model_test_20261024T132506Z_570e0563/metrics.json",
+      "sha256": "cd2f804cb9101ee16106afc9067d9bf14c5236efc729812845593cf6448f9c44",
+      "bytes": 34362
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-phishing-orig_generation_origin_Cross-Model_test_20261024T132506Z_570e0563/records.jsonl.gz",
+      "sha256": "41ef26ed40763d9d953f4e85c41a42d866eb94990628f5e5f34527d061f2869d",
+      "bytes": 850549
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-phishing-orig_generation_origin_Cross-Model_test_20261024T132506Z_570e0563/task/run_manifest.json",
+      "sha256": "2928730e7de002ac14ba796137bfdeb1ae923c8edf0247fd8eda900a869becea",
+      "bytes": 34485
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-phishing-orig_generation_origin_Cross-Model_test_20261024T132506Z_570e0563/task/report.json",
+      "sha256": "20eb51e58670665a611ec84832754e08640a695b3073c4fec2d429720b094a0c",
+      "bytes": 20557
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-phishing-orig_generation_origin_Cross-Model_test_20261024T132506Z_570e0563/task/predictions.jsonl",
+      "sha256": "afaa2c4110da7ab7df1e0f8a6f38938c4bb73379d4d0ee1f1bbef57143bac784",
+      "bytes": 2638984
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-phishing-orig_phishing_E-PhishLLM_test_20261024T130718Z_bed2bc1d/metrics.json",
+      "sha256": "46cbc9844b8aeceeeac9d3c189dbf7afeaaeb814b81845fd55ab2ef96df0827f",
+      "bytes": 34537
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-phishing-orig_phishing_E-PhishLLM_test_20261024T130718Z_bed2bc1d/records.jsonl.gz",
+      "sha256": "29298317c432fbb7ad6a3793b9be0347b84883f234d92957fb566a2f5211a3f0",
+      "bytes": 598765
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-phishing-orig_phishing_E-PhishLLM_test_20261024T130718Z_bed2bc1d/task/run_manifest.json",
+      "sha256": "dba80d4bddb9d60b04f66727f1e749575d68c4b02b622d81f5fe9b7c937f965c",
+      "bytes": 29550
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-phishing-orig_phishing_E-PhishLLM_test_20261024T130718Z_bed2bc1d/task/report.json",
+      "sha256": "664e9a56ca5720c9436cd245fe7e7b9939f252c9f5b32e733ebda2386594a178",
+      "bytes": 20650
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-phishing-orig_phishing_E-PhishLLM_test_20261024T130718Z_bed2bc1d/task/predictions.jsonl",
+      "sha256": "dc3285f85cdad5b4eac87e96e29b2f396cf6330bbe49ef978943cf4a8bcc2cc0",
+      "bytes": 2631097
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-phishing-orig_phishing_origin_PhishFuzzer_test_20261024T160916Z_72fc16ac/metrics.json",
+      "sha256": "aa28fdbf65370fb1f651b2eaabf547012331f8b9c2b9bb150ed1b16a45914191",
+      "bytes": 35650
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-phishing-orig_phishing_origin_PhishFuzzer_test_20261024T160916Z_72fc16ac/records.jsonl.gz",
+      "sha256": "44da1aa33b3513480d63e89c6861fcaa2c46f1dbe1d49d6bbc76fbf87492a95c",
+      "bytes": 472762
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-phishing-orig_phishing_origin_PhishFuzzer_test_20261024T160916Z_72fc16ac/task/run_manifest.json",
+      "sha256": "b00d4ced18b18080d203a571f88ec0f07f7893b2684013a4b2575861ee259871",
+      "bytes": 18974
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-phishing-orig_phishing_origin_PhishFuzzer_test_20261024T160916Z_72fc16ac/task/report.json",
+      "sha256": "1b89eb7cc2067d14873cff2e5e336bd2f15c6605ca0028fffd0952493bc7348a",
+      "bytes": 21445
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-phishing-orig_phishing_origin_PhishFuzzer_test_20261024T160916Z_72fc16ac/task/predictions.jsonl",
+      "sha256": "14b699250ee93121f1592f9f707735b8cecd2b619bc3d430df0b9ea8359375cb",
+      "bytes": 1104274
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-injection-4bit-heldout-_injection_Contextual-Paired-Email-Injection_test_20261025T114401Z_55cab46a/metrics.json",
+      "sha256": "499b382b2319efca56b93d07e1e1d120311192b8d7e80e4b46df72a1d7aa7192",
+      "bytes": 27596
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-injection-4bit-heldout-_injection_Contextual-Paired-Email-Injection_test_20261025T114401Z_55cab46a/records.jsonl.gz",
+      "sha256": "bfeb6dc6cb48644d1950bd07104b17d42c49358235303268d73cbb6a6ef97501",
+      "bytes": 524612
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-injection-4bit-heldout-_injection_Contextual-Paired-Email-Injection_test_20261025T114401Z_55cab46a/task/run_manifest.json",
+      "sha256": "57d9ea20ea0c013098043c8bae82fc1795d21380827bfd5c57ae4992acc5c064",
+      "bytes": 23345
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-injection-4bit-heldout-_injection_Contextual-Paired-Email-Injection_test_20261025T114401Z_55cab46a/task/report.json",
+      "sha256": "afe4fb7d7386794c64cfb4a676ea1ad192db0d140fe222d898a9ccd578718e54",
+      "bytes": 15338
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-injection-4bit-heldout-_injection_Contextual-Paired-Email-Injection_test_20261025T114401Z_55cab46a/task/predictions.jsonl",
+      "sha256": "210602e316d34d5c177846803b110006f0c33484489f79fcb9f045d08fa7aca8",
+      "bytes": 2210904
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-injection-4bit-heldout-_injection_LLMail-Inject_test_20261025T094256Z_8238b2aa/metrics.json",
+      "sha256": "ff327bd95147b4a1c34fa6c19a0c4a8c4ad6bcdddc61376b799af07309eca626",
+      "bytes": 27683
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-injection-4bit-heldout-_injection_LLMail-Inject_test_20261025T094256Z_8238b2aa/records.jsonl.gz",
+      "sha256": "a805a00e73163ef6e92bf5e6ce4e90fc7bd532587a00666044c2ec49bbe805a9",
+      "bytes": 1127610
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-injection-4bit-heldout-_injection_LLMail-Inject_test_20261025T094256Z_8238b2aa/task/run_manifest.json",
+      "sha256": "0ec578e9383c93093704a138c6a012706d3751ea3d1d98dfdaefd7c8f5e7270b",
+      "bytes": 86259
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-injection-4bit-heldout-_injection_LLMail-Inject_test_20261025T094256Z_8238b2aa/task/report.json",
+      "sha256": "b2b76c1541b5bf07852f6f97837d3e8a70174c7cc6772cf640503a6b0800fcd4",
+      "bytes": 15386
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-injection-4bit-heldout-_injection_LLMail-Inject_test_20261025T094256Z_8238b2aa/task/predictions.jsonl",
+      "sha256": "3d3cca49cd8f8aa08e14d9c7e6974c0229752a086e410c2356db17ce650ad57c",
+      "bytes": 2723424
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-phishing-origin-4bit-he_generation_origin_Cross-Model_test_20261024T143830Z_6f4eb335/metrics.json",
+      "sha256": "dfaba4b13ef02f81aafd3bb61ef9268023346e71f9bcd81fc3e3757f96c89e8e",
+      "bytes": 34243
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-phishing-origin-4bit-he_generation_origin_Cross-Model_test_20261024T143830Z_6f4eb335/records.jsonl.gz",
+      "sha256": "65af139e10890d97f0ff195869730a2b9651e83897110a60c2e0d6883daf7d6e",
+      "bytes": 860256
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-phishing-origin-4bit-he_generation_origin_Cross-Model_test_20261024T143830Z_6f4eb335/task/run_manifest.json",
+      "sha256": "eef8bc86d64e93c81241e18bb0b094217d98d0e710854d2c25e214a004e18f72",
+      "bytes": 34745
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-phishing-origin-4bit-he_generation_origin_Cross-Model_test_20261024T143830Z_6f4eb335/task/report.json",
+      "sha256": "f55b6b0e99e045c7861c997f86ef5a527b85f13f6f4f478f6b93cbae0adcb0ed",
+      "bytes": 20483
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-phishing-origin-4bit-he_generation_origin_Cross-Model_test_20261024T143830Z_6f4eb335/task/predictions.jsonl",
+      "sha256": "2a6f8a76911dec14e10e71892cd6bfa26716a8e95fb80d588c7d7245c687d7d5",
+      "bytes": 2666353
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-phishing-origin-4bit-he_phishing_E-PhishLLM_test_20261024T140625Z_915e01aa/metrics.json",
+      "sha256": "4d9eac97a1f515cde7b22eb8a0c2644a83fa94bdf22ca322ceeca96c99472586",
+      "bytes": 34892
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-phishing-origin-4bit-he_phishing_E-PhishLLM_test_20261024T140625Z_915e01aa/records.jsonl.gz",
+      "sha256": "7a39ac6cd84710af1723e3bb8cd3e9f527876d65c8ac37dd8fb674ea844d8975",
+      "bytes": 598191
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-phishing-origin-4bit-he_phishing_E-PhishLLM_test_20261024T140625Z_915e01aa/task/run_manifest.json",
+      "sha256": "8b46eb2eb3fc4644a301eb33a81ed5342f7dc253df3f1f4ca49ad5136b4eeecd",
+      "bytes": 29810
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-phishing-origin-4bit-he_phishing_E-PhishLLM_test_20261024T140625Z_915e01aa/task/report.json",
+      "sha256": "79abdc238c37f2fb7dce11be9b588dc9e4541eb493ff040510b30d4ef6073afd",
+      "bytes": 20855
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-phishing-origin-4bit-he_phishing_E-PhishLLM_test_20261024T140625Z_915e01aa/task/predictions.jsonl",
+      "sha256": "c4f9f19bc009725275433378ccb813af44473b38b9f1fbeee9d5ef83d66f83b7",
+      "bytes": 2653179
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-phishing-origin-4bit-he_phishing_origin_PhishFuzzer_test_20261024T161857Z_27b71faf/metrics.json",
+      "sha256": "f9fa40cea1d2e84f86f5d116d06a45e03054d9dafe78ab45d89639a6bf9119e8",
+      "bytes": 36191
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-phishing-origin-4bit-he_phishing_origin_PhishFuzzer_test_20261024T161857Z_27b71faf/records.jsonl.gz",
+      "sha256": "0b59451b0ed6220ad740db19b463b6688d9781b5e04ddba59fe5d6eabe4e2e94",
+      "bytes": 478676
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-phishing-origin-4bit-he_phishing_origin_PhishFuzzer_test_20261024T161857Z_27b71faf/task/run_manifest.json",
+      "sha256": "0b14b4289cf49996cdfdb1a2cfc59d0c7c1947ca0dee7cb5dd4d7182a3a45a38",
+      "bytes": 19234
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-phishing-origin-4bit-he_phishing_origin_PhishFuzzer_test_20261024T161857Z_27b71faf/task/report.json",
+      "sha256": "d12c12dfdd251fbb780023485fb4e8ba94aad80852622a9d48d5ddc03593fbb8",
+      "bytes": 21679
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-phishing-origin-4bit-he_phishing_origin_PhishFuzzer_test_20261024T161857Z_27b71faf/task/predictions.jsonl",
+      "sha256": "293b92e539ea0e5352f4e0b39de19a263e6e4bd1e787778da769934be17adb1d",
+      "bytes": 1116008
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-injection-heldout-v_injection_Contextual-Paired-Email-Injection_test_20261025T121446Z_63c869b1/metrics.json",
+      "sha256": "d0df6a296fbebb652d9a326a659b08804b59aa8cabd054ef93670bc917af6f8f",
+      "bytes": 27929
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-injection-heldout-v_injection_Contextual-Paired-Email-Injection_test_20261025T121446Z_63c869b1/records.jsonl.gz",
+      "sha256": "1bec5701083530c614e5fce3b27f78b125b8ce96426c6680562ebe481646f340",
+      "bytes": 511897
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-injection-heldout-v_injection_Contextual-Paired-Email-Injection_test_20261025T121446Z_63c869b1/task/run_manifest.json",
+      "sha256": "18cddac1dd351af30f33a9adcd179378a0653c08ae05c77c82e7943cfd044457",
+      "bytes": 22867
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-injection-heldout-v_injection_Contextual-Paired-Email-Injection_test_20261025T121446Z_63c869b1/task/report.json",
+      "sha256": "0c0c4bd93214de4ef0d658f0e280c4c5ccfb296e310b4575c75391b28a40a70e",
+      "bytes": 15441
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-injection-heldout-v_injection_Contextual-Paired-Email-Injection_test_20261025T121446Z_63c869b1/task/predictions.jsonl",
+      "sha256": "6c44249b465806e40e0f285fb63607b14122e71362c35024c3ff6edff0108f3d",
+      "bytes": 2182741
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-injection-heldout-v_injection_LLMail-Inject_test_20261025T120406Z_1f3df7f2/metrics.json",
+      "sha256": "59174af5e748e142fc52f38791ba7f1c823905ba498bb1960b6bf300ea373789",
+      "bytes": 27477
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-injection-heldout-v_injection_LLMail-Inject_test_20261025T120406Z_1f3df7f2/records.jsonl.gz",
+      "sha256": "9ca656646e67ef912180af4c401ae78a021c3ee597240e66518a08ce976598a2",
+      "bytes": 1109933
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-injection-heldout-v_injection_LLMail-Inject_test_20261025T120406Z_1f3df7f2/task/run_manifest.json",
+      "sha256": "a1da22dc2310e61afc1b543c2d29978e411184b902419d09f5e01b49b3714a82",
+      "bytes": 85781
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-injection-heldout-v_injection_LLMail-Inject_test_20261025T120406Z_1f3df7f2/task/report.json",
+      "sha256": "a141d4f8d3c561010f860541f3910dfd5cd5d846a57a92bdc2790a01f4d6d10f",
+      "bytes": 15319
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-injection-heldout-v_injection_LLMail-Inject_test_20261025T120406Z_1f3df7f2/task/predictions.jsonl",
+      "sha256": "01f67f6abb1059742d6cf0b24a4d098e4f752eeeec53737c2c20b34da389cb3d",
+      "bytes": 2687909
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-phishing-origin-hel_generation_origin_Cross-Model_test_20261024T151515Z_1ed66531/metrics.json",
+      "sha256": "14652d137b1816588c2b0c4fb9bf2f44d0fc4df26ffd664d76c49c88a8993e46",
+      "bytes": 34790
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-phishing-origin-hel_generation_origin_Cross-Model_test_20261024T151515Z_1ed66531/records.jsonl.gz",
+      "sha256": "8e2f8e8ac6dfb4e5b94c9c3ed1b96bb791a63524705c4f702cfeafa31fc3a057",
+      "bytes": 845551
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-phishing-origin-hel_generation_origin_Cross-Model_test_20261024T151515Z_1ed66531/task/run_manifest.json",
+      "sha256": "128a8845bba7275157a4a8d3d41fc6bf519d17def8b53f73a0c89b893671a21e",
+      "bytes": 34445
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-phishing-origin-hel_generation_origin_Cross-Model_test_20261024T151515Z_1ed66531/task/report.json",
+      "sha256": "62599281a5b5224768901b89fd141198f43bbf376a390f2793d59eacfe727f98",
+      "bytes": 20738
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-phishing-origin-hel_generation_origin_Cross-Model_test_20261024T151515Z_1ed66531/task/predictions.jsonl",
+      "sha256": "b16303cee8afa01046eec55db8390c2133c5b64dc45ca1e0c3ad674718b41fef",
+      "bytes": 2620273
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-phishing-origin-hel_phishing_E-PhishLLM_test_20261024T145831Z_e0e4e8b5/metrics.json",
+      "sha256": "47f2b57021f4391f902cb668ad25c881c5d08d434b9d062d21228e537636fa87",
+      "bytes": 34895
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-phishing-origin-hel_phishing_E-PhishLLM_test_20261024T145831Z_e0e4e8b5/records.jsonl.gz",
+      "sha256": "61d06eb7ef3413c4962ce7feb062042db99d94447ddb951fc4475f02a749919d",
+      "bytes": 596169
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-phishing-origin-hel_phishing_E-PhishLLM_test_20261024T145831Z_e0e4e8b5/task/run_manifest.json",
+      "sha256": "368cd52d406412648d713af9ece0e620759576a72a841e40819dd251c07c775c",
+      "bytes": 29510
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-phishing-origin-hel_phishing_E-PhishLLM_test_20261024T145831Z_e0e4e8b5/task/report.json",
+      "sha256": "2608b38c6400f7049661c5e82481b88e729a4d5898c2e9fd4d50a8edf1781154",
+      "bytes": 20833
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-phishing-origin-hel_phishing_E-PhishLLM_test_20261024T145831Z_e0e4e8b5/task/predictions.jsonl",
+      "sha256": "be5135e7398a615904bbef256e062237649d680643f6ea06e60270602d0a0158",
+      "bytes": 2616456
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-phishing-origin-hel_phishing_origin_PhishFuzzer_test_20261024T155125Z_97f41ed9/metrics.json",
+      "sha256": "31e1149c8525887881a602386b86f409bd7ef36e938c232db294bf2cb15f6469",
+      "bytes": 36187
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-phishing-origin-hel_phishing_origin_PhishFuzzer_test_20261024T155125Z_97f41ed9/records.jsonl.gz",
+      "sha256": "4061ee69422470c633a69c0e09220b46536d2eb1f5756ebeb3849b3b683e978e",
+      "bytes": 472352
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-phishing-origin-hel_phishing_origin_PhishFuzzer_test_20261024T155125Z_97f41ed9/task/run_manifest.json",
+      "sha256": "34fab0e9b6138e891e1776f3caebdade7b6928442b71fd9fbf3b0d99964f2372",
+      "bytes": 18934
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-phishing-origin-hel_phishing_origin_PhishFuzzer_test_20261024T155125Z_97f41ed9/task/report.json",
+      "sha256": "0fc2544244ed547260b99aff951168b9394c9173bebc0598f09a6faf35f19d3f",
+      "bytes": 21680
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-phishing-origin-hel_phishing_origin_PhishFuzzer_test_20261024T155125Z_97f41ed9/task/predictions.jsonl",
+      "sha256": "1a3854d96680427d8db7e1507437428544472750b93f07686f323921cd60dd78",
+      "bytes": 1096289
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-injection-4bit-heldout-v1-com_injection_Contextual-Paired-Email-Injection_test_20261109T173206Z_b755b8ec/metrics.json",
+      "sha256": "f3ed702686b24a1fd867c3ade2b681b5d2bb3e1b7b30543a46084b6f155a1508",
+      "bytes": 27130
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-injection-4bit-heldout-v1-com_injection_Contextual-Paired-Email-Injection_test_20261109T173206Z_b755b8ec/records.jsonl.gz",
+      "sha256": "83c60517af98a97e63af5aee1320e216293e6268f96071fc4ce5de7eae93e72c",
+      "bytes": 521932
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-injection-4bit-heldout-v1-com_injection_Contextual-Paired-Email-Injection_test_20261109T173206Z_b755b8ec/task/run_manifest.json",
+      "sha256": "9b4c70b98c6ba94f05de64794b7bb73c867100d5236dda428fa935b43bd1849a",
+      "bytes": 23408
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-injection-4bit-heldout-v1-com_injection_Contextual-Paired-Email-Injection_test_20261109T173206Z_b755b8ec/task/report.json",
+      "sha256": "3c1c1a08a350057ff000603d082baf1da364013608d74a22f348771051fb4b03",
+      "bytes": 15072
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-injection-4bit-heldout-v1-com_injection_Contextual-Paired-Email-Injection_test_20261109T173206Z_b755b8ec/task/predictions.jsonl",
+      "sha256": "0a6ac5397b5b72bcd4d46e877bf8c99b85d5151b55a7d4d88020da912fcb47a9",
+      "bytes": 2234570
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-injection-4bit-heldout-v1-com_injection_LLMail-Inject_test_20261109T164922Z_8ee2210e/metrics.json",
+      "sha256": "2c932a61257a115fb3d153baf5787c8ed225c797b993a367d1ec385f00325d03",
+      "bytes": 27700
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-injection-4bit-heldout-v1-com_injection_LLMail-Inject_test_20261109T164922Z_8ee2210e/records.jsonl.gz",
+      "sha256": "8fc6e9307cdce3a55061135326b2ccb6e1809994578d9912012611cc67586577",
+      "bytes": 1128895
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-injection-4bit-heldout-v1-com_injection_LLMail-Inject_test_20261109T164922Z_8ee2210e/task/run_manifest.json",
+      "sha256": "d78e8c5a7f7a1115dcf24755c4ce13c0a9b7da93b90c1bdda990de78d5103fc5",
+      "bytes": 86322
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-injection-4bit-heldout-v1-com_injection_LLMail-Inject_test_20261109T164922Z_8ee2210e/task/report.json",
+      "sha256": "71a54a6bb596fdc4194fb7fac39c08d588be6eedad2d040f87b1e4585a0f8649",
+      "bytes": 15484
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-injection-4bit-heldout-v1-com_injection_LLMail-Inject_test_20261109T164922Z_8ee2210e/task/predictions.jsonl",
+      "sha256": "667a25fa6376a0e318fbfb47bafa7b0c6c08d403b834ce3ce213168a5083dce0",
+      "bytes": 2745724
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-phishing-origin-4bit-heldout-_generation_origin_Cross-Model_test_20261109T174921Z_9b0e0d5f/metrics.json",
+      "sha256": "2696b732b7bb31002d0547fbc0ffd887f24c4e08bd8f3c4926c78b197b078c26",
+      "bytes": 34948
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-phishing-origin-4bit-heldout-_generation_origin_Cross-Model_test_20261109T174921Z_9b0e0d5f/records.jsonl.gz",
+      "sha256": "768734d82a95357d29f69254a9920b9daf7c0ca519d958c7cfac540058349105",
+      "bytes": 862414
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-phishing-origin-4bit-heldout-_generation_origin_Cross-Model_test_20261109T174921Z_9b0e0d5f/task/run_manifest.json",
+      "sha256": "2091be4888dabf9b5a1c6c6037f6e44cf4e9c4b7525decbc00050c428b164d38",
+      "bytes": 35016
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-phishing-origin-4bit-heldout-_generation_origin_Cross-Model_test_20261109T174921Z_9b0e0d5f/task/report.json",
+      "sha256": "0c586e4789e305a71b5bdd419cd8b90eaca2c9492ef1cf8d98c368ee4d6586e5",
+      "bytes": 20863
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-phishing-origin-4bit-heldout-_generation_origin_Cross-Model_test_20261109T174921Z_9b0e0d5f/task/predictions.jsonl",
+      "sha256": "2c66bf583bcdc426de6190a2370ab6a3c2c1efabf5792a97c5bbb841bf139591",
+      "bytes": 2695525
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-phishing-origin-4bit-heldout-_phishing_E-PhishLLM_test_20261109T174258Z_42522859/metrics.json",
+      "sha256": "1c63bc7e12d8ca23224cbd57c53c05db34bdfe526d17a117c39f4e536e45d9f9",
+      "bytes": 35098
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-phishing-origin-4bit-heldout-_phishing_E-PhishLLM_test_20261109T174258Z_42522859/records.jsonl.gz",
+      "sha256": "86fa5bb7dd0fbe6145f344b6c44e0daac818300a1f3d431baea80cbd602a84ba",
+      "bytes": 603318
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-phishing-origin-4bit-heldout-_phishing_E-PhishLLM_test_20261109T174258Z_42522859/task/run_manifest.json",
+      "sha256": "88a4fb67ea2bb7b0f165f28c7b27a8f1beff49998b9e4af4311072c7475b16e0",
+      "bytes": 30081
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-phishing-origin-4bit-heldout-_phishing_E-PhishLLM_test_20261109T174258Z_42522859/task/report.json",
+      "sha256": "410fc618ce0fc242a59ee32decd1312475c7aec8d7b35a25a7a7250ed88db90c",
+      "bytes": 20975
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-phishing-origin-4bit-heldout-_phishing_E-PhishLLM_test_20261109T174258Z_42522859/task/predictions.jsonl",
+      "sha256": "99daeb6f621e0c926b10807327ef4a924e2d68df830ca74aaf76f955549d79f2",
+      "bytes": 2688097
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-phishing-origin-4bit-heldout-_phishing_origin_PhishFuzzer_test_20261109T181840Z_764d774c/metrics.json",
+      "sha256": "23e1423941860700240273ab5d1046d166c7f4e0e62b75a2da987d19bd07fdab",
+      "bytes": 36635
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-phishing-origin-4bit-heldout-_phishing_origin_PhishFuzzer_test_20261109T181840Z_764d774c/records.jsonl.gz",
+      "sha256": "fae7381ae6c105311c2e46f2cdc56f46212f686b278ef5cf35fbe56a5a8767ad",
+      "bytes": 475869
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-phishing-origin-4bit-heldout-_phishing_origin_PhishFuzzer_test_20261109T181840Z_764d774c/task/run_manifest.json",
+      "sha256": "f9413d45490b50dea280819edba762e1779b4bf4b56f1d621a5648c8e29c5ac7",
+      "bytes": 19505
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-phishing-origin-4bit-heldout-_phishing_origin_PhishFuzzer_test_20261109T181840Z_764d774c/task/report.json",
+      "sha256": "c7cf028a861fbbb834179de2be7c9dbf980bd60d6f24d066469292a3d72f38e7",
+      "bytes": 21899
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-phishing-origin-4bit-heldout-_phishing_origin_PhishFuzzer_test_20261109T181840Z_764d774c/task/predictions.jsonl",
+      "sha256": "6af5b010d0d3e2514e2652a490bf140062bc5ac2313ae2c9354f424954679d44",
+      "bytes": 1129496
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-injection-heldout-v1-comparis_injection_Contextual-Paired-Email-Injection_test_20261025T124522Z_1527729f/metrics.json",
+      "sha256": "5d00d8b44909c36dc3c538f212004c00b293d886159c06b83f1bdcba05783d7b",
+      "bytes": 27057
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-injection-heldout-v1-comparis_injection_Contextual-Paired-Email-Injection_test_20261025T124522Z_1527729f/records.jsonl.gz",
+      "sha256": "7d6f7e7be5b54b311290525ddbd943c418264e00bd2d76751d3b0d9f4046a458",
+      "bytes": 509759
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-injection-heldout-v1-comparis_injection_Contextual-Paired-Email-Injection_test_20261025T124522Z_1527729f/task/run_manifest.json",
+      "sha256": "bb63b5bf5de38464a57cfa5d31a70d26f10f4282f201a36dff3cfc13e98b92a8",
+      "bytes": 22785
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-injection-heldout-v1-comparis_injection_Contextual-Paired-Email-Injection_test_20261025T124522Z_1527729f/task/report.json",
+      "sha256": "eef3fe345aefade44e7b8912cf37046b599b98f6968852c490c3790f895160e3",
+      "bytes": 14974
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-injection-heldout-v1-comparis_injection_Contextual-Paired-Email-Injection_test_20261025T124522Z_1527729f/task/predictions.jsonl",
+      "sha256": "e257802aa41b9668fac0face970f29a2b29b717b592cc350aa6dba15c63430b6",
+      "bytes": 2166560
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-injection-heldout-v1-comparis_injection_LLMail-Inject_test_20261025T123356Z_e5a58cb8/metrics.json",
+      "sha256": "b11d434fc84e181ae76171d70264abff5f36c1448dc960dff69c613c7d2f90bb",
+      "bytes": 27468
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-injection-heldout-v1-comparis_injection_LLMail-Inject_test_20261025T123356Z_e5a58cb8/records.jsonl.gz",
+      "sha256": "2d4e851a627d727680a6f10f2b72de88d595b788bb21a8b4c68c9d3d08f0f30b",
+      "bytes": 1104503
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-injection-heldout-v1-comparis_injection_LLMail-Inject_test_20261025T123356Z_e5a58cb8/task/run_manifest.json",
+      "sha256": "47500876f8306b9540adf641c67dde8cf79a87b2bf15db2145cbb474aa2032af",
+      "bytes": 85699
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-injection-heldout-v1-comparis_injection_LLMail-Inject_test_20261025T123356Z_e5a58cb8/task/report.json",
+      "sha256": "887f4917800702c5981d56de4f5f29948f0422e8e6bb58b3b4bc4c09c935f482",
+      "bytes": 15285
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-injection-heldout-v1-comparis_injection_LLMail-Inject_test_20261025T123356Z_e5a58cb8/task/predictions.jsonl",
+      "sha256": "21a95a891531cffbe850a0aa28ee3132832769ef33d030e45410041a5dbe2d97",
+      "bytes": 2669068
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_generation_origin_Cross-Model_test_20261024T183832Z_37b2e0a2/metrics.json",
+      "sha256": "c310705d26f76832c94bc238ab126c0fbe6defe3d96d4c98a073b4392e5762e5",
+      "bytes": 34704
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_generation_origin_Cross-Model_test_20261024T183832Z_37b2e0a2/records.jsonl.gz",
+      "sha256": "1f0a492d6d5a4e4abdc9e878223276b59c73090ac98ab215200e81dc946b31ce",
+      "bytes": 847816
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_generation_origin_Cross-Model_test_20261024T183832Z_37b2e0a2/task/run_manifest.json",
+      "sha256": "3a51319eee837b776609432f907b7d4b88aa36af2b6336c93c30252da5ecef65",
+      "bytes": 34363
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_generation_origin_Cross-Model_test_20261024T183832Z_37b2e0a2/task/report.json",
+      "sha256": "ac5cf3728bdd3fdb6af838e51a9ea296e2dbedc0218968f5310434130093b6a4",
+      "bytes": 20659
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_generation_origin_Cross-Model_test_20261024T183832Z_37b2e0a2/task/predictions.jsonl",
+      "sha256": "bc902da39991437e9342966100ff50b9229e66613bdd79ef39a61bb7d44e8208",
+      "bytes": 2607081
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_phishing_E-PhishLLM_test_20261024T181909Z_ad4a541f/metrics.json",
+      "sha256": "a480bc62b864929374d5984bfc3fd7deff1d31e2986107216480669a3c82408a",
+      "bytes": 34270
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_phishing_E-PhishLLM_test_20261024T181909Z_ad4a541f/records.jsonl.gz",
+      "sha256": "6da6f3d15ab880807ef0f60a6a0effb9f7d2c5c944776728532bf78e23db98b7",
+      "bytes": 582580
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_phishing_E-PhishLLM_test_20261024T181909Z_ad4a541f/task/run_manifest.json",
+      "sha256": "dec1a05be758d7342124f0e3ece6ff0cef189235a5c52bc6211c6dc477b3cc50",
+      "bytes": 29428
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_phishing_E-PhishLLM_test_20261024T181909Z_ad4a541f/task/report.json",
+      "sha256": "16caec5e3b0c91a24f5ea291543338e10327395326bcfb78cb83386f6aa82285",
+      "bytes": 20566
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_phishing_E-PhishLLM_test_20261024T181909Z_ad4a541f/task/predictions.jsonl",
+      "sha256": "d43df7eb54bb05c08b786c9d749b6a4d62524f1d0e45c24172c6872c3bf64177",
+      "bytes": 2600678
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_phishing_origin_PhishFuzzer_test_20261024T190720Z_188ba954/metrics.json",
+      "sha256": "dfeb783d401ba4508bdf5ff68d60240705539ecb4c7225adbf2e427c7ca48317",
+      "bytes": 36255
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_phishing_origin_PhishFuzzer_test_20261024T190720Z_188ba954/records.jsonl.gz",
+      "sha256": "da7683db4d677e031484065ea3c0ab9b68e95723289b5a3ecc27bd11e1ea793b",
+      "bytes": 470418
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_phishing_origin_PhishFuzzer_test_20261024T190720Z_188ba954/task/run_manifest.json",
+      "sha256": "6fd5ef8716c074c91766b268f5fa9428e7ffdbdef70252f472b0ac1a5952796b",
+      "bytes": 18852
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_phishing_origin_PhishFuzzer_test_20261024T190720Z_188ba954/task/report.json",
+      "sha256": "7b3766bd3502981226ca001554fe4ba66fc8103014d4009c34455bf455719ed9",
+      "bytes": 21632
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-phishing-origin-heldout-v1-co_phishing_origin_PhishFuzzer_test_20261024T190720Z_188ba954/task/predictions.jsonl",
+      "sha256": "84dd58189f7f02a36773dc2758452a91891ff5f72df5dc55dd3e47fe4bab648d",
+      "bytes": 1090020
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-injection-4bit-heldout-v1-comparison-v1_injection_Contextual-Paired-Email-Injection_test_20261025T131556Z_11531e57/metrics.json",
+      "sha256": "0bb8a19be82d8063ed7a816e65f6406315893f35a5ae62f1a9c23c7de0c16e78",
+      "bytes": 26987
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-injection-4bit-heldout-v1-comparison-v1_injection_Contextual-Paired-Email-Injection_test_20261025T131556Z_11531e57/records.jsonl.gz",
+      "sha256": "f8cf981066f998719237872d776c71d80714f12508b4c60d7e587a2d404e3589",
+      "bytes": 519220
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-injection-4bit-heldout-v1-comparison-v1_injection_Contextual-Paired-Email-Injection_test_20261025T131556Z_11531e57/task/run_manifest.json",
+      "sha256": "bddb8335dda2de2e06335eec0990dae8a35bd5f59898dcf9d25b39bbae6f1172",
+      "bytes": 23179
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-injection-4bit-heldout-v1-comparison-v1_injection_Contextual-Paired-Email-Injection_test_20261025T131556Z_11531e57/task/report.json",
+      "sha256": "32ea7507798d5a2f0f81d88a774a90644eb7be54c30f0b04e26c0af97bc396a6",
+      "bytes": 14919
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-injection-4bit-heldout-v1-comparison-v1_injection_Contextual-Paired-Email-Injection_test_20261025T131556Z_11531e57/task/predictions.jsonl",
+      "sha256": "3444789f91751ed3ced13f5f9db03d887c67c5dc87f214299504ba5746ccc80e",
+      "bytes": 2183171
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-injection-4bit-heldout-v1-comparison-v1_injection_LLMail-Inject_test_20261025T130459Z_8868bc6e/metrics.json",
+      "sha256": "c294095f1c72f27365606300fa4080352f187f75f11e47498d1aa86b9e3617e2",
+      "bytes": 27382
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-injection-4bit-heldout-v1-comparison-v1_injection_LLMail-Inject_test_20261025T130459Z_8868bc6e/records.jsonl.gz",
+      "sha256": "fdcced99ff565d85b1dca77df7e0716ab18589c2b5ea752e3bffa1224d93ce54",
+      "bytes": 1116523
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-injection-4bit-heldout-v1-comparison-v1_injection_LLMail-Inject_test_20261025T130459Z_8868bc6e/task/run_manifest.json",
+      "sha256": "31e5bdd3ecbbe29a33cb69ad9aab026759501c31033b39552db85e4ffd973f9e",
+      "bytes": 86093
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-injection-4bit-heldout-v1-comparison-v1_injection_LLMail-Inject_test_20261025T130459Z_8868bc6e/task/report.json",
+      "sha256": "f8917bc1567c3c5758f6a882120fcaac6dca6a2b5d0c194e932ef903b5d0de71",
+      "bytes": 15263
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-injection-4bit-heldout-v1-comparison-v1_injection_LLMail-Inject_test_20261025T130459Z_8868bc6e/task/predictions.jsonl",
+      "sha256": "f777a2e30152888d70c3c2a81c4b9da82069f625051d9ba7be6c4e526be2088b",
+      "bytes": 2688987
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-phishing-origin-4bit-heldout-v1-compari_generation_origin_Cross-Model_test_20261024T193047Z_fde60a5e/metrics.json",
+      "sha256": "5845870c1ec005e2bd73dc063367db4100d1e2fa2c8f506661d76c9f33ffe775",
+      "bytes": 34110
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-phishing-origin-4bit-heldout-v1-compari_generation_origin_Cross-Model_test_20261024T193047Z_fde60a5e/records.jsonl.gz",
+      "sha256": "0419c9df3475152bf63ff9381db2bdbb68cc4146e7d6548a6b0eb89d54abce6d",
+      "bytes": 855644
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-phishing-origin-4bit-heldout-v1-compari_generation_origin_Cross-Model_test_20261024T193047Z_fde60a5e/task/run_manifest.json",
+      "sha256": "84a6c9234f8cebf1e4b4e27df540e0918c07b46ad6ee718e458c6f58508bbc0d",
+      "bytes": 34600
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-phishing-origin-4bit-heldout-v1-compari_generation_origin_Cross-Model_test_20261024T193047Z_fde60a5e/task/report.json",
+      "sha256": "3a8b95827e8ed6b31c1aba787d60a4b29ee9994a4d2c9482d4b2c5c8482e82dc",
+      "bytes": 20403
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-phishing-origin-4bit-heldout-v1-compari_generation_origin_Cross-Model_test_20261024T193047Z_fde60a5e/task/predictions.jsonl",
+      "sha256": "98ff9687d1f8430b15d1df612e0badc1a74319531f02027636264d6193ee9c58",
+      "bytes": 2635946
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-phishing-origin-4bit-heldout-v1-compari_phishing_E-PhishLLM_test_20261024T191819Z_ff5b31ba/metrics.json",
+      "sha256": "c15a1ab52d333897c5f21cae849b1b31859668f6d7ca66a40ca3ad19cd34a7db",
+      "bytes": 34670
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-phishing-origin-4bit-heldout-v1-compari_phishing_E-PhishLLM_test_20261024T191819Z_ff5b31ba/records.jsonl.gz",
+      "sha256": "897de706463dfb3c055a61d83d1b920714cd4340abb7e9147f1b2359266e9d55",
+      "bytes": 592979
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-phishing-origin-4bit-heldout-v1-compari_phishing_E-PhishLLM_test_20261024T191819Z_ff5b31ba/task/run_manifest.json",
+      "sha256": "7680d06dd2b0a97e66779b166c678e979c8b0be75429f587112a3f563fc8c8b3",
+      "bytes": 29665
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-phishing-origin-4bit-heldout-v1-compari_phishing_E-PhishLLM_test_20261024T191819Z_ff5b31ba/task/report.json",
+      "sha256": "6816b6bea8ec96d745aa7f0ef8b6e4fed5d2903b13ccf3bafae5fabe4fe81cc9",
+      "bytes": 20778
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-phishing-origin-4bit-heldout-v1-compari_phishing_E-PhishLLM_test_20261024T191819Z_ff5b31ba/task/predictions.jsonl",
+      "sha256": "52c9126f0f3448ec6f7110316e22f8ee3779ce9d3291493d50de6d6531627379",
+      "bytes": 2624738
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-phishing-origin-4bit-heldout-v1-compari_phishing_origin_PhishFuzzer_test_20261024T194215Z_70e7a4f7/metrics.json",
+      "sha256": "492bad892d08f3c4a8e6b89fe73f590d958240a6e66ef775ae7951be29558158",
+      "bytes": 36143
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-phishing-origin-4bit-heldout-v1-compari_phishing_origin_PhishFuzzer_test_20261024T194215Z_70e7a4f7/records.jsonl.gz",
+      "sha256": "27eebd4f3a591e44d5b35c3d30ba11de67075337c424c8989fb41fb46a23d949",
+      "bytes": 476967
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-phishing-origin-4bit-heldout-v1-compari_phishing_origin_PhishFuzzer_test_20261024T194215Z_70e7a4f7/task/run_manifest.json",
+      "sha256": "c46e70dcbfc91315b460c96bb02923c30c7fef46dc0d46b30be48079ab9227d4",
+      "bytes": 19089
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-phishing-origin-4bit-heldout-v1-compari_phishing_origin_PhishFuzzer_test_20261024T194215Z_70e7a4f7/task/report.json",
+      "sha256": "00415ae978d9df905d00d49d7fa933b89781ac8bb095e5994e2913fc6be4d87b",
+      "bytes": 21613
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-phishing-origin-4bit-heldout-v1-compari_phishing_origin_PhishFuzzer_test_20261024T194215Z_70e7a4f7/task/predictions.jsonl",
+      "sha256": "79940b8ade9378e24647d8bcd89751053892c4da7d4d484b28edc98e5f453bb3",
+      "bytes": 1102453
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-injection-heldout-v1-comparis_injection_Contextual-Paired-Email-Injection_test_20261025T133759Z_3b858738/metrics.json",
+      "sha256": "f01b4af904ad1d243f50d04f0ad87e0cc4a558a4bb8703219243399af790f251",
+      "bytes": 27081
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-injection-heldout-v1-comparis_injection_Contextual-Paired-Email-Injection_test_20261025T133759Z_3b858738/records.jsonl.gz",
+      "sha256": "2490153dd57ec41fe2dd548cad1750f7acdf1fdc31230131f2a9102afdfce31d",
+      "bytes": 510558
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-injection-heldout-v1-comparis_injection_Contextual-Paired-Email-Injection_test_20261025T133759Z_3b858738/task/run_manifest.json",
+      "sha256": "ecc0b25b7e5941ee3da0e69e4f0f3c87bd03fbe692efe538348e22f77ee5c667",
+      "bytes": 22785
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-injection-heldout-v1-comparis_injection_Contextual-Paired-Email-Injection_test_20261025T133759Z_3b858738/task/report.json",
+      "sha256": "add4190371b433573fa683be21980f6ec578bb9d304ccb76a59acbacbdbac94e",
+      "bytes": 14982
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-injection-heldout-v1-comparis_injection_Contextual-Paired-Email-Injection_test_20261025T133759Z_3b858738/task/predictions.jsonl",
+      "sha256": "7c0f81026567711a3f82556ac973d546191354303c6b0ee22e3f27bdfd16d0cb",
+      "bytes": 2163103
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-injection-heldout-v1-comparis_injection_LLMail-Inject_test_20261025T132101Z_d2cd32b2/metrics.json",
+      "sha256": "abd89f685f979d98323b9564bde374784fcdd87f013b9a7c640ad246f6684004",
+      "bytes": 27453
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-injection-heldout-v1-comparis_injection_LLMail-Inject_test_20261025T132101Z_d2cd32b2/records.jsonl.gz",
+      "sha256": "8112e5d18e0568c8b9fc8803c8e9ffbbae24063763fcf96bf13ef9ca8bd2e327",
+      "bytes": 1108728
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-injection-heldout-v1-comparis_injection_LLMail-Inject_test_20261025T132101Z_d2cd32b2/task/run_manifest.json",
+      "sha256": "0d9a5cc4f1bcaeb4b8989c0b9564751e3850b62fba11cc638b26bfcbce5db93b",
+      "bytes": 85699
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-injection-heldout-v1-comparis_injection_LLMail-Inject_test_20261025T132101Z_d2cd32b2/task/report.json",
+      "sha256": "f94fb0ff4dc7d28dbe6bc840388643613275c041065f195bc475edeedf2739fd",
+      "bytes": 15282
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-injection-heldout-v1-comparis_injection_LLMail-Inject_test_20261025T132101Z_d2cd32b2/task/predictions.jsonl",
+      "sha256": "74be7ea0958d0d4e80999f914472bdddabb86b4d53e67b67b48c9f271fbff56d",
+      "bytes": 2666767
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_generation_origin_Cross-Model_test_20261024T202319Z_bc31a4f8/metrics.json",
+      "sha256": "adac810a8c95ec9e96d0ff5cd9e39847d9a0ea648e492825fd01ff0ed4f4e932",
+      "bytes": 34673
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_generation_origin_Cross-Model_test_20261024T202319Z_bc31a4f8/records.jsonl.gz",
+      "sha256": "8c5397eaa52d8d91bcaf0224ac306f2f6d62d692a15221cf4748995a28005fae",
+      "bytes": 847505
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_generation_origin_Cross-Model_test_20261024T202319Z_bc31a4f8/task/run_manifest.json",
+      "sha256": "70e32e9647c87c122ad4c58948bea15d117ee4f5b47dabb94b803ad787e70315",
+      "bytes": 34363
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_generation_origin_Cross-Model_test_20261024T202319Z_bc31a4f8/task/report.json",
+      "sha256": "8cf3fc5760e1559851ef194e95ed33287e20b23bfdf35b23e56cbdc3800876f5",
+      "bytes": 20657
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_generation_origin_Cross-Model_test_20261024T202319Z_bc31a4f8/task/predictions.jsonl",
+      "sha256": "05fcddbf675fef96def885a3e77197856339560dbe88192a1b64556e9ce5d663",
+      "bytes": 2606771
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_phishing_E-PhishLLM_test_20261024T195502Z_6947e61c/metrics.json",
+      "sha256": "d942bf94ee692a227ade5686b42e1300cf18a3bbd541a24eec002740ebd96769",
+      "bytes": 34409
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_phishing_E-PhishLLM_test_20261024T195502Z_6947e61c/records.jsonl.gz",
+      "sha256": "423d69f298c0da31ea5497a16c2b8b676c9360b805c83a8621f8378f5ebd7268",
+      "bytes": 589100
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_phishing_E-PhishLLM_test_20261024T195502Z_6947e61c/task/run_manifest.json",
+      "sha256": "b4503f7dfc89e9cbf40e5fdc6d56778a270ec50029b08ee67419982163e24e81",
+      "bytes": 29428
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_phishing_E-PhishLLM_test_20261024T195502Z_6947e61c/task/report.json",
+      "sha256": "0fe88a28e9be5f6a7bcc7da09c203ef2c91992d10dc74f80a6b7461cd60e029b",
+      "bytes": 20643
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_phishing_E-PhishLLM_test_20261024T195502Z_6947e61c/task/predictions.jsonl",
+      "sha256": "9e4e6d18c0ad397a4647630ab9ea5a539bb9471062cd964112f4224fe5c32d4c",
+      "bytes": 2597014
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_phishing_origin_PhishFuzzer_test_20261024T204129Z_9cf3c750/metrics.json",
+      "sha256": "d9ef2729ffd019fcaae309aef83affc175eded29279078e6cf2474aab2f70ce4",
+      "bytes": 35830
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_phishing_origin_PhishFuzzer_test_20261024T204129Z_9cf3c750/records.jsonl.gz",
+      "sha256": "91da1265f9576daebdb1ce9755e8bf4dd736affca7fc0b6acefbeb2fa0ffe010",
+      "bytes": 470697
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_phishing_origin_PhishFuzzer_test_20261024T204129Z_9cf3c750/task/run_manifest.json",
+      "sha256": "90d1c26196efc1807354836d4537d8846963d13a7cd934976e5e9b539d8698bb",
+      "bytes": 18852
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_phishing_origin_PhishFuzzer_test_20261024T204129Z_9cf3c750/task/report.json",
+      "sha256": "453136d263065726ebfe2fc1f6c297bf72c28eb10982d55ce113b71e14a4b40c",
+      "bytes": 21457
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-phishing-origin-heldout-v1-co_phishing_origin_PhishFuzzer_test_20261024T204129Z_9cf3c750/task/predictions.jsonl",
+      "sha256": "0e1363c35ba084a96718204abcb7d33a2e14f78e13fbc208558f99c8540366b4",
+      "bytes": 1090359
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-injection-4bit-heldout-v1-comparison-v1_injection_Contextual-Paired-Email-Injection_test_20261025T142547Z_81dd0a47/metrics.json",
+      "sha256": "b47e4fc70e34bdc80b1266819faa46883dbd306b7768928a2a84f9b9af93f420",
+      "bytes": 27010
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-injection-4bit-heldout-v1-comparison-v1_injection_Contextual-Paired-Email-Injection_test_20261025T142547Z_81dd0a47/records.jsonl.gz",
+      "sha256": "0c7ad28e781e8c0d7c6e834a2f4a0b57237ad647a85d1c99cf8181c9f7275b3d",
+      "bytes": 522918
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-injection-4bit-heldout-v1-comparison-v1_injection_Contextual-Paired-Email-Injection_test_20261025T142547Z_81dd0a47/task/run_manifest.json",
+      "sha256": "91dfd9530887fa5c09c90437c9cffe2614373cf2e31d81f62087fcec5b188066",
+      "bytes": 23179
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-injection-4bit-heldout-v1-comparison-v1_injection_Contextual-Paired-Email-Injection_test_20261025T142547Z_81dd0a47/task/report.json",
+      "sha256": "9b23b39c2af058b5ba8406eb2e4b266c9e7251845f531299202c2784b040a69a",
+      "bytes": 14934
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-injection-4bit-heldout-v1-comparison-v1_injection_Contextual-Paired-Email-Injection_test_20261025T142547Z_81dd0a47/task/predictions.jsonl",
+      "sha256": "4723f909fabd22589ca276c34d1fbea29db1a0d08a2eacafbc6e337516bf6a40",
+      "bytes": 2179659
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-injection-4bit-heldout-v1-comparison-v1_injection_LLMail-Inject_test_20261025T141249Z_415f1cde/metrics.json",
+      "sha256": "8021ae7d589904751110f919fbb71460a6c0bb926c4b19bcebce0113115978d1",
+      "bytes": 27286
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-injection-4bit-heldout-v1-comparison-v1_injection_LLMail-Inject_test_20261025T141249Z_415f1cde/records.jsonl.gz",
+      "sha256": "ec3055810f685b6fd4a0a556856203304c5186a5b9f6ad1dc21c3ba7f8ea98ae",
+      "bytes": 1118513
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-injection-4bit-heldout-v1-comparison-v1_injection_LLMail-Inject_test_20261025T141249Z_415f1cde/task/run_manifest.json",
+      "sha256": "71f69f53f0998e41ae140bcc79f7ba93597626a5e3afa67908eeb8887540e3b8",
+      "bytes": 86093
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-injection-4bit-heldout-v1-comparison-v1_injection_LLMail-Inject_test_20261025T141249Z_415f1cde/task/report.json",
+      "sha256": "79168c0b6bb1552d9876cbfb97435d6b1fbb6859f06ae403ebcc160d4f1cbab6",
+      "bytes": 15212
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-injection-4bit-heldout-v1-comparison-v1_injection_LLMail-Inject_test_20261025T141249Z_415f1cde/task/predictions.jsonl",
+      "sha256": "90afce9af9d8ab808dd396c8b2a20753e2a7ebfc9a879b5daf87324b4e56818c",
+      "bytes": 2686730
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-phishing-origin-4bit-heldout-v1-compari_generation_origin_Cross-Model_test_20261024T210756Z_7dfb41ae/metrics.json",
+      "sha256": "63a7cda59f3299cd8a7028641a12551ebfc95ac7aad680ac975dc1865aac376c",
+      "bytes": 34120
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-phishing-origin-4bit-heldout-v1-compari_generation_origin_Cross-Model_test_20261024T210756Z_7dfb41ae/records.jsonl.gz",
+      "sha256": "6227bdc37e3dd393aca4e51ab0ebba831108ac7c7bc2ea006e6012217ec229fd",
+      "bytes": 860567
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-phishing-origin-4bit-heldout-v1-compari_generation_origin_Cross-Model_test_20261024T210756Z_7dfb41ae/task/run_manifest.json",
+      "sha256": "6efe20e46e0c356c29fec0b7e60629a13986d22286d97d8bb1dd6a193d445761",
+      "bytes": 34787
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-phishing-origin-4bit-heldout-v1-compari_generation_origin_Cross-Model_test_20261024T210756Z_7dfb41ae/task/report.json",
+      "sha256": "178f7f0b4cd509010ef9b9c87b5ad4a90d65d0647fcf7a61d1c64521bfdfc20e",
+      "bytes": 20418
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-phishing-origin-4bit-heldout-v1-compari_generation_origin_Cross-Model_test_20261024T210756Z_7dfb41ae/task/predictions.jsonl",
+      "sha256": "ccc013ad9977b65a6eef042cea553b7fc0e470b4f5b48e9a8e48015347a5cdb8",
+      "bytes": 2633636
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-phishing-origin-4bit-heldout-v1-compari_phishing_E-PhishLLM_test_20261101T162628Z_12df175a/metrics.json",
+      "sha256": "83204f8025e2295f54a516708b18369f28035e88eea1255c58974e74b987ebfc",
+      "bytes": 34643
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-phishing-origin-4bit-heldout-v1-compari_phishing_E-PhishLLM_test_20261101T162628Z_12df175a/records.jsonl.gz",
+      "sha256": "080a91614df069b478ae8a7faa05aa64cd7b2871d71d3ddf451a375e26bc1fb0",
+      "bytes": 596563
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-phishing-origin-4bit-heldout-v1-compari_phishing_E-PhishLLM_test_20261101T162628Z_12df175a/task/run_manifest.json",
+      "sha256": "fb49ed63fe855fc23928c425b3f8795b5089a0bfb01bae59f53ef36bd5ef1ae1",
+      "bytes": 29852
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-phishing-origin-4bit-heldout-v1-compari_phishing_E-PhishLLM_test_20261101T162628Z_12df175a/task/report.json",
+      "sha256": "40f77405ecf26a2506566419c887c83aaec04161582ae4948a72bf5b8af5c7f9",
+      "bytes": 20757
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-phishing-origin-4bit-heldout-v1-compari_phishing_E-PhishLLM_test_20261101T162628Z_12df175a/task/predictions.jsonl",
+      "sha256": "a49f61e76860d3b2ae72b16cd4635e024c30fbe12dacf2ad7defc01a497478e7",
+      "bytes": 2621067
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-phishing-origin-4bit-heldout-v1-compari_phishing_origin_PhishFuzzer_test_20261024T212921Z_96fddf8e/metrics.json",
+      "sha256": "64b9e1d1f61f3d4db9986a46336d10f78ad979221b79e1502d486253e72946e1",
+      "bytes": 36060
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-phishing-origin-4bit-heldout-v1-compari_phishing_origin_PhishFuzzer_test_20261024T212921Z_96fddf8e/records.jsonl.gz",
+      "sha256": "9ab0abe44a89898bbc33b1429aeaca91d294a7008cb94cd3d0ffc389d7cbd3dd",
+      "bytes": 478185
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-phishing-origin-4bit-heldout-v1-compari_phishing_origin_PhishFuzzer_test_20261024T212921Z_96fddf8e/task/run_manifest.json",
+      "sha256": "c10ad2d1e879fec665ef031d7f498f8d54a00ff533d0f3a474f3228d0b14e55e",
+      "bytes": 19276
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-phishing-origin-4bit-heldout-v1-compari_phishing_origin_PhishFuzzer_test_20261024T212921Z_96fddf8e/task/report.json",
+      "sha256": "a858d1364d0e5c4dd1e5ae968938afc24743de3a3e3f9ed1f459e9eddf999af9",
+      "bytes": 21553
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-phishing-origin-4bit-heldout-v1-compari_phishing_origin_PhishFuzzer_test_20261024T212921Z_96fddf8e/task/predictions.jsonl",
+      "sha256": "92d04b1adf24f3e56aec3bba3a718b12ac9519b0cca74489ffc1eab0076154dd",
+      "bytes": 1101979
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-contextual-fixed-test-v1_injection_Contextual-Paired-Email-Injection_test_20261025T154536Z_888e2cee/metrics.json",
+      "sha256": "edf5f73e96efcc45eb3cb4218dc84ca292db6e25b861a408a44b8b468381f7dc",
+      "bytes": 11234
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-contextual-fixed-test-v1_injection_Contextual-Paired-Email-Injection_test_20261025T154536Z_888e2cee/records.jsonl.gz",
+      "sha256": "38cb829be6f7d5a1ecbe0996886fad97e48f51e4704eee908aaa7423940cbbe0",
+      "bytes": 472501
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-contextual-fixed-test-v1_injection_LLMail-Inject_test_20261025T154542Z_527f371f/metrics.json",
+      "sha256": "777452c10ca54346e45af84eab653d7c260041b3b36e62c6576d21b24d67ff95",
+      "bytes": 11434
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-contextual-fixed-test-v1_injection_LLMail-Inject_test_20261025T154542Z_527f371f/records.jsonl.gz",
+      "sha256": "bb6a6493882833a32eb2b2cb73ad2795af66964d3c6722dedef438988316034b",
+      "bytes": 1067401
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-contextual-fixed-test-v1_phishing_E-PhishLLM-paired-injection-v1_test_20261104T084845Z_98d9632e/metrics.json",
+      "sha256": "00f937e7a78bae03c20aa3ad66f0a28a57f731c176467be1ec95b820c27ea64c",
+      "bytes": 12645
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-contextual-fixed-test-v1_phishing_E-PhishLLM-paired-injection-v1_test_20261104T084845Z_98d9632e/records.jsonl.gz",
+      "sha256": "f4f5d8ff57b674e37702850d50e53914506bd4a6b62f1cf90e2a872a4a8e6459",
+      "bytes": 560295
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-ephishllm-fixed-test-v1_phishing_Cross-Model_test_20261025T153715Z_7a13fef5/metrics.json",
+      "sha256": "b0318bc3297961053c2b10cdc4d6fcd6fe4c764dd3c723dfcca4c16f61b5ee3a",
+      "bytes": 11234
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-ephishllm-fixed-test-v1_phishing_Cross-Model_test_20261025T153715Z_7a13fef5/records.jsonl.gz",
+      "sha256": "e4ac483f7514311369d18416bc852fe70e3d1e60d1ee6ff55597782a36b7fc43",
+      "bytes": 810398
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-ephishllm-fixed-test-v1_phishing_Cross-Model_test_20261025T153726Z_a52f83df/metrics.json",
+      "sha256": "fa94774f0169727016dcf5355bf5c66b6d3ea8bd08ea893bd7db14fcdef443fb",
+      "bytes": 11353
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-ephishllm-fixed-test-v1_phishing_Cross-Model_test_20261025T153726Z_a52f83df/records.jsonl.gz",
+      "sha256": "bdb480a8c1a1ec9e006dc6fba278da408568070816496d0b25420de6f2937bef",
+      "bytes": 7791994
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-ephishllm-fixed-test-v1_phishing_E-PhishLLM-paired-injection-v1_test_20261104T084836Z_6b5382bc/metrics.json",
+      "sha256": "545b047cda5f157d7b85004ee79f00e7b31e95c1212833e3a9d8d96e8be7c4a6",
+      "bytes": 12639
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-ephishllm-fixed-test-v1_phishing_E-PhishLLM-paired-injection-v1_test_20261104T084836Z_6b5382bc/records.jsonl.gz",
+      "sha256": "a8f69261fc632f59ce9c645af6158c4471b08ac2904c0b724e0fbbcb5f3ae0fa",
+      "bytes": 560122
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-ephishllm-fixed-test-v1_phishing_E-PhishLLM_test_20261025T153759Z_02f12126/metrics.json",
+      "sha256": "d839d2be748b5a5e15ce3ad05964b520ceee688c1e7233f2ad90fcb0d2a2d9ee",
+      "bytes": 11493
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-ephishllm-fixed-test-v1_phishing_E-PhishLLM_test_20261025T153759Z_02f12126/records.jsonl.gz",
+      "sha256": "7c00df6ef2870dd9147ae93674083e867612483a45ca7497d10a08634b639d7d",
+      "bytes": 8668301
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-ephishllm-fixed-test-v1_phishing_PhishFuzzer_test_20261025T154551Z_a8cfaaca/metrics.json",
+      "sha256": "991fd0b06689da3cf22bb56f5c9ba8c1c6112ce2eb096eec317cfe62fb0d30ff",
+      "bytes": 11574
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-ephishllm-fixed-test-v1_phishing_PhishFuzzer_test_20261025T154551Z_a8cfaaca/records.jsonl.gz",
+      "sha256": "83b2b0f109b1245bc9726f9ce69730bbc4be767b1bbc8bbc3f0eaad50b335581",
+      "bytes": 466796
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-ephishllm-paired-injection-fixed-test_phishing_Cross-Model_test_20261104T084815Z_340b2608/metrics.json",
+      "sha256": "eee3e6d8cdab2788aa837034396e54127684a825f1c5463662f2a0082d254f21",
+      "bytes": 11290
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-ephishllm-paired-injection-fixed-test_phishing_Cross-Model_test_20261104T084815Z_340b2608/records.jsonl.gz",
+      "sha256": "538b367b390182df41887415a26e8abdf27c214bbbf5139c4b0f87fdf0666540",
+      "bytes": 953994
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-ephishllm-paired-injection-fixed-test_phishing_E-PhishLLM-paired-injection-v1_test_20261104T084107Z_87fd79cd/metrics.json",
+      "sha256": "c460efc7d91ce727aeb1be4a1933e2665bafa3b9f59b1dd0a0fa332e6c092cb3",
+      "bytes": 12686
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-ephishllm-paired-injection-fixed-test_phishing_E-PhishLLM-paired-injection-v1_test_20261104T084107Z_87fd79cd/records.jsonl.gz",
+      "sha256": "9149ee783985386d251428863aed20e1e64cad69ddec5850b5cfe9c0f517cf18",
+      "bytes": 561741
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-ephishllm-paired-injection-fixed-test_phishing_E-PhishLLM_test_20261104T084819Z_dc711062/metrics.json",
+      "sha256": "e0630a4bada3fba808b7fe53ad24500ef27f43fc58f9743deb5b7a1be07c8fcb",
+      "bytes": 11473
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-ephishllm-paired-injection-fixed-test_phishing_E-PhishLLM_test_20261104T084819Z_dc711062/records.jsonl.gz",
+      "sha256": "af46efc38d518b9067b6042b0e48c90095a1781074dd9006afd4dad83b34bcce",
+      "bytes": 673298
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-ephishllm-paired-injection-fixed-test_phishing_PhishFuzzer_test_20261104T084824Z_bf9580a8/metrics.json",
+      "sha256": "09fef4b2fecb266624e33ef4540e29b8ffcd1fd16e21769f680334fbc2526478",
+      "bytes": 11625
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-ephishllm-paired-injection-fixed-test_phishing_PhishFuzzer_test_20261104T084824Z_bf9580a8/records.jsonl.gz",
+      "sha256": "b087e2890a6ce3acdd4c078eb8e95ad90f24c3e043f365f6168e5a16c3f0be4a",
+      "bytes": 519588
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-phishfuzzer-fixed-test-v1_phishing_Cross-Model_test_20261025T154618Z_815bb1ba/metrics.json",
+      "sha256": "dd63b6ee5ef04361a37911b96a3bfba5c3b18031013a96608c4940c495366cb0",
+      "bytes": 11248
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-phishfuzzer-fixed-test-v1_phishing_Cross-Model_test_20261025T154618Z_815bb1ba/records.jsonl.gz",
+      "sha256": "e0f7e1297244a28a059c72c1258734fc7cddcd34e333c369070d3c6ee4731fe8",
+      "bytes": 835598
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-phishfuzzer-fixed-test-v1_phishing_Cross-Model_test_20261025T154622Z_aa5b925e/metrics.json",
+      "sha256": "0e92521e408a48c8cf73c6dc4f3b70e5914a0359970744cf40a3b9e066e5b60a",
+      "bytes": 11247
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-phishfuzzer-fixed-test-v1_phishing_Cross-Model_test_20261025T154622Z_aa5b925e/records.jsonl.gz",
+      "sha256": "0b09cca9e14ca03478db531755096b34b36509fd661cbc72dcd5818d03dadf18",
+      "bytes": 835658
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-phishfuzzer-fixed-test-v1_phishing_E-PhishLLM-paired-injection-v1_test_20261104T084842Z_b83d3183/metrics.json",
+      "sha256": "f1def530ff836f8d8da30baf3470b0e6c4c02a9daf02b62a4edcbe7a0c8fa0f2",
+      "bytes": 12647
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-phishfuzzer-fixed-test-v1_phishing_E-PhishLLM-paired-injection-v1_test_20261104T084842Z_b83d3183/records.jsonl.gz",
+      "sha256": "abca4c5c31e0fd3f08ca9ed371670a6fa85b3af006ed6e0c6b164237e25022cf",
+      "bytes": 560449
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-phishfuzzer-fixed-test-v1_phishing_E-PhishLLM_test_20261025T154633Z_6e794d8c/metrics.json",
+      "sha256": "40a78deca6ff6e0f75ddf2d23421012a82002f626e8f176e89435960a30d4241",
+      "bytes": 11422
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-phishfuzzer-fixed-test-v1_phishing_E-PhishLLM_test_20261025T154633Z_6e794d8c/records.jsonl.gz",
+      "sha256": "5da97439345126f1f245986e3f477f1e8494188da16579b6ee9ceea314d9d610",
+      "bytes": 546142
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-phishfuzzer-fixed-test-v1_phishing_PhishFuzzer_test_20261025T154628Z_ac3a44bd/metrics.json",
+      "sha256": "2b3274c12d4c79da853ead162631490aba0ae0906f1397b2d7c451bf38be3931",
+      "bytes": 11579
+    },
+    {
+      "path": "thesis/assets/all-runs-results/rules_only-phishfuzzer-fixed-test-v1_phishing_PhishFuzzer_test_20261025T154628Z_ac3a44bd/records.jsonl.gz",
+      "sha256": "b8e28485f1faa3c04f12c47aace8503f20d08ba06ae64e4f3572ec0df9ea8455",
+      "bytes": 466585
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf-Phishing_trained_classifier_phishing_Cross-Model_test_20261025T154151Z_3dff2b6c/metrics.json",
+      "sha256": "9afb974c876fc640622e3aae3ec5bd7d3862c2df1ea471785fc0359177a9fc29",
+      "bytes": 11341
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf-Phishing_trained_classifier_phishing_Cross-Model_test_20261025T154151Z_3dff2b6c/records.jsonl.gz",
+      "sha256": "ff4295cfe0366231c67b787a90222a66bfd8e3643e10be8526d1de9e55490041",
+      "bytes": 7803737
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf-Phishing_trained_classifier_phishing_E-PhishLLM-paired-injection-v1_test_20261104T084852Z_da138884/metrics.json",
+      "sha256": "56e574c84c56e84f35c846333cd647e61e4a4d88387eeece465742f4a36762b6",
+      "bytes": 12059
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf-Phishing_trained_classifier_phishing_E-PhishLLM-paired-injection-v1_test_20261104T084852Z_da138884/records.jsonl.gz",
+      "sha256": "d9f608b215a57cee5bd6f01b84e58ac5551af64c5fceddb9b0282e40e037418a",
+      "bytes": 390296
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf-Phishing_trained_classifier_phishing_E-PhishLLM_test_20261025T154459Z_2dc891dd/metrics.json",
+      "sha256": "6fbd3828ec2db6ba822c673231663696ee7529850164e4f4a994f8a65339a008",
+      "bytes": 11553
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf-Phishing_trained_classifier_phishing_E-PhishLLM_test_20261025T154459Z_2dc891dd/records.jsonl.gz",
+      "sha256": "0496eafa02a2629f767b48132d1b05d8240e1cd47fc5f4160b601948dc9b8140",
+      "bytes": 361435
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf-Phishing_trained_classifier_phishing_PhishFuzzer_test_20261025T154505Z_ae37cf1f/metrics.json",
+      "sha256": "2653d172639ea92284c102b11d157bc787236a7852df2cdc1880c01a4b35857f",
+      "bytes": 11579
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf-Phishing_trained_classifier_phishing_PhishFuzzer_test_20261025T154505Z_ae37cf1f/records.jsonl.gz",
+      "sha256": "5adb9a9145f2e77541ae7abcb9a2a6d8d4cc59d662bff019bff50b2245b044d0",
+      "bytes": 475109
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf-Phishing_trained_classifier_phishing_tfidf_Phishing_trained_classifier_test_20261025T154642Z_b894d54c/metrics.json",
+      "sha256": "c744e588edc1ad0e4c6b1a270a4e41e5acdbfb2d96fb1ff48f132c9a84656c63",
+      "bytes": 11636
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf-Phishing_trained_classifier_phishing_tfidf_Phishing_trained_classifier_test_20261025T154642Z_b894d54c/records.jsonl.gz",
+      "sha256": "2456ab923c6fef7935bfe9755c478997e77c0866e1b2bfe4786ddb11b461b0f7",
+      "bytes": 469903
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-ephishllm-fixed-test-v1_phishing_Cross-Model_test_20261025T154557Z_9c120146/metrics.json",
+      "sha256": "51cf79cf31a91ec7b760510ee2e76254f776a777df67239bcf2b89e2d5b0f6ec",
+      "bytes": 11248
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-ephishllm-fixed-test-v1_phishing_Cross-Model_test_20261025T154557Z_9c120146/records.jsonl.gz",
+      "sha256": "4090d56447e96eefbcccebb43f2d69b0484341ea2dddf8c5f81e970a065279ef",
+      "bytes": 835472
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-ephishllm-fixed-test-v1_phishing_E-PhishLLM-paired-injection-v1_test_20261104T084839Z_94319abb/metrics.json",
+      "sha256": "19c04bba128569fb607d7e69a434c98912e22464c26bc18c8a90166d74d5cb2f",
+      "bytes": 12063
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-ephishllm-fixed-test-v1_phishing_E-PhishLLM-paired-injection-v1_test_20261104T084839Z_94319abb/records.jsonl.gz",
+      "sha256": "b3fa550435d029572f5a245be6858154539a8f2da44ea7fb739b03b2be2440b7",
+      "bytes": 560943
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-ephishllm-fixed-test-v1_phishing_E-PhishLLM_test_20261025T154603Z_cb2b0e31/metrics.json",
+      "sha256": "fb861bae0add5b1233c67dff180ed26b4472a0461f2393705768274becfffea3",
+      "bytes": 11457
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-ephishllm-fixed-test-v1_phishing_E-PhishLLM_test_20261025T154603Z_cb2b0e31/records.jsonl.gz",
+      "sha256": "5199095aaf01593d1695f1ed9298c81b517bba473d3eb41995426938668a6afd",
+      "bytes": 554420
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-ephishllm-fixed-test-v1_phishing_E-PhishLLM_test_20261025T154608Z_16e9b491/metrics.json",
+      "sha256": "26a4539b00ebd937ffff188f367cbe61c59724af7667c3e226701182687f40c7",
+      "bytes": 11453
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-ephishllm-fixed-test-v1_phishing_E-PhishLLM_test_20261025T154608Z_16e9b491/records.jsonl.gz",
+      "sha256": "184d92f7e496e8e4d32a1b9b8ad9a7a4625a877fa82c9f580ce09e202cf114a0",
+      "bytes": 554391
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-ephishllm-fixed-test-v1_phishing_PhishFuzzer_test_20261025T154613Z_2a3b1b02/metrics.json",
+      "sha256": "d2d94c53890fcb4f8d2ef5aeda5f8b45af6c52389b8cfceb2dfaed06894a1e04",
+      "bytes": 11588
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-ephishllm-fixed-test-v1_phishing_PhishFuzzer_test_20261025T154613Z_2a3b1b02/records.jsonl.gz",
+      "sha256": "9cef45f6748e9ed7f79a45ea012f3764367a3d1f5434086684a3da50ba4167f1",
+      "bytes": 467174
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-ephishllm-paired-injection-fixed-te_phishing_Cross-Model_test_20261104T084827Z_0d85e074/metrics.json",
+      "sha256": "9aabe8ca715e149b4140d097e3b8fc67b45c6e43215e1722517e7cdab0a1b8b8",
+      "bytes": 11294
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-ephishllm-paired-injection-fixed-te_phishing_Cross-Model_test_20261104T084827Z_0d85e074/records.jsonl.gz",
+      "sha256": "d61f0863a2dae66501ddde9fece52025655a382945c940c4a3be1e29df2bfb59",
+      "bytes": 952805
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-ephishllm-paired-injection-fixed-te_phishing_E-PhishLLM-paired-injection-v1_test_20261104T084103Z_b22505cb/metrics.json",
+      "sha256": "70e668e403f0c2fa3fc8f9aa530a5f3b5a9466d21a921a06af8dab60986354bf",
+      "bytes": 12120
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-ephishllm-paired-injection-fixed-te_phishing_E-PhishLLM-paired-injection-v1_test_20261104T084103Z_b22505cb/records.jsonl.gz",
+      "sha256": "28066d1f653366c624b69aee0349adbef774551b4a6dd91817db46a799e36e00",
+      "bytes": 561866
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-ephishllm-paired-injection-fixed-te_phishing_E-PhishLLM_test_20261104T084830Z_87910b4c/metrics.json",
+      "sha256": "8b2ee82597d2b5399a6f77823a2a16cc09be52251630fa05ede1d28589e87f76",
+      "bytes": 11510
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-ephishllm-paired-injection-fixed-te_phishing_E-PhishLLM_test_20261104T084830Z_87910b4c/records.jsonl.gz",
+      "sha256": "a48a88e1f3edae1e4f03dd8c1e2ea8dcde38079e816c32ec107ae70a27df466d",
+      "bytes": 674941
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-ephishllm-paired-injection-fixed-te_phishing_PhishFuzzer_test_20261104T084833Z_5016a0de/metrics.json",
+      "sha256": "d6e72821bc7a322f21b17a403841a796444af48fa98549c0b77093e918b014b9",
+      "bytes": 11634
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-ephishllm-paired-injection-fixed-te_phishing_PhishFuzzer_test_20261104T084833Z_5016a0de/records.jsonl.gz",
+      "sha256": "604c8834ccffdef48fe5bd7ab819860f60b2d51a8553517430e1f213f881d501",
+      "bytes": 518972
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-phishfuzzer-fixed-test-v1_phishing_Cross-Model_test_20261025T154514Z_a966e0c0/metrics.json",
+      "sha256": "f1b0c0d9accdc0442eaaf91c54815e8233db4d683f882bd9c2382d0832a80749",
+      "bytes": 11246
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-phishfuzzer-fixed-test-v1_phishing_Cross-Model_test_20261025T154514Z_a966e0c0/records.jsonl.gz",
+      "sha256": "e6f28f3b8080c1c4e692dc2ce287e73684ca44299e38cb7100ce022c805138ba",
+      "bytes": 835344
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-phishfuzzer-fixed-test-v1_phishing_E-PhishLLM-paired-injection-v1_test_20261104T084848Z_9c70d234/metrics.json",
+      "sha256": "2c81ae4109f76ac8f1a9245909f392cb099716fc209b762918cd3fbf7fa61ef5",
+      "bytes": 12078
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-phishfuzzer-fixed-test-v1_phishing_E-PhishLLM-paired-injection-v1_test_20261104T084848Z_9c70d234/records.jsonl.gz",
+      "sha256": "043edac6b4478a97c83503123299ee291e9dc2448f9eca1d13812f77ec74799d",
+      "bytes": 561195
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-phishfuzzer-fixed-test-v1_phishing_E-PhishLLM_test_20261025T154527Z_990e119f/metrics.json",
+      "sha256": "7c4a6b43f127e625bb88914f3201dd7119fd59026ba88ea8b9cde06c9eb72fbd",
+      "bytes": 11472
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-phishfuzzer-fixed-test-v1_phishing_E-PhishLLM_test_20261025T154527Z_990e119f/records.jsonl.gz",
+      "sha256": "1e11f5aa827682bdadd85649fdb7edbf700e9457f326f942fd9ec57f6c0ba6ad",
+      "bytes": 554415
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-phishfuzzer-fixed-test-v1_phishing_PhishFuzzer_test_20261025T154521Z_c3f1b42f/metrics.json",
+      "sha256": "62bdf8f3bd8ab1c7104dbcf9921344f124af19bf75cb4991442a593749cdfdfd",
+      "bytes": 11581
+    },
+    {
+      "path": "thesis/assets/all-runs-results/tfidf_logreg-phishfuzzer-fixed-test-v1_phishing_PhishFuzzer_test_20261025T154521Z_c3f1b42f/records.jsonl.gz",
+      "sha256": "15d2e541b24f081ef42841b353ed7f92e27787d1372d3a57cbc163bf61f98d14",
+      "bytes": 467302
+    },
+    {
+      "path": "experiment-runner/src/llm_phishing/personalization.py",
+      "sha256": "1056b418fc2af642db4348bca970e32116ce7c1251bcdd2c88b0fe694991e0a6",
+      "bytes": 4018
+    },
+    {
+      "path": "thesis/assets/analysis/baseline_results.py",
+      "sha256": "8d779aa16b6f06ed8e65f7a7094a3e00eca2fa86a3df65bdd2f709ced0f9b34c",
+      "bytes": 9900
+    },
+    {
+      "path": "experiment-runner/data/evaluation/baseline_comparison.json",
+      "sha256": "004521b642e3047f714a2c06fb12f200489b6966309721d73c3e73d0f46f882d",
+      "bytes": 4265
+    },
+    {
+      "path": "thesis/assets/analysis/personalisierung_vorschlaege.csv",
+      "sha256": "cc9cf608288290e6e04b92a578b3f24a19276f8f9d66e21f00f44151957decb1",
+      "bytes": 1341445
+    },
+    {
+      "path": "thesis/assets/analysis/personalisierung_vorschlaege.py",
+      "sha256": "847a16e82a48187470d62c3c24c86e60725b34c209be32b40037ec14dbf147d5",
+      "bytes": 14896
+    },
+    {
+      "path": "thesis/assets/analysis/personalisierung_vorschlaege_manifest.json",
+      "sha256": "6e9950e0173e0948e5da03a5fa54bfe026b313d3b05232227aa31e777cd98fb3",
+      "bytes": 2134
+    },
+    {
+      "path": "thesis/assets/analysis/gepaarter_injection_test.py",
+      "sha256": "278a3b74bbd651f19ddb6a9c090a0082545943a75a557eb848b05039012a6663",
+      "bytes": 36454
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-phishing-origin-paired-inject_phishing_E-PhishLLM-paired-injection-v1_test_20261101T192558Z_4cbbb13d/task/run_manifest.json",
+      "sha256": "9cc516f5572c3e595d5e2b6835fd715e46728a3e7a56deabfe57050bfaeb1354",
+      "bytes": 42618
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-phishing-origin-paired-inject_phishing_E-PhishLLM-paired-injection-v1_test_20261101T192558Z_4cbbb13d/task/predictions.jsonl",
+      "sha256": "b924d921b708e3a02414fa768413c9afd23cab33de7d5f4d61000e7fa5d141d3",
+      "bytes": 2729431
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-phishing-origin-paired-inject_phishing_E-PhishLLM-paired-injection-v1_test_20261101T192558Z_4cbbb13d/task/report.json",
+      "sha256": "cdbc1ff0dd184077c91e5d9050db83aa2042f296fe33f5f53b52b3ed4f883c29",
+      "bytes": 21051
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-phishing-origin-4bit-paired-injection-v_phishing_E-PhishLLM-paired-injection-v1_test_20261101T193451Z_7f5dfa3c/task/run_manifest.json",
+      "sha256": "d37fd147668a61f4e85a1cb4b9c1d2e95f612771541f342aee267770f337452d",
+      "bytes": 42855
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-phishing-origin-4bit-paired-injection-v_phishing_E-PhishLLM-paired-injection-v1_test_20261101T193451Z_7f5dfa3c/task/predictions.jsonl",
+      "sha256": "69f9b0f8fe160c48aa27e431d714f84cc88f271275fa08ffca866e0f821a7c5b",
+      "bytes": 2753193
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-phishing-origin-4bit-paired-injection-v_phishing_E-PhishLLM-paired-injection-v1_test_20261101T193451Z_7f5dfa3c/task/report.json",
+      "sha256": "03cb9727a3992d475655877d630ddca15824f34a8d25209e41ef04a3b335216f",
+      "bytes": 21139
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-phishing-origin-paired-inject_phishing_E-PhishLLM-paired-injection-v1_test_20261101T194207Z_64e0f803/task/run_manifest.json",
+      "sha256": "f5f86db6bfbbdce1905b85233e03464139e41f5975fd4a0f003757eb421a9b2e",
+      "bytes": 42618
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-phishing-origin-paired-inject_phishing_E-PhishLLM-paired-injection-v1_test_20261101T194207Z_64e0f803/task/predictions.jsonl",
+      "sha256": "b1ac33c92d3f05339aa69b6344bb11e8135825158e587627115ae49936a94b55",
+      "bytes": 2725018
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-phishing-origin-paired-inject_phishing_E-PhishLLM-paired-injection-v1_test_20261101T194207Z_64e0f803/task/report.json",
+      "sha256": "49e16b187f11fcbb7f01ba41137cc89fa3020345af42172efc1744814259d98d",
+      "bytes": 21243
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-phishing-origin-4bit-paired-injection-v_phishing_E-PhishLLM-paired-injection-v1_test_20261101T200353Z_0f7f740e/task/run_manifest.json",
+      "sha256": "0bc1b1e8a17fd195bb0eeafc9efd7114cf69a380f83a33a53cc42fac741a59ad",
+      "bytes": 43042
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-phishing-origin-4bit-paired-injection-v_phishing_E-PhishLLM-paired-injection-v1_test_20261101T200353Z_0f7f740e/task/predictions.jsonl",
+      "sha256": "cd11f5572b60b808d78a862005a542749756559749b61f7f77209175bbce8a66",
+      "bytes": 2749377
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-phishing-origin-4bit-paired-injection-v_phishing_E-PhishLLM-paired-injection-v1_test_20261101T200353Z_0f7f740e/task/report.json",
+      "sha256": "a52858b7a32c7df5d30f4277c106427d8aff929a92cc7353e09f80aa9f5fd1af",
+      "bytes": 21138
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-phishing-orig_phishing_E-PhishLLM-paired-injection-v1_test_20261101T184034Z_f1055a7a/task/run_manifest.json",
+      "sha256": "839dff4b87f6e9ee62497fe728bc7adfad4725d5a0d5e565c3cdf39cd0744b02",
+      "bytes": 42740
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-phishing-orig_phishing_E-PhishLLM-paired-injection-v1_test_20261101T184034Z_f1055a7a/task/predictions.jsonl",
+      "sha256": "0726fcf68dae3806595c3248ef74f5f03867527a9f6bb09c3f422362cd34eebd",
+      "bytes": 2759213
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-phishing-orig_phishing_E-PhishLLM-paired-injection-v1_test_20261101T184034Z_f1055a7a/task/report.json",
+      "sha256": "3df1fcabb6d4b43d659c323aa6f3137714a1349b213d2b3689524b2637d31401",
+      "bytes": 21200
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-phishing-origin-4bit-pa_phishing_E-PhishLLM-paired-injection-v1_test_20261101T185751Z_fc38a052/task/run_manifest.json",
+      "sha256": "82ec980ef7bc42c3d0db0b22f781b7a9b21c4a698a07166e366e81f23ca5cafc",
+      "bytes": 43000
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-phishing-origin-4bit-pa_phishing_E-PhishLLM-paired-injection-v1_test_20261101T185751Z_fc38a052/task/predictions.jsonl",
+      "sha256": "209d510b391887c18a1dcd6db6caf53c6fd2a9af4eaf57f3ee548b40ab8c566a",
+      "bytes": 2782445
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-phishing-origin-4bit-pa_phishing_E-PhishLLM-paired-injection-v1_test_20261101T185751Z_fc38a052/task/report.json",
+      "sha256": "c7acccb270e2b9bd34b8cac5981c652556a4fb906b644f6ff169809ee6a8b99a",
+      "bytes": 21225
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-phishing-origin-pai_phishing_E-PhishLLM-paired-injection-v1_test_20261101T191140Z_ee2843d1/task/run_manifest.json",
+      "sha256": "d01205ac040cbf80ab8219b5cb7e8725726a690fce52f2003c540b0d4c885c16",
+      "bytes": 42700
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-phishing-origin-pai_phishing_E-PhishLLM-paired-injection-v1_test_20261101T191140Z_ee2843d1/task/predictions.jsonl",
+      "sha256": "8b2b8f24320b0665d9cbc6321f90434f0232dd2687b3ab9c73c635e9ae2097cf",
+      "bytes": 2744837
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-phishing-origin-pai_phishing_E-PhishLLM-paired-injection-v1_test_20261101T191140Z_ee2843d1/task/report.json",
+      "sha256": "1719518bf07d286e4632421d867ac73ccaa56aabb7c06a7d042e0fd49552ab58",
+      "bytes": 21186
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-phishing-origin-4bit-paired-i_phishing_E-PhishLLM-paired-injection-v1_test_20261109T173637Z_575fc1e7/task/run_manifest.json",
+      "sha256": "8f737726e340659e463ef19d10385289b8af8f86d6db763be4035948a9af0f8d",
+      "bytes": 43172
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-phishing-origin-4bit-paired-i_phishing_E-PhishLLM-paired-injection-v1_test_20261109T173637Z_575fc1e7/task/predictions.jsonl",
+      "sha256": "471408d43ee1dede6c9fc316e5a213e1ea52250f0371efff0c8203f85b66831c",
+      "bytes": 2815499
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-phishing-origin-4bit-paired-i_phishing_E-PhishLLM-paired-injection-v1_test_20261109T173637Z_575fc1e7/task/report.json",
+      "sha256": "26a602e1c71e6c55f1c08c7c27485504d84dd362447c396ec2e913e2f668cd03",
+      "bytes": 21260
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-phishing-origin-pa_phishing_E-PhishLLM-paired-injection-v1_test_20261101T181134Z_4fd44f86/task/run_manifest.json",
+      "sha256": "66e907eec7bb12657ed8173e006849f1d6cf5b622c670a7456bb77fce5494a47",
+      "bytes": 42711
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-phishing-origin-pa_phishing_E-PhishLLM-paired-injection-v1_test_20261101T181134Z_4fd44f86/task/predictions.jsonl",
+      "sha256": "c0a6b029b79ed161054eefb0262f6c137a9c41f583463cff02fa478570360608",
+      "bytes": 2746922
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-phishing-origin-pa_phishing_E-PhishLLM-paired-injection-v1_test_20261101T181134Z_4fd44f86/task/report.json",
+      "sha256": "fcaac5479c8d453f99f0e6bf13996012600b0e990d335684dc2a02f2e3d99479",
+      "bytes": 21114
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-phishing-origin-4bit-paired-_phishing_E-PhishLLM-paired-injection-v1_test_20261101T182712Z_5deb451d/task/run_manifest.json",
+      "sha256": "01155eacbd5510e5e6a88029d2fbee95cb5e4e64a26c7d4951b8c7ca3b794492",
+      "bytes": 42967
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-phishing-origin-4bit-paired-_phishing_E-PhishLLM-paired-injection-v1_test_20261101T182712Z_5deb451d/task/predictions.jsonl",
+      "sha256": "caba6d913b08d097ff07ca8a5819bb2a291b90592f63f38107cbf7a8af794d0e",
+      "bytes": 2771097
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-phishing-origin-4bit-paired-_phishing_E-PhishLLM-paired-injection-v1_test_20261101T182712Z_5deb451d/task/report.json",
+      "sha256": "5a46942546ce5b6bf39ab87560b2f692ee143043816a7a9331e4eb00ff879622",
+      "bytes": 21165
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-injection-paired-injection-de_phishing_E-PhishLLM-paired-injection-v1_test_20261114T163923Z_77b3309d/task/run_manifest.json",
+      "sha256": "44c9fb053b826d1826e756a640e2f41ab3c71d7ba5a9210aeb7f91622f9e3c42",
+      "bytes": 42663
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-injection-paired-injection-de_phishing_E-PhishLLM-paired-injection-v1_test_20261114T163923Z_77b3309d/task/predictions.jsonl",
+      "sha256": "57d71ca176e9931d3200758a027c90c98a25b6d36bc1820c5c71b70ce25ff927",
+      "bytes": 2709630
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-injection-paired-injection-de_phishing_E-PhishLLM-paired-injection-v1_test_20261114T163923Z_77b3309d/task/report.json",
+      "sha256": "265bc50a6b12b09db47f48106f214eae615480487f2fa0bf6d0671323399ba5c",
+      "bytes": 15423
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-injection-4bit-paired-injection-detecti_phishing_E-PhishLLM-paired-injection-v1_test_20261114T164558Z_4448e180/task/run_manifest.json",
+      "sha256": "2d79ace9964ea1719f21b2e4b99e760252ac1e8a6673aa330193e9eae5d921f9",
+      "bytes": 43057
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-injection-4bit-paired-injection-detecti_phishing_E-PhishLLM-paired-injection-v1_test_20261114T164558Z_4448e180/task/predictions.jsonl",
+      "sha256": "21da26d3e580ce3d989e33c89789c9298b764f67d672d456cc9a686358d2484a",
+      "bytes": 2729770
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-injection-4bit-paired-injection-detecti_phishing_E-PhishLLM-paired-injection-v1_test_20261114T164558Z_4448e180/task/report.json",
+      "sha256": "3ca2480b0494ac2b951995e7c032d0bf0b10682190561594c8137ab8892db597",
+      "bytes": 15396
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-injection-paired-injection-de_phishing_E-PhishLLM-paired-injection-v1_test_20261114T165221Z_4d3aec8b/task/run_manifest.json",
+      "sha256": "647861904b0f08f37d0ffa96947c18d8bb0ad1f81f09aef6a29a0e73a4b61914",
+      "bytes": 42663
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-injection-paired-injection-de_phishing_E-PhishLLM-paired-injection-v1_test_20261114T165221Z_4d3aec8b/task/predictions.jsonl",
+      "sha256": "8fd3a62f9a7f66ff80653d2db38f6fb7e25025fe2757a707055a57b096c591e6",
+      "bytes": 2705676
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-injection-paired-injection-de_phishing_E-PhishLLM-paired-injection-v1_test_20261114T165221Z_4d3aec8b/task/report.json",
+      "sha256": "57efe5ff3cfe7aa30597b257d1a36655f25d24141e934a967876c87a8c0341dc",
+      "bytes": 15409
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-injection-4bit-paired-injection-detecti_phishing_E-PhishLLM-paired-injection-v1_test_20261114T170251Z_79ce792e/task/run_manifest.json",
+      "sha256": "98e315328f94c59c07b1e98dfb7dd650865c100b5b18897f03ce15c653e30b30",
+      "bytes": 43057
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-injection-4bit-paired-injection-detecti_phishing_E-PhishLLM-paired-injection-v1_test_20261114T170251Z_79ce792e/task/predictions.jsonl",
+      "sha256": "b6d1e19eb0a34b66fdb952283ab1b8f4418248d4e0f0136f7066dc89f33031c7",
+      "bytes": 2726334
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-injection-4bit-paired-injection-detecti_phishing_E-PhishLLM-paired-injection-v1_test_20261114T170251Z_79ce792e/task/report.json",
+      "sha256": "4d37f45c95dc61883d50f15edbe64c172617ac7f72eb95f91512b653c3bf021a",
+      "bytes": 15903
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-injection-pai_phishing_E-PhishLLM-paired-injection-v1_test_20261114T160227Z_0ab18be1/task/run_manifest.json",
+      "sha256": "fd64d7a6d7c74b1ced1fcb2ae3d58f643d4eada506a9a0e37b7d0c28acb1ea94",
+      "bytes": 42785
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-injection-pai_phishing_E-PhishLLM-paired-injection-v1_test_20261114T160227Z_0ab18be1/task/predictions.jsonl",
+      "sha256": "024fd58da22587535fe6206d8c8be88faac4faaf2fc6a4e13fb927ab6646f39a",
+      "bytes": 2739469
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-injection-pai_phishing_E-PhishLLM-paired-injection-v1_test_20261114T160227Z_0ab18be1/task/report.json",
+      "sha256": "7dab5edd871976f940e9ca389a894badf909274994fa72554236f5069e8dab6f",
+      "bytes": 16314
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-injection-4bit-paired-i_phishing_E-PhishLLM-paired-injection-v1_test_20261114T161435Z_3c368f27/task/run_manifest.json",
+      "sha256": "f84cd77a1ebdca2d9a1dfc91fc0184360219e34e60ef22559b12dfdfce88f212",
+      "bytes": 43223
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-injection-4bit-paired-i_phishing_E-PhishLLM-paired-injection-v1_test_20261114T161435Z_3c368f27/task/predictions.jsonl",
+      "sha256": "fd14e6b7ea1f5ae783cdc5ff9bc51fba803419705ae02881c0304dcd37b08dbc",
+      "bytes": 2761321
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-injection-4bit-paired-i_phishing_E-PhishLLM-paired-injection-v1_test_20261114T161435Z_3c368f27/task/report.json",
+      "sha256": "2d16ce9ca73c04503aa0c6fd656d6009855d6e98565939d658bbd5288d78fcb2",
+      "bytes": 16110
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-injection-paired-in_phishing_E-PhishLLM-paired-injection-v1_test_20261114T162751Z_9813dc30/task/run_manifest.json",
+      "sha256": "4d3508ab35cffd9935e2b1cfd54fb7f8412e87c5b270fd1d5a70cc3d6edf464f",
+      "bytes": 42745
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-injection-paired-in_phishing_E-PhishLLM-paired-injection-v1_test_20261114T162751Z_9813dc30/task/predictions.jsonl",
+      "sha256": "314745e8bb482c587c4d5fd5d1924dd8e984f42367950be47ce58467d42f7ab1",
+      "bytes": 2729768
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-injection-paired-in_phishing_E-PhishLLM-paired-injection-v1_test_20261114T162751Z_9813dc30/task/report.json",
+      "sha256": "e030ec01b37292fbd0a06851f3b5a9a01f95ed129b114d778861cf3891dc9dfa",
+      "bytes": 16298
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-injection-4bit-paired-injecti_phishing_E-PhishLLM-paired-injection-v1_test_20261114T163359Z_b1b70795/task/run_manifest.json",
+      "sha256": "4832a908260a0a524165662241944a5e5ef4061a97a56293fa68622094d9e42a",
+      "bytes": 43160
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-injection-4bit-paired-injecti_phishing_E-PhishLLM-paired-injection-v1_test_20261114T163359Z_b1b70795/task/predictions.jsonl",
+      "sha256": "55ce73b80f582a8b5a9bc6c39c23370417962c658bd41a66ea9717b742fa7e42",
+      "bytes": 2747007
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-injection-4bit-paired-injecti_phishing_E-PhishLLM-paired-injection-v1_test_20261114T163359Z_b1b70795/task/report.json",
+      "sha256": "4fcdcf4c404e5521de0f9883be59e060e1f88da0151f22e0347db34fb6adf2ca",
+      "bytes": 16166
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-injection-paired-i_phishing_E-PhishLLM-paired-injection-v1_test_20261114T154043Z_9f7ff154/task/run_manifest.json",
+      "sha256": "6a41b82497454ca8d8552914102c389c3b94d9dcfd606cd67f3f6f2c3ed94980",
+      "bytes": 42756
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-injection-paired-i_phishing_E-PhishLLM-paired-injection-v1_test_20261114T154043Z_9f7ff154/task/predictions.jsonl",
+      "sha256": "2ba7eacae08ccd6cf9baa7238337288d052e82861efee5f7be4df4df37ce2f1f",
+      "bytes": 2729974
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-injection-paired-i_phishing_E-PhishLLM-paired-injection-v1_test_20261114T154043Z_9f7ff154/task/report.json",
+      "sha256": "0266bf0039c44a130dbd1557bd5f53cf0005eef8511e4cd10f54100a70f664ab",
+      "bytes": 16186
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-injection-4bit-paired-inject_phishing_E-PhishLLM-paired-injection-v1_test_20261114T155220Z_82acd2c9/task/run_manifest.json",
+      "sha256": "09fb3ed71929b07a40156ed14e142fc93420c5102fc9a0415c888c1370cb9bd2",
+      "bytes": 42982
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-injection-4bit-paired-inject_phishing_E-PhishLLM-paired-injection-v1_test_20261114T155220Z_82acd2c9/task/predictions.jsonl",
+      "sha256": "2f8c9ed23d87a01945d4013a7c48f9a6d2f0fba6f82514ff0ec1403d520a8638",
+      "bytes": 2747164
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-injection-4bit-paired-inject_phishing_E-PhishLLM-paired-injection-v1_test_20261114T155220Z_82acd2c9/task/report.json",
+      "sha256": "e30509a294852ba96dda5a5fc8e7ee076629562d94861ce668ee9a11c01e601a",
+      "bytes": 16271
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-base-4bit-phishing-origin-paired-inject_phishing_E-PhishLLM-paired-injection-v1_test_20261101T192558Z_4cbbb13d/records.jsonl.gz",
+      "sha256": "7fb8b645e8243edbad7aba8f93c2932112cffc3db4c02110f3cd64b8fb2bc690",
+      "bytes": 632308
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-4b-phishing-origin-4bit-paired-injection-v_phishing_E-PhishLLM-paired-injection-v1_test_20261101T193451Z_7f5dfa3c/records.jsonl.gz",
+      "sha256": "4f582c23b3b315d2eead721d5f5d3bd031502f4e225fe4525868b3040a57375d",
+      "bytes": 641267
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-base-4bit-phishing-origin-paired-inject_phishing_E-PhishLLM-paired-injection-v1_test_20261101T194207Z_64e0f803/records.jsonl.gz",
+      "sha256": "f983cde0b904eff485eb67736abcea5d267c2af46b2d2a0e767a535a3c30a591",
+      "bytes": 639230
+    },
+    {
+      "path": "thesis/assets/all-runs-results/qwen3-8b-phishing-origin-4bit-paired-injection-v_phishing_E-PhishLLM-paired-injection-v1_test_20261101T200353Z_0f7f740e/records.jsonl.gz",
+      "sha256": "046f391e11773a4875b438a72967280668d5a201d56991a31453a7fe0d22ad40",
+      "bytes": 646782
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-base-4bit-phishing-orig_phishing_E-PhishLLM-paired-injection-v1_test_20261101T184034Z_f1055a7a/records.jsonl.gz",
+      "sha256": "87e2c7ddfaff5538b2b1276b11feb3c82e5bdbf5b23b7ef0196fe55197e4d62d",
+      "bytes": 650233
+    },
+    {
+      "path": "thesis/assets/all-runs-results/mistral-7b-instruct-v0-3-phishing-origin-4bit-pa_phishing_E-PhishLLM-paired-injection-v1_test_20261101T185751Z_fc38a052/records.jsonl.gz",
+      "sha256": "69307c3bb5dac34d2bd2ca530b022ad73c0a6d7df4ce935b8f54c87c46768496",
+      "bytes": 654885
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-base-4bit-phishing-origin-pai_phishing_E-PhishLLM-paired-injection-v1_test_20261101T191140Z_ee2843d1/records.jsonl.gz",
+      "sha256": "e941bd13db46d479258f43d08b05c7676fa734e840427c894aec3b98d326aaaa",
+      "bytes": 647654
+    },
+    {
+      "path": "thesis/assets/all-runs-results/phi4-mini-instruct-phishing-origin-4bit-paired-i_phishing_E-PhishLLM-paired-injection-v1_test_20261109T173637Z_575fc1e7/records.jsonl.gz",
+      "sha256": "b6ec57088418c0f8b43c60832f3ede73235f7937fdf277b6070d1f1016a5d614",
+      "bytes": 652079
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-base-4bit-phishing-origin-pa_phishing_E-PhishLLM-paired-injection-v1_test_20261101T181134Z_4fd44f86/records.jsonl.gz",
+      "sha256": "dd2fd881e9f561dc6fe31214262d149449bea7f22beaca0685cac50c2216795c",
+      "bytes": 646384
+    },
+    {
+      "path": "thesis/assets/all-runs-results/llama31-8b-instruct-phishing-origin-4bit-paired-_phishing_E-PhishLLM-paired-injection-v1_test_20261101T182712Z_5deb451d/records.jsonl.gz",
+      "sha256": "81f9512f934964f2f7baf50da105511f3e24736538a431dd917a9836b175877e",
+      "bytes": 649790
+    }
+  ]
+}

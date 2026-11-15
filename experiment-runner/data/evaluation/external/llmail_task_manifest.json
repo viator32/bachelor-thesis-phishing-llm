@@ -1,0 +1,15 @@
+{
+  "evaluation_scope": "External source evaluation after exact local overlap exclusions; not a near-duplicate/pretraining audit",
+  "selection_policy": "Use this frozen full file without --limit; groups need not be two-row pairs",
+  "tasks": {
+    "injection": {
+      "splits": {
+        "test": {
+          "path": "data/evaluation/external/llmail_injection.jsonl",
+          "rows": 153986,
+          "sha256": "6fbec31870bacc3fb8ee933b59877b253bfd63d89d19c39a46da84f9fd76c422"
+        }
+      }
+    }
+  }
+}

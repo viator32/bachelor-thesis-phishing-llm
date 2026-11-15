@@ -1,0 +1,4 @@
+dataset,n,P0,P1,unannotated
+PhishFuzzer,424,334,84,6
+E-PhishLLM,1000,368,622,10
+Cross-Model,1000,906,87,7

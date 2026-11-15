@@ -1,0 +1,527 @@
+{
+  "report_version": 4,
+  "task": "injection",
+  "reference_fields": [
+    "contains_prompt_injection"
+  ],
+  "evaluated": 990,
+  "available_rows": 990,
+  "evaluation": "full",
+  "json_valid_rate": 1.0,
+  "json_syntax_valid_rate": 1.0,
+  "schema_valid_rate": 1.0,
+  "invalid_outputs": 0,
+  "technical_errors": 0,
+  "per_task": {
+    "contains_prompt_injection": {
+      "valid_outputs": 990,
+      "invalid_outputs": 0,
+      "accuracy_on_schema_valid": 0.2585858585858586,
+      "macro_f1_on_schema_valid": 0.21310815025296279,
+      "per_class": {
+        "False": {
+          "precision": 0.3369713506139154,
+          "recall": 0.498989898989899,
+          "f1": 0.4022801302931596,
+          "support": 495,
+          "test_support": 495,
+          "invalid_support": 0
+        },
+        "True": {
+          "precision": 0.03501945525291829,
+          "recall": 0.01818181818181818,
+          "f1": 0.023936170212765954,
+          "support": 495,
+          "test_support": 495,
+          "invalid_support": 0
+        }
+      },
+      "confusion_matrix": {
+        "False": {
+          "False": 247,
+          "True": 248
+        },
+        "True": {
+          "False": 486,
+          "True": 9
+        }
+      },
+      "confusion_matrix_with_invalid": {
+        "False": {
+          "False": 247,
+          "True": 248,
+          "invalid": 0
+        },
+        "True": {
+          "False": 486,
+          "True": 9,
+          "invalid": 0
+        }
+      },
+      "false_positives": 248,
+      "false_negatives": 486,
+      "true_positives": 9,
+      "true_negatives": 247,
+      "false_positive_rate_on_schema_valid": 0.501010101010101,
+      "false_negative_rate_on_schema_valid": 0.9818181818181818,
+      "recall_on_schema_valid": 0.01818181818181818,
+      "precision_on_schema_valid": 0.03501945525291829,
+      "f1_on_schema_valid": 0.023936170212765957
+    }
+  },
+  "personalization": {
+    "annotated_records": 984,
+    "unannotated_records": 6,
+    "by_level": {
+      "0": {
+        "evaluated": 372,
+        "schema_valid_rate": 1.0,
+        "invalid_outputs": 0,
+        "technical_errors": 0,
+        "end_to_end_exact_match_rate": 0.1827956989247312,
+        "per_task": {
+          "contains_prompt_injection": {
+            "valid_outputs": 372,
+            "invalid_outputs": 0,
+            "accuracy_on_schema_valid": 0.1827956989247312,
+            "macro_f1_on_schema_valid": 0.16384715485626403,
+            "per_class": {
+              "False": {
+                "precision": 0.256198347107438,
+                "recall": 0.3333333333333333,
+                "f1": 0.2897196261682243,
+                "support": 186,
+                "test_support": 186,
+                "invalid_support": 0
+              },
+              "True": {
+                "precision": 0.046153846153846156,
+                "recall": 0.03225806451612903,
+                "f1": 0.0379746835443038,
+                "support": 186,
+                "test_support": 186,
+                "invalid_support": 0
+              }
+            },
+            "confusion_matrix": {
+              "False": {
+                "False": 62,
+                "True": 124
+              },
+              "True": {
+                "False": 180,
+                "True": 6
+              }
+            },
+            "confusion_matrix_with_invalid": {
+              "False": {
+                "False": 62,
+                "True": 124,
+                "invalid": 0
+              },
+              "True": {
+                "False": 180,
+                "True": 6,
+                "invalid": 0
+              }
+            },
+            "false_positives": 124,
+            "false_negatives": 180,
+            "true_positives": 6,
+            "true_negatives": 62,
+            "false_positive_rate_on_schema_valid": 0.6666666666666666,
+            "false_negative_rate_on_schema_valid": 0.967741935483871,
+            "recall_on_schema_valid": 0.03225806451612903,
+            "precision_on_schema_valid": 0.046153846153846156,
+            "f1_on_schema_valid": 0.0379746835443038
+          }
+        }
+      },
+      "1": {
+        "evaluated": 612,
+        "schema_valid_rate": 1.0,
+        "invalid_outputs": 0,
+        "technical_errors": 0,
+        "end_to_end_exact_match_rate": 0.3022875816993464,
+        "per_task": {
+          "contains_prompt_injection": {
+            "valid_outputs": 612,
+            "invalid_outputs": 0,
+            "accuracy_on_schema_valid": 0.3022875816993464,
+            "macro_f1_on_schema_valid": 0.23701690204173395,
+            "per_class": {
+              "False": {
+                "precision": 0.3752577319587629,
+                "recall": 0.5947712418300654,
+                "f1": 0.46017699115044247,
+                "support": 306,
+                "test_support": 306,
+                "invalid_support": 0
+              },
+              "True": {
+                "precision": 0.023622047244094488,
+                "recall": 0.00980392156862745,
+                "f1": 0.013856812933025405,
+                "support": 306,
+                "test_support": 306,
+                "invalid_support": 0
+              }
+            },
+            "confusion_matrix": {
+              "False": {
+                "False": 182,
+                "True": 124
+              },
+              "True": {
+                "False": 303,
+                "True": 3
+              }
+            },
+            "confusion_matrix_with_invalid": {
+              "False": {
+                "False": 182,
+                "True": 124,
+                "invalid": 0
+              },
+              "True": {
+                "False": 303,
+                "True": 3,
+                "invalid": 0
+              }
+            },
+            "false_positives": 124,
+            "false_negatives": 303,
+            "true_positives": 3,
+            "true_negatives": 182,
+            "false_positive_rate_on_schema_valid": 0.40522875816993464,
+            "false_negative_rate_on_schema_valid": 0.9901960784313726,
+            "recall_on_schema_valid": 0.00980392156862745,
+            "precision_on_schema_valid": 0.023622047244094488,
+            "f1_on_schema_valid": 0.013856812933025405
+          }
+        }
+      },
+      "2": {
+        "evaluated": 0,
+        "schema_valid_rate": null,
+        "invalid_outputs": 0,
+        "technical_errors": 0,
+        "end_to_end_exact_match_rate": null,
+        "per_task": {
+          "contains_prompt_injection": {
+            "valid_outputs": 0,
+            "invalid_outputs": 0,
+            "accuracy_on_schema_valid": null,
+            "macro_f1_on_schema_valid": null,
+            "per_class": {
+              "False": {
+                "precision": null,
+                "recall": null,
+                "f1": null,
+                "support": 0,
+                "test_support": 0,
+                "invalid_support": 0
+              },
+              "True": {
+                "precision": null,
+                "recall": null,
+                "f1": null,
+                "support": 0,
+                "test_support": 0,
+                "invalid_support": 0
+              }
+            },
+            "confusion_matrix": {
+              "False": {
+                "False": 0,
+                "True": 0
+              },
+              "True": {
+                "False": 0,
+                "True": 0
+              }
+            },
+            "confusion_matrix_with_invalid": {
+              "False": {
+                "False": 0,
+                "True": 0,
+                "invalid": 0
+              },
+              "True": {
+                "False": 0,
+                "True": 0,
+                "invalid": 0
+              }
+            },
+            "false_positives": 0,
+            "false_negatives": 0,
+            "true_positives": 0,
+            "true_negatives": 0,
+            "false_positive_rate_on_schema_valid": null,
+            "false_negative_rate_on_schema_valid": null,
+            "recall_on_schema_valid": null,
+            "precision_on_schema_valid": null,
+            "f1_on_schema_valid": null
+          }
+        }
+      }
+    }
+  },
+  "joint_accuracy_on_schema_valid": 0.2585858585858586,
+  "end_to_end_exact_match_rate": 0.2585858585858586,
+  "latency_ms": {
+    "response_count": 990,
+    "median": 669.1446255000528,
+    "p95": 802.9976481000176,
+    "first_request_including_possible_load": 11966.411754999854,
+    "scope": "HTTP wall time; may include loading, queueing and prompt-cache effects"
+  },
+  "server_peak_memory_gib": null,
+  "prompt_injection_attack_success_rate": null,
+  "limitations": [
+    "Same 990 rows as ephishllm_paired_injection.jsonl; target is contains_prompt_injection (clean=false, injected=true). Clean means no experimentally added instruction, not an independent guarantee that the carrier is free of manipulative wording.",
+    "Full saved input; does not reproduce the Colab 1024-token middle truncation",
+    "Injection-label accuracy is not attack success rate",
+    "Personalization strata use independent annotations; unannotated rows are excluded only from strata",
+    "Server memory is not measured; client memory is not substituted"
+  ],
+  "comparison": {
+    "schema_version": "comparison_v1",
+    "records": 990,
+    "context": {
+      "run_id": "mistral-7b-instruct-v0-3-base-4bit-injection-pai_phishing_E-PhishLLM-paired-injection-v1_test_20261114T160227Z_0ab18be1",
+      "config_id": "mistral-7b-instruct-v0.3-base-4bit-injection-paired-injection-detection-v1",
+      "model_id": "mistral-7b-instruct-v0.3-base-4bit",
+      "prompt_id": "task_native_v1:injection",
+      "source_datasets": [
+        "ephishllm_paired_injection_v1"
+      ],
+      "splits": [
+        "test"
+      ],
+      "run_name": "mistral-7b-instruct-v0.3-base-4bit-injection-paired-injection-detection-v1 \u2014 Phishing detection \u2014 E-PhishLLM paired injection v1 (test)",
+      "model_task": "injection",
+      "evaluation_task": "phishing",
+      "task_label": "Phishing detection",
+      "dataset": "E-PhishLLM paired injection v1",
+      "dataset_path": "/app/data/evaluation/external/ephishllm_paired_injection_detection_task_manifest.json",
+      "split": "test"
+    },
+    "successful_records": 990,
+    "failed_records": 0,
+    "classification": {
+      "phishing": {
+        "status": "not_available",
+        "reason": "No valid supported predictions with reference labels",
+        "labeled_records": 0,
+        "eligible_records": 0,
+        "evaluated_records": 0,
+        "invalid_outputs": 0,
+        "unsupported_records": 0,
+        "accuracy": null,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "balanced_accuracy": null,
+        "mcc": null,
+        "false_positive_rate": null,
+        "false_negative_rate": null,
+        "tp": null,
+        "tn": null,
+        "fp": null,
+        "fn": null,
+        "confusion_matrix": null,
+        "end_to_end_accuracy": null,
+        "labels": [
+          false,
+          true
+        ],
+        "per_class": {}
+      },
+      "generation_origin": {
+        "status": "not_available",
+        "reason": "No valid supported predictions with reference labels",
+        "labeled_records": 0,
+        "eligible_records": 0,
+        "evaluated_records": 0,
+        "invalid_outputs": 0,
+        "unsupported_records": 0,
+        "accuracy": null,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "balanced_accuracy": null,
+        "mcc": null,
+        "false_positive_rate": null,
+        "false_negative_rate": null,
+        "tp": null,
+        "tn": null,
+        "fp": null,
+        "fn": null,
+        "confusion_matrix": null,
+        "end_to_end_accuracy": null,
+        "labels": [
+          "human",
+          "ai",
+          "unknown"
+        ],
+        "per_class": {}
+      },
+      "prompt_injection": {
+        "status": "available",
+        "reason": null,
+        "labeled_records": 990,
+        "eligible_records": 990,
+        "evaluated_records": 990,
+        "invalid_outputs": 0,
+        "unsupported_records": 0,
+        "accuracy": 0.2585858585858586,
+        "precision": 0.03501945525291829,
+        "recall": 0.01818181818181818,
+        "f1": 0.023936170212765957,
+        "balanced_accuracy": 0.2585858585858586,
+        "mcc": -0.550654701971835,
+        "false_positive_rate": 0.501010101010101,
+        "false_negative_rate": 0.9818181818181818,
+        "tp": 9,
+        "tn": 247,
+        "fp": 248,
+        "fn": 486,
+        "confusion_matrix": [
+          [
+            247,
+            248
+          ],
+          [
+            486,
+            9
+          ]
+        ],
+        "end_to_end_accuracy": 0.2585858585858586,
+        "labels": [
+          false,
+          true
+        ],
+        "per_class": {
+          "False": {
+            "precision": 0.3369713506139154,
+            "recall": 0.498989898989899,
+            "f1": 0.4022801302931596,
+            "support": 495
+          },
+          "True": {
+            "precision": 0.03501945525291829,
+            "recall": 0.01818181818181818,
+            "f1": 0.023936170212765957,
+            "support": 495
+          }
+        }
+      }
+    },
+    "validity": {
+      "model_requests_evaluated": 990,
+      "json_validity_rate": 1.0,
+      "schema_validity_rate": 1.0,
+      "final_schema_validity_rate": 1.0,
+      "repair_attempts": 0,
+      "repair_successes": 0,
+      "result_validity_rate": 1.0,
+      "note": "Model JSON validity includes failed requests; deterministic results are programmatic JSON, not LLM responses."
+    },
+    "performance": {
+      "latency_ms": {
+        "n": 990,
+        "mean": 705.6153121919164,
+        "median": 669.1446255000528,
+        "p95": 802.9976481000176
+      },
+      "tokens_per_second": {
+        "n": 990,
+        "mean": 31.39761616161616,
+        "median": 31.56,
+        "p95": 32.06
+      },
+      "prompt_tokens": {
+        "n": 990,
+        "mean": 238.77272727272728,
+        "median": 234.0,
+        "p95": 313.54999999999995
+      },
+      "output_tokens": {
+        "n": 990,
+        "mean": 12.438383838383839,
+        "median": 11.0,
+        "p95": 15.0
+      },
+      "throughput_records_per_min": 81.9908829644151,
+      "model_process_rss_mb": {
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "p95": null
+      },
+      "server_peak_memory_gib": null,
+      "memory_note": "Only owned model-process RSS is measured when available; server peak memory is not measured."
+    },
+    "robustness": {
+      "prompt_injection_attack_success_rate": null,
+      "eligible_attack_pairs": 0,
+      "label_flip_rate": null,
+      "benign_suspicious_wording_fpr": null,
+      "note": "ASR requires labeled clean/injected phishing pairs and a defined attack goal; injection recall is not ASR."
+    }
+  },
+  "run_id": "mistral-7b-instruct-v0-3-base-4bit-injection-pai_phishing_E-PhishLLM-paired-injection-v1_test_20261114T160227Z_0ab18be1",
+  "run_identity": {
+    "run_name": "mistral-7b-instruct-v0.3-base-4bit-injection-paired-injection-detection-v1 \u2014 Phishing detection \u2014 E-PhishLLM paired injection v1 (test)",
+    "model_task": "injection",
+    "evaluation_task": "phishing",
+    "task_label": "Phishing detection",
+    "dataset": "E-PhishLLM paired injection v1",
+    "dataset_path": "/app/data/evaluation/external/ephishllm_paired_injection_detection_task_manifest.json",
+    "split": "test"
+  },
+  "model_id": "mistral-7b-instruct-v0.3-base-4bit",
+  "model_variant": "base",
+  "split": "test",
+  "selected_rows": 990,
+  "status": "completed",
+  "selection": {
+    "method": "label_and_metadata_stratified_rows",
+    "seed": 42,
+    "requested_maximum": 1000,
+    "available_labels": [
+      {
+        "labels": {
+          "contains_prompt_injection": false
+        },
+        "count": 495
+      },
+      {
+        "labels": {
+          "contains_prompt_injection": true
+        },
+        "count": 495
+      }
+    ],
+    "selected_labels": [
+      {
+        "labels": {
+          "contains_prompt_injection": false
+        },
+        "count": 495
+      },
+      {
+        "labels": {
+          "contains_prompt_injection": true
+        },
+        "count": 495
+      }
+    ]
+  },
+  "input_policy": "full_saved_input",
+  "allow_repair": false,
+  "schema_retries": 3,
+  "schema_retried_records": 0,
+  "constrained_json": true
+}

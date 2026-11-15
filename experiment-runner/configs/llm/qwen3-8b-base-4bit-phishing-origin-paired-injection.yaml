@@ -1,0 +1,20 @@
+{
+  "config_id": "qwen3-8b-base-4bit-phishing-origin-paired-injection-v1",
+  "task": "phishing_origin",
+  "model_id": "qwen3-8b-base-4bit",
+  "artifact_dir": "/Volumes/TITAN5/models/qwen3-8b-base-4bit",
+  "base_model_id": "Qwen/Qwen3-8B",
+  "base_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "dataset_manifest": "data/evaluation/external/ephishllm_paired_injection_task_manifest.json",
+  "base_url": "http://localhost:8080",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_new_tokens": 64,
+  "timeout_seconds": 180,
+  "input_policy": "full_saved_input",
+  "allow_repair": false,
+  "constrained_json": true,
+  "model_variant": "base",
+  "output_contract": "comparison_v1",
+  "response_schema": "task_native_v1"
+}

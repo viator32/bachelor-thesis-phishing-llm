@@ -1,0 +1,12 @@
+config_id: rules_only-ephishllm-fixed-test-v1
+method: rules_only
+task: phishing
+model: not-applicable
+dataset_path: data/processed/comparison_ephishllm_test.jsonl
+tfidf_model_path: models/tfidf_Phishing_trained_classifier.joblib
+seed: 42
+split: test
+languages: []
+max_input_tokens: null
+limit: null
+personalization_annotations: null

@@ -1,0 +1,6 @@
+{
+  "purpose": "Offline documentation only; no model inference or measured predictions.",
+  "task_examples": "Didactic inputs in the saved task layout, not original research holdout rows.",
+  "endpoint_default": "http://localhost:8080/v1/chat/completions",
+  "authentication": "Authorization headers intentionally omitted; never include API keys in documentation."
+}

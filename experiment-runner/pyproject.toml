@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-phishing-prototype"
+version = "0.1.0"
+description = "Local research prototype for reproducible phishing and prompt-injection detection experiments"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "beautifulsoup4>=4.12,<5",
+  "fastapi>=0.115,<1",
+  "httpx>=0.27,<1",
+  "joblib>=1.4,<2",
+  "numpy>=1.26,<3",
+  "pandas>=2.2,<3",
+  "pydantic>=2.9,<3",
+  "PyYAML>=6,<7",
+  "scikit-learn>=1.5,<2",
+  "typer>=0.12,<1",
+  "uvicorn[standard]>=0.30,<1"
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.7,<1"]
+# Optional for an owned local mlx_lm.server process. The core client and Linux Docker
+# API call the host oMLX server over HTTP and do not require MLX in the container.
+mlx = ["mlx-lm>=0.19,<1"]
+
+[project.scripts]
+phishlab = "llm_phishing.cli:app"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+# Broad exception capture is intentional at experiment/API boundaries so failures become run data.
+# Typer's documented CLI pattern uses Option() in defaults.
+ignore = ["B008", "BLE001"]

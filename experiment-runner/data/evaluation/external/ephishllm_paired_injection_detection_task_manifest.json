@@ -1,0 +1,23 @@
+{
+  "dataset_name": "E-PhishLLM paired injection v1 — injection detection view (own derivative)",
+  "evaluation_scope": "Same 990 rows as ephishllm_paired_injection.jsonl; target is contains_prompt_injection (clean=false, injected=true). Clean means no experimentally added instruction, not an independent guarantee that the carrier is free of manipulative wording.",
+  "selection_policy": "Use this frozen full file without --limit",
+  "reference_fields": [
+    "contains_prompt_injection"
+  ],
+  "derived_from": {
+    "path": "data/evaluation/external/ephishllm_paired_injection.jsonl",
+    "sha256": "b26ba69b19008a7e754b6a2356d76a88af99673ede3bd0c2efe6c1db63fa6c4d"
+  },
+  "tasks": {
+    "injection": {
+      "splits": {
+        "test": {
+          "path": "data/evaluation/external/ephishllm_paired_injection_detection.jsonl",
+          "rows": 990,
+          "sha256": "fbce6dd8361e322dcca2116e60a51bf1a08231e3dea34288ca1660a7f5b06c50"
+        }
+      }
+    }
+  }
+}
